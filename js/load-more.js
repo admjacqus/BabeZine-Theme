@@ -32,7 +32,7 @@ jQuery(function($){
 						// create new item elements
 					   var $items = res.data;
 					   // append items to grid, then add and lay out newly appended items
-						 console.log($grid)
+						//  console.log($grid)
 					   $grid.append( $items ).masonry( 'appended', $items );
 
 						// $grid.append( res.data )

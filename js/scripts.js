@@ -2,12 +2,12 @@
 
   window.onload = function() {
         document.body.className += " loaded";
-        console.log("page loaded");
+        // console.log("page loaded");
 
         var body = $("body");
 
         if (body.hasClass("home") || body.hasClass("category") || body.hasClass("search-results") ){
-          console.log("case1: all masonary")
+          // console.log("case1: all masonary")
           /* establish masonary grid */
               $grid = $('#grid').masonry({
                 initLayout: false,
@@ -19,8 +19,8 @@
               });
               // bind event
               $grid.masonry( 'on', 'layoutComplete', function() {
-                console.log('layout is complete');
-                // document.body.className += " loaded";
+                // console.log('layout is complete');
+                document.body.className += " loaded";
               });
             // trigger initial layout
             $grid.masonry();
@@ -34,21 +34,20 @@
               nextSelector : ".nav-previous a",
               // selector for all items you'll retrieve
               itemSelector : ".item",
-
               // finished message
-              loading: {
-                finishedMsg: 'No more pages to load.'
-                }
+              // loading: {
+                // finishedMsg: 'No more pages to load.'
+                // }
               },
 
               // Trigger Masonry as a callback
               function( newElements ) {
                 // hide new items while they are loading
-                var $newElems = $( newElements ).css({ opacity: 0 });
+                // var $newElems = $( newElements ).css({ opacity: 0 });
                 // ensure that images load before adding to masonry layout
                 $newElems.imagesLoaded(function(){
                   // show elems now they're ready
-                  $newElems.animate({ opacity: 1 });
+                  // $newElems.animate({ opacity: 1 });
                   $grid.masonry( 'appended', $newElems, true );
                 });
 
@@ -58,9 +57,7 @@
 
           }
           if (body.hasClass("search") || body.hasClass("category")){
-
-               console.log("case2: set height only")
-
+            //  console.log("case2: set height only")
              setHeight();
              /* control babe title, position and opacity */
              function setHeight() {
@@ -70,11 +67,8 @@
              }
              $(window).on('resize orientationchange', setHeight);
 
-
              if (body.hasClass("category")) {
-
-               console.log("case2.1: hide grad")
-
+              //  console.log("case2.1: hide grad")
                var menu = $("#menu-main-menu"),
                    current = $("#menu-main-menu li").last();
 
@@ -82,14 +76,14 @@
                      $(".grad").animate( {opacity: "0"}, 300 )}
 
                    menu.animate({scrollLeft: current.offset().left }, 800, function() {
-                     console.log('menu item visible');
+                    //  console.log('menu item visible');
                    });
              }
 
 
            } else if (body.hasClass("home")){
 
-                console.log("case3: home")
+                // console.log("case3: home")
 
                 setHeight();
                 /* control babe title, position and opacity */
@@ -97,7 +91,7 @@
                   var fixed = $(".title-container"),
                   hero = $("#hero img");
                     fixed.css('top', ( hero.offset().top + hero.height() /1.8 ) );
-                    console.log("height set");
+                    // console.log("height set");
                 }
 
                 function setOpacity() {
@@ -116,7 +110,7 @@
 
               } else if (body.hasClass("single")) {
                   $('body.single #content .entry-content p:has(iframe)').css('width', '100%');
-                  console.log("single");
+                  // console.log("single");
                 }
             };
 
