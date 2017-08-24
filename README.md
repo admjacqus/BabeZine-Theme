@@ -1,2 +1,0 @@
-# babeZine
-Wordpress theme.
