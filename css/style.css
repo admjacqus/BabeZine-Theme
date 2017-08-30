@@ -31,7 +31,21 @@ ul, menu, dir {
   -webkit-margin-end: 0;
   -webkit-padding-start: 0; }
 
-li {
+ol {
+  margin: 3rem 0; }
+
+ol li {
+  letter-spacing: 0.1rem;
+  text-transform: lowercase;
+  text-transform: initial;
+  line-height: 1.9;
+  width: 70%;
+  margin: 0 auto 1rem;
+  text-align: left;
+  list-style-type: decimal;
+  list-style-position: outside; }
+
+ul li {
   list-style: none; }
 
 #wrapper {
@@ -97,9 +111,6 @@ a {
 .size-thumbnail {
   max-width: 100%;
   height: auto; }
-
-.post-edit-link {
-  display: none; }
 
 .border {
   border: 5px #474747 solid; }
@@ -506,34 +517,6 @@ body.single {
 
 body a .nice-likes-unlike {
   color: #474747; }
-
-.snapchat {
-  background: rgba(0, 0, 0, 0.4);
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
-  .snapchat img {
-    width: 30%;
-    max-width: 250px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
-
-.is-visible {
-  visibility: visible;
-  opacity: 1;
-  z-index: 5; }
-
-.snap-toggle {
-  cursor: pointer; }
 
 textarea, input, button {
   outline: none; }
