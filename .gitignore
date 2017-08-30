@@ -2,3 +2,5 @@ node_modules/
 package.json
 gulpfile.js
 npm-debug.log
+
+/sass
