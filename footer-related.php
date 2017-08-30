@@ -18,9 +18,9 @@
   while( $my_query->have_posts() ) {
   $my_query->the_post();?>
 
-  <li><div class="relatedthumb"><a href="<? the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a></div>
+  <li><div class="relatedthumb"><a href="<?php the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a></div>
   <div class="relatedcontent">
-  <h2 class="title"><a href="<? the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+  <h2 class="title"><a href="<?php the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
   </div>
   <?php if( get_field('bz_button') ){ ?>
   <button class="cta"><?php the_field('bz_button'); ?></button>
@@ -28,8 +28,7 @@
         <button class="cta">check it out</button>
         <?php } ?>
   </li>
-  <?
-  }
+  <?php }
   echo '</ul></div>';
   }
   }

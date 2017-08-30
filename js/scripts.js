@@ -43,11 +43,11 @@
               // Trigger Masonry as a callback
               function( newElements ) {
                 // hide new items while they are loading
-                // var $newElems = $( newElements ).css({ opacity: 0 });
+                var $newElems = $( newElements ).css({ opacity: 0 });
                 // ensure that images load before adding to masonry layout
                 $newElems.imagesLoaded(function(){
                   // show elems now they're ready
-                  // $newElems.animate({ opacity: 1 });
+                  $newElems.animate({ opacity: 1 });
                   $grid.masonry( 'appended', $newElems, true );
                 });
 
