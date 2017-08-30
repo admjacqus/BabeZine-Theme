@@ -72,11 +72,11 @@ add_action( 'widgets_init', 'mg_widgets_init' );
  * Include and setup custom metaboxes and fields. (make sure you copy this file to outside the CMB2 directory)
  *
  * Be sure to replace all instances of 'wp_' with your project's prefix.
- * http://nacin.com/2010/05/11/in-wordpress-prefix-everything/
+ * https://nacin.com/2010/05/11/in-wordpress-prefix-everything/
  *
  * @category Missguided
  * @package  mg_CMB2
- * @license  http://www.opensource.org/licenses/gpl-license.php GPL v2.0 (or later)
+ * @license  https://www.opensource.org/licenses/gpl-license.php GPL v2.0 (or later)
  * @link     https://github.com/WebDevStudios/CMB2
  */
 
