@@ -615,11 +615,9 @@ span.load-more {
     pointer-events: none; }
   #menu-main-menu a {
     border-bottom: none; }
-  body.home #grid .item, body.home #grid .item-2, body.category #grid .item, body.category #grid .item-2, body.search #grid .item, body.search #grid .item-2 {
-    width: 80% !important;
-    margin: 5% 10% 15% !important; }
-  body.single .entry-content a > strong {
-    margin: 30px 80px; } }
+  body.home #container #grid .item, body.home #container #grid .item-2, body.category #container #grid .item, body.category #container #grid .item-2, body.search #container #grid .item, body.search #container #grid .item-2 {
+    width: 90%;
+    margin: 5% 5% 15%; } }
 
 @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
   #menu-main-menu {
