@@ -6,7 +6,7 @@ function my_assets() {
 	// https://github.com/desandro/masonry
 	wp_enqueue_script( 'infinte', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-infinitescroll/2.0b2.120519/jquery.infinitescroll.min.js', array( 'jquery' ), '1', true );
 	wp_enqueue_script( 'masonry', array('jquery'), null, true);
-	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.js', array(), '4.2511235' , true);
+	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.js', array(), '4.251123234255412321' , true);
 }
 add_action( 'wp_enqueue_scripts', 'my_assets' );
 

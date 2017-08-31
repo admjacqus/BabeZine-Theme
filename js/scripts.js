@@ -90,16 +90,20 @@
       if (body.hasClass("category")) {
         //  console.log("case2.1: hide grad")
         var menu = $("#menu-main-menu"),
-          current = $("#menu-main-menu li").last();
+        currentItem = $("#menu-main-menu li.current-menu-item"),
+          last = $("#menu-main-menu li").last();
 
-        if (current.hasClass("current-menu-item")) {
+          last.css("background", "white");
+          // console.log(last.offset().left);
+        if (last.hasClass("current-menu-item")) {
+
           $(".grad").animate({
             opacity: "0"
           }, 300);
         }
 
         menu.animate({
-          scrollLeft: current.offset().left
+          scrollLeft: currentItem.offset().left - 20
         }, 800, function() {
           //  console.log('menu item visible');
         });
