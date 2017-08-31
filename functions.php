@@ -40,6 +40,12 @@ function wpdocs_custom_excerpt_length( $length ) {
     return 15;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+// Replaces the excerpt "Read More" text by a link
+function new_excerpt_more($more) {
+       global $post;
+	return '<a class="moretag" href="'. get_permalink($post->ID) . '">...</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
 
 /**Set the content width based on the theme's design and stylesheet.*/
 if ( ! isset( $content_width ) ) {
