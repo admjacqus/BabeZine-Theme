@@ -18,6 +18,18 @@ function theme_functions() {
 		add_theme_support( 'automatic-feed-links' );
 }
 
+// Remove p tags from images, scripts, and iframes.
+function remove_some_ptags( $content ) {
+  $content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+  $content = preg_replace('/<p>\s*(<script.*>*.<\/script>)\s*<\/p>/iU', '\1', $content);
+  $content = preg_replace('/<p>\s*(<iframe.*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
+	$content = preg_replace('/<p style="text-align: center;">\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+  $content = preg_replace('/<p style="text-align: center;">\s*(<script.*>*.<\/script>)\s*<\/p>/iU', '\1', $content);
+  $content = preg_replace('/<p style="text-align: center;">\s*(<iframe.*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
+  return $content;
+}
+add_filter( 'the_content', 'remove_some_ptags' );
+
 /**
  * Filter the except length to 20 words.
  *
