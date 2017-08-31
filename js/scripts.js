@@ -92,11 +92,8 @@
         var menu = $("#menu-main-menu"),
         currentItem = $("#menu-main-menu li.current-menu-item"),
           last = $("#menu-main-menu li").last();
-
-          last.css("background", "white");
           // console.log(last.offset().left);
         if (last.hasClass("current-menu-item")) {
-
           $(".grad").animate({
             opacity: "0"
           }, 300);
