@@ -3,9 +3,10 @@ function my_assets() {
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css', false, filemtime(get_stylesheet_directory() . '/css/style.css'));
 
 	wp_enqueue_script( 'twitter', 'https://platform.twitter.com/widgets.js', array(), '1', true);
+	// https://github.com/desandro/masonry
 	wp_enqueue_script( 'infinte', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-infinitescroll/2.0b2.120519/jquery.infinitescroll.min.js', array( 'jquery' ), '1', true );
 	wp_enqueue_script( 'masonry', array('jquery'), null, true);
-	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.js', array(), '4.251' , true);
+	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.js', array(), '4.2511235' , true);
 }
 add_action( 'wp_enqueue_scripts', 'my_assets' );
 

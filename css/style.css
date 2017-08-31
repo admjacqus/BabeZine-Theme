@@ -273,6 +273,17 @@ button, .button, input#searchsubmit {
       background: #474747;
       fill: white; }
 
+#infscr-loading {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
+  #infscr-loading img {
+    display: block;
+    width: 150px;
+    margin: 0 auto; }
+
 body.home #container, body.category #container, body.search #container {
   position: relative;
   max-width: 960px;

@@ -52,9 +52,13 @@
           // selector for all items you'll retrieve
           itemSelector: ".item",
           // finished message
-          // loading: {
-          // finishedMsg: 'No more pages to load.'
-          // }
+          loading: {
+          finishedMsg: 'No more pages to load.',
+          //spinner
+          // img: 'https://media.missguided.co.uk/image/upload/v1476782121/Loading-Small2_tjqqro.gif'
+          //yappy doge
+          img: 'https://i.giphy.com/media/5xtDarniHFmiZuCoW40/200w_d.gif'
+          }
         },
 
         // Trigger Masonry as a callback
