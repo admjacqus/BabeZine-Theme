@@ -49,7 +49,7 @@
 							<div class="grad"></div>
 						</div>
 <!-- can add serach to pages real easy (need styling) -->
-<!-- <?php get_search_form(); ?> -->
+<!-- < ?php get_search_form(); ?> -->
 
 			</div>
 			</header>

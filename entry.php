@@ -18,8 +18,9 @@
                               </a>
                               <?php }?>
                               <?php edit_post_link(); ?>
+                              <?php get_template_part( 'entry', 'meta' ); ?>
                               <!-- < ?php if ( !is_search() ) get_template_part( 'entry', 'meta' ); ?> -->
                             </header>
-                            <?php if ( !is_search() ) get_template_part( 'entry-footer' ); ?>
                             <?php get_template_part( 'entry', ( is_archive() || is_search() ? 'summary' : 'content' ) ); ?>
+                            <?php if ( !is_search() ) get_template_part( 'entry-footer' ); ?>
                           </article>

@@ -6,10 +6,12 @@
 <?php if ( '' != get_the_author_meta( 'user_description' ) ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . get_the_author_meta( 'user_description' ) . '</div>' ); ?>
 <?php rewind_posts(); ?>
 </header>
-<?php while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'entry' ); ?>
-<?php endwhile; ?>
+<section id="grid">
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  <?php get_template_part( 'entry-summary' ); ?>
+  <?php endwhile; endif; ?>
+</section>
 <?php get_template_part( 'nav', 'below' ); ?>
 </section>
-<?php get_sidebar(); ?>
+<!-- < ?php get_sidebar(); ?> -->
 <?php get_footer(); ?>
