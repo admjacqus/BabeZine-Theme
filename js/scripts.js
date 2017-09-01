@@ -23,7 +23,7 @@
   window.onload = function() {
     document.body.className += " loaded";
     var body = $("body");
-    if (body.hasClass("home") || body.hasClass("category") || body.hasClass("search-results")) {
+    if (body.hasClass("home") || body.hasClass("category") || body.hasClass("search-results") || body.hasClass("archive")) {
       // console.log("case1: all masonary")
       /* establish masonary grid */
       $grid = $('#grid').masonry({

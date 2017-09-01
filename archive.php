@@ -8,10 +8,12 @@ elseif ( is_year() ) { printf( __( 'Yearly Archives: %s', 'missguided' ), get_th
 else { _e( 'Archives', 'missguided' ); }
 ?></h1>
 </header>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'entry' ); ?>
-<?php endwhile; endif; ?>
+<section id="grid">
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  <?php get_template_part( 'entry-summary' ); ?>
+  <?php endwhile; endif; ?>
+</section>
 <?php get_template_part( 'nav', 'below' ); ?>
 </section>
-<?php get_sidebar(); ?>
+<!-- < ?php get_search_form(); ?> -->
 <?php get_footer(); ?>

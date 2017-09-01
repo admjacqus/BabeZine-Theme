@@ -3,10 +3,13 @@
 <header class="header">
 <h1 class="entry-title"><?php _e( 'Tag Archives: ', 'missguided' ); ?><?php single_tag_title(); ?></h1>
 </header>
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-<?php get_template_part( 'entry' ); ?>
-<?php endwhile; endif; ?>
+<section id="grid">
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+  <?php get_template_part( 'entry-summary' ); ?>
+  <?php endwhile; endif; ?>
+</section>
+<!-- < ?php get_search_form(); ?> -->
 <?php get_template_part( 'nav', 'below' ); ?>
 </section>
-<?php get_sidebar(); ?>
+<!-- < ?php get_sidebar(); ?> -->
 <?php get_footer(); ?>
