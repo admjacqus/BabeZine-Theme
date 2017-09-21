@@ -409,7 +409,7 @@ body.single {
     body.single .entry-content h1, body.single .entry-content h2, body.single .entry-content h3, body.single .entry-content h4, body.single .entry-content h5, body.single .entry-content h6, body.single .entry-content p {
       margin: 1rem auto; }
     body.single .entry-content img {
-      height: auto;
+      width: auto;
       max-width: 100%;
       max-height: 90vh;
       margin: 2rem auto; }
