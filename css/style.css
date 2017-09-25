@@ -333,6 +333,9 @@ body.home #container, body.category #container, body.search #container, body.arc
         height: auto; }
     body.home #container #grid .item-2, body.category #container #grid .item-2, body.search #container #grid .item-2, body.archive #container #grid .item-2 {
       width: 63%; }
+      body.home #container #grid .item-2 .title, body.category #container #grid .item-2 .title, body.search #container #grid .item-2 .title, body.archive #container #grid .item-2 .title {
+        font-size: 35px;
+        margin: 50px 0 30px; }
   body.home #container .title-container, body.category #container .title-container, body.search #container .title-container, body.archive #container .title-container {
     position: fixed;
     top: 50%;
@@ -396,16 +399,6 @@ body.single {
       cursor: default;
       width: 80%;
       margin: 0 auto; }
-    body.single .entry-content img .alignnone {
-      margin: 50px -0.1rem;
-      /*max-height: 90vh;*/
-      /*width: auto; */ }
-    body.single .entry-content img .alignleft {
-      float: left;
-      margin: 0 25px 0 0; }
-    body.single .entry-content img .alignright {
-      float: right;
-      margin: 0 0 0 25px; }
     body.single .entry-content h1, body.single .entry-content h2, body.single .entry-content h3, body.single .entry-content h4, body.single .entry-content h5, body.single .entry-content h6, body.single .entry-content p {
       margin: 1rem auto; }
     body.single .entry-content img {
@@ -483,7 +476,7 @@ body.single {
   body.single #related_posts .relatedcontent .title {
     font-size: 18px;
     width: 95%;
-    margin: 1rem auto 1rem; }
+    margin: 1rem auto; }
     body.single #related_posts .relatedcontent .title a {
       text-transform: lowercase; }
   body.single #related_posts .relatedthumb img {
@@ -583,15 +576,19 @@ span.load-more {
   height: 30px;
   display: block; }
 
-@media only screen and (min-width: 769px) {
-  #categories {
-    max-height: 8em; }
-  #hero .title {
-    font-size: 30px;
-    margin: 1.5rem 0; }
-  body.home #grid .item-2 .title, body.category #grid .item-2 .title, body.search #grid .item-2 .title {
-    font-size: 35px;
-    margin: 50px 0 30px; } }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  .totop {
+    bottom: 36px; }
+  body.home #container .subtitle, body.category #container .subtitle, body.search #container .subtitle, body.archive #container .subtitle {
+    width: 100%; }
+  body.home #container #grid .item-2, body.category #container #grid .item-2, body.search #container #grid .item-2, body.archive #container #grid .item-2 {
+    width: 55%;
+    margin: 5%; }
+    body.home #container #grid .item-2 .title, body.category #container #grid .item-2 .title, body.search #container #grid .item-2 .title, body.archive #container #grid .item-2 .title {
+      font-size: 24px;
+      margin: 30px 0 20px; }
+  body.home #container .title-container .subtitle, body.category #container .title-container .subtitle, body.search #container .title-container .subtitle, body.archive #container .title-container .subtitle {
+    font-size: 70px; } }
 
 /*all mob to ipad*/
 @media only screen and (max-width: 767px) {
@@ -624,7 +621,12 @@ span.load-more {
     border-bottom: none; }
   body.home #container #grid .item, body.home #container #grid .item-2, body.category #container #grid .item, body.category #container #grid .item-2, body.search #container #grid .item, body.search #container #grid .item-2 {
     width: 90%;
-    margin: 5% 5% 15%; } }
+    margin: 5% 5% 15%; }
+  body.single .entry-content img {
+    width: auto;
+    max-width: auto;
+    height: auto;
+    margin: 2rem auto; } }
 
 @media only screen and (min-device-width: 769px) and (max-device-width: 1024px) {
   #menu-main-menu {
@@ -635,17 +637,13 @@ span.load-more {
     font-size: 14px; }
   #menu-main-menu {
     padding: 10px; }
-  body.single article header {
-    margin: 10px 0; }
-    body.single article header .entry-title {
-      font-size: 30px; }
+  body.single article header .entry-title {
+    font-size: 30px; }
   body.single article .entry-content p, body.single article .entry-content span {
     font-size: 12px;
     line-height: 1.5;
     letter-spacing: 0.075rem;
-    margin-bottom: 12px; }
-  body.single article .entry-content a > strong {
-    margin: 30px 100px; } }
+    margin-bottom: 12px; } }
 
 @media only screen and (min-device-width: 10px) and (max-device-width: 425px) {
   .navbar .navigation ul h5 {
