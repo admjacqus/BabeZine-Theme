@@ -82,11 +82,17 @@ if ( ! isset( $content_width ) ) {
 }
 add_action( 'widgets_init', 'mg_widgets_init' );
 
+//updating
+require 'plugin-update-checker-master/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://static.missguided.co.uk/media/upload/BabeZine/babeZine_updater.json',
+	__FILE__,
+	'missguided'
+);
+
 /**
  * Include and setup custom metaboxes and fields. (make sure you copy this file to outside the CMB2 directory)
  *
- * Be sure to replace all instances of 'wp_' with your project's prefix.
- * https://nacin.com/2010/05/11/in-wordpress-prefix-everything/
  *
  * @category Missguided
  * @package  mg_CMB2
@@ -97,12 +103,6 @@ add_action( 'widgets_init', 'mg_widgets_init' );
 /**
  * Get the bootstrap! If using the plugin from wordpress.org, REMOVE THIS!
  */
-
-// if ( file_exists( dirname( __FILE__ ) . '/cmb2/init.php' ) ) {
-// 	require_once dirname( __FILE__ ) . '/cmb2/init.php';
-// } elseif ( file_exists( dirname( __FILE__ ) . '/CMB2/init.php' ) ) {
-// 	require_once dirname( __FILE__ ) . '/CMB2/init.php';
-// }
 
 add_action( 'cmb2_admin_init', 'wp_register_repeatable_group_field_metabox' );
 /**
