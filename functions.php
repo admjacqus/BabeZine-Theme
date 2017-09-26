@@ -82,14 +82,6 @@ if ( ! isset( $content_width ) ) {
 }
 add_action( 'widgets_init', 'mg_widgets_init' );
 
-//updating
-require 'plugin-update-checker-master/plugin-update-checker.php';
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://static.missguided.co.uk/media/upload/BabeZine/babeZine_updater.json',
-	__FILE__,
-	'missguided'
-);
-
 /**
  * Include and setup custom metaboxes and fields. (make sure you copy this file to outside the CMB2 directory)
  *
