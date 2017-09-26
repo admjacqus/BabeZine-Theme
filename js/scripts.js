@@ -35,13 +35,10 @@
       });
       // bind event
       $grid.masonry('on', 'layoutComplete', function() {
-
-        $grid.imagesLoaded().done( function() {
-            // console.log('all images successfully loaded');
-            body.addClass("imgLoaded");
-          });
-
-
+      });
+      $grid.imagesLoaded().done( function() {
+          // console.log('all images successfully loaded');
+          body.addClass("imgLoaded");
       });
       // trigger initial layout
       $grid.masonry();
