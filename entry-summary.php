@@ -3,7 +3,7 @@
                       <?php if( get_field('bz_image') ){ ?>
                       <img src="<?php the_field('bz_image');?>" />
                         <?php } else { ?>
-                            <div class="thumbnail fadein"><?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?></div>
+                            <div class="thumbnail"><?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?></div>
                             <?php } ?>
                 <h2 class="title"><?php the_title(); ?></h2>
                 <h4 class="subtitle">

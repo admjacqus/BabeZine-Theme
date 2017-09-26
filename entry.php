@@ -11,7 +11,7 @@
 
                           <?php }else{?>
                             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
-                              <div class="thumbnail fadein"><?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?></div>
+                              <div class="thumbnail"><?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?></div>
                               <?php if ( is_singular() ) { echo '<h1 class="entry-title">'; } else { echo '<h2 class="entry-title">'; } ?>
                                 <?php the_title(); ?>
                                 <?php if ( is_singular() ) { echo '</h1>'; } else { echo '</h2>'; } ?>

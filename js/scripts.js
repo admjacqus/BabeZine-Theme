@@ -21,7 +21,6 @@
   }
 
   window.onload = function() {
-    document.body.className += " loaded";
     var body = $("body");
     if (body.hasClass("home") || body.hasClass("category") || body.hasClass("search-results") || body.hasClass("archive")) {
       // console.log("case1: all masonary")
@@ -36,8 +35,13 @@
       });
       // bind event
       $grid.masonry('on', 'layoutComplete', function() {
-        // console.log('layout is complete');
-        document.body.className += " loaded";
+
+        $grid.imagesLoaded().done( function() {
+            // console.log('all images successfully loaded');
+            body.addClass("imgLoaded");
+          });
+
+
       });
       // trigger initial layout
       $grid.masonry();
