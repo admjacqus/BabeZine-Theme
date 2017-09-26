@@ -16,7 +16,9 @@
                 <?php if( get_field('bz_button') ){ ?>
                 <button class="cta"><?php the_field('bz_button'); ?></button>
                   <?php } else { ?>
+                    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
                       <button class="cta">check it out</button>
+                    </a>
                       <?php } ?>
               </a>
             </div>
