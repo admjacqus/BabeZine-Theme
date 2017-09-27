@@ -82,86 +82,9 @@ if ( ! isset( $content_width ) ) {
 }
 add_action( 'widgets_init', 'mg_widgets_init' );
 
-/**
- * Include and setup custom metaboxes and fields. (make sure you copy this file to outside the CMB2 directory)
- *
- *
- * @category Missguided
- * @package  mg_CMB2
- * @license  https://www.opensource.org/licenses/gpl-license.php GPL v2.0 (or later)
- * @link     https://github.com/WebDevStudios/CMB2
- */
+//inlcude custom shortcodes
+include(WP_CONTENT_DIR . '/custom_shortcodes.php');
 
-/**
- * Get the bootstrap! If using the plugin from wordpress.org, REMOVE THIS!
- */
+add_shortcode( 'product', 'product_func' );
 
-add_action( 'cmb2_admin_init', 'wp_register_repeatable_group_field_metabox' );
-/**
- * Hook in and add a metabox to demonstrate repeatable grouped fields
- */
-function wp_register_repeatable_group_field_metabox() {
-	// removed prefix on all ids below $prefix = 'wp_group_';
-
-	/**
-	 * Repeatable Field Groups
-	 */
-	$cmb_group = new_cmb2_box( array(
-		//'id'           => $prefix . 'metabox',
-		'id'           => 'product_metabox',
-		'title'        => esc_html__( 'Realted product group', 'cmb2' ),
-		'object_types' => array( 'page', 'post' ),
-	) );
-
-	// $group_field_id is the field id string, so in this case: $prefix . 'demo'
-	$group_field_id = $cmb_group->add_field( array(
-		//'id'          => $prefix . 'demo',
-		'id'          => 'product_group',
-		'type'        => 'group',
-		//'description' => esc_html__( 'Generates reusable form entries', 'cmb2' ),
-		'description' => esc_html__( 'Add related products below, rearranage order by dragging.', 'cmb2' ),
-		'options'     => array(
-			'group_title'   => esc_html__( 'Product {#}', 'cmb2' ), // {#} gets replaced by row number
-			'add_button'    => esc_html__( 'Add Another Product', 'cmb2' ),
-			'remove_button' => esc_html__( 'Remove Product', 'cmb2' ),
-			'sortable'      => true, // beta
-			// 'closed'     => true, // true to have the groups closed by default
-		),
-	) );
-
-	/**
-	 * Group fields works the same, except ids only need
-	 * to be unique to the group. Prefix is not needed.
-	 *
-	 * The parent field's id needs to be passed as the first argument.
-	 */
-	$cmb_group->add_group_field( $group_field_id, array(
-		'name'       => esc_html__( 'Product Title', 'cmb2' ),
-		'id'         => 'title',
-		'type'       => 'text',
-		// 'repeatable' => true, // Repeatable fields are supported w/in repeatable groups (for most types)
-	) );
-
-	$cmb_group->add_group_field( $group_field_id, array(
-		'name' => esc_html__( 'Product Image', 'cmb2' ),
-		'id'   => 'image',
-		'type' => 'file',
-	) );
-
-	$cmb_group->add_group_field( $group_field_id, array(
-		'name' => esc_html__( 'Price', 'cmb2' ),
-		'desc' => esc_html__( 'price with &pound;, incl .00. eg: 20.00', 'cmb2' ),
-		'id'   => 'price',
-		'type' => 'text_money',
-		'before_field' => '&pound;', // override '$' symbol if needed
-		// 'repeatable' => true,
-	) );
-
-	$cmb_group->add_group_field( $group_field_id, array(
-		'name' => esc_html__( 'Product URL', 'cmb2' ),
-		'id'   => 'link',
-		'type' => 'text_url',
-	) );
-
-}
 ?>
