@@ -2,6 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
+<meta name="theme-color" content="#ffffff"/>
 <meta name="viewport" content="width=device-width" />
 <?php wp_head(); ?>
 <title><?php wp_title(''); ?></title>
