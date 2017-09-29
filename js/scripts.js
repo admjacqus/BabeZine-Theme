@@ -135,4 +135,34 @@
     }
   });
 
-})(jQuery);
+   $(window).scroll(function () {
+     if ($(this).scrollTop() > ($(document).height() / 5) * 3 && $(window).width() > 1180) {
+       $('.float--left, .float--right').css('visibility', 'visible');
+       $('.float--left, .float--right').css('opacity', '1');
+       $('.float--left').css('left', '0');
+       $('.float--right').css('right', '0')
+     } else {
+       $('.float--left, .float--right').css('visibility', 'hidden')
+       $('.float--left, .float--right').css('opacity', '0')
+     }
+   });
+
+   $(window).resize(function () {
+     if ($(window).width() < 1180) {
+       $('.float--left, .float--right').css('opacity', '0')
+       $('.float--left, .float--right').css('visibility', 'hidden')
+     } else if ($(this).scrollTop() > ($(document).height() / 5) * 3) {
+       $('.float--left, .float--right').css('visibility', 'visible')
+       $('.float--left, .float--right').css('opacity', '1')
+     }
+   });
+
+   if ($(window).width() < 1180) {
+     $('.float--left').css('opacity', '0');
+     $('.float--left').css('visibility', 'hidden')
+     console.log("less that 1280");
+   }
+
+
+
+   })(jQuery);
