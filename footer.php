@@ -5,7 +5,6 @@
 <footer class="footer">
 <?php
 if ( is_single() ) :
-	get_footer( 'shop' );
 	get_footer( 'related' );
 else :
 	wp_footer();

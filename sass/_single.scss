@@ -74,7 +74,9 @@ body.single {
     }
 
     img {
-      width: initial;
+      width: auto;
+      height: auto;
+      max-width: 100%;
       max-height: 90vh;
       margin: 2rem auto;
     }
@@ -159,29 +161,6 @@ body.single {
   footer.footer {
     margin: 0 auto 50px;
     max-width: 960px;
-
-    .widget-title {}
-
-    .related_product {
-      text-align: center;
-    }
-
-    img .prod-img {
-      width: 100%;
-    }
-
-    .product_price,
-    .product_title {
-      font-size: 0.7rem;
-    }
-
-    .product_title {
-      font-size: 1.4em;
-    }
-
-    .product_price:before {
-      content: "£";
-    }
   }
 
 #related_posts {
@@ -191,7 +170,7 @@ body.single {
     .relatedcontent {
       .title {
         font-size: 18px;
-        width: 95%;
+        width: 100%;
         margin: 1rem auto 1rem;
         a {
           text-transform: lowercase;
