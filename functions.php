@@ -5,7 +5,7 @@ function my_assets() {
 	wp_enqueue_script( 'twitter', 'https://platform.twitter.com/widgets.js', array(), '1', true);
 	wp_enqueue_script( 'infinte', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-infinitescroll/2.0b2.120519/jquery.infinitescroll.min.js', array( 'jquery' ), '1', true );
 	wp_enqueue_script( 'masonry', array('jquery'), null, true);
-	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.js', array(), '5.3' , true);
+	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.js', array(), '5.31' , true);
 }
 add_action( 'wp_enqueue_scripts', 'my_assets' );
 
@@ -83,7 +83,7 @@ if ( ! isset( $content_width ) ) {
 add_action( 'widgets_init', 'mg_widgets_init' );
 
 //inlcude custom shortcodes
-include(WP_CONTENT_DIR . '/custom_shortcodes.php');
+include_once(WP_CONTENT_DIR . '/custom_shortcodes.php');
 
 add_shortcode( 'product', 'product_func' );
 
