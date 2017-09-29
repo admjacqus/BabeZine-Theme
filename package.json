@@ -1,0 +1,23 @@
+{
+  "name": "babezine",
+  "version": "1.0.0",
+  "description": "merge ContentHub and Blog homepage.",
+  "main": "index.js",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-sass": "^3.1.0",
+    "sass": "^1.0.0-beta.2"
+  },
+  "scripts": {
+    "start": "gulp",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "/"
+  },
+  "author": "adam.jacques",
+  "license": "ISC"
+}

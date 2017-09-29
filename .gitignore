@@ -1,7 +1,4 @@
 node_modules/
-package.json
-gulpfile.js
 npm-debug.log
 .DS_Store
-
-/sass
+/css

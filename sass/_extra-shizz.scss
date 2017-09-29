@@ -1,0 +1,86 @@
+
+.embed-responsive {
+  margin-bottom: 3rem;
+}
+/*search/archive/tag*/
+body.archive,
+body.search,
+body.tag {
+  .header {
+    margin-bottom: 50px;
+
+    .entry-title {
+      text-align: center;
+      text-transform: lowercase;
+    }
+  }
+}
+/*404*/
+body.error404,
+body.search-no-results {
+  .title-container {
+    top: 70%;
+    opacity: 0.25;
+  }
+
+  header.header {
+    margin-top: 50px;
+  }
+
+  .entry-content p,
+  .entry-title {
+    text-align: center;
+  }
+}
+
+#searchform {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  min-width: 370px;
+  max-width: 500px;
+}
+
+#searchform .screen-reader-text {
+  display: none;
+}
+
+#s {
+  float: left;
+  font-size: 1rem;
+  padding: 10px;
+  border: none;
+  background: #fff;
+  width: 70%;
+}
+
+input#searchsubmit {
+  @extend .button;
+  margin: 0;
+}
+
+//imagesLoaded
+.item {
+  opacity: 0;
+  transition: opacity ease 300ms;
+}
+body.imgLoaded {
+  .item {
+    opacity: 1;
+  }
+}
+
+// shit dflt video player
+.mejs-container * {
+    color: white;
+}
+.mejs-container, .mejs-container .mejs-controls, .mejs-embed, .mejs-embed body {
+  background: #424242!important;
+}
+.wp-playlist .mejs-controls .mejs-button button {
+  outline: 0;
+  min-width: 1px;
+}
+.mejs-controls .mejs-time-rail .mejs-time-current {
+  background: darken($background-colour, 5)!important;
+}

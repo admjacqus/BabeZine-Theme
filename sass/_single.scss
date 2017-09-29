@@ -1,0 +1,210 @@
+// relative to post
+body.single {
+  text-align: center;
+  #container {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  article {
+    padding: 2em 0 0 1em;
+    header {
+      position: relative;
+      text-align: center;
+      margin: 0 auto;
+      max-width: 700px;
+
+      .entry-title {
+        font-size: 4em;
+        text-transform: lowercase;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+        word-wrap: break-word;
+        margin-bottom: 0.5em;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .entry-footer {
+    margin-bottom: 2em;
+  }
+
+  .entry-content {
+    .addtoany_share_save_container {
+      margin: 3em 0;
+    }
+
+    .column {
+      margin-bottom: 70px;
+      height: 100%;
+      display: inline-block;
+    }
+    .wp-caption {
+      max-width: 90vw;
+      margin: 0 auto 1em;
+    }
+
+    p {
+      font-size: 1.16em;
+      line-height: 1.7em;
+      margin-bottom: 1em;
+      height: auto;
+      display: block;
+      color: $font-colour;
+      cursor: default;
+      width: 80%;
+      margin: 0 auto;
+      &.wp-caption-text {
+        margin: -2em auto 1em;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      margin: 1rem auto;
+    }
+
+    img {
+      width: initial;
+      max-height: 90vh;
+      margin: 2rem auto;
+    }
+
+    img .attachment-post-thumbnail {
+      width: 100%;
+      height: auto;
+      padding: 0;
+    }
+
+    // assisted by jQuery
+    p > a { border-bottom: 1.5px solid $font-colour; }
+    .contains-image { border: none; }
+
+    iframe {
+      max-width: 100%;
+      // height: auto;
+      margin: 1em auto 0;
+    }
+    .product {
+        max-width: 230px;
+        display: inline-flex;
+        margin: .5em 0 2em;
+        padding: 1em .5em;
+        @extend .transition;
+        &:hover {
+          background: lighten($background-colour, 5);
+        }
+        img {
+          margin: 0;
+          width: 95%;
+          height: auto;
+          max-width: 270px;
+        }
+        p {
+          font-size: 1em;
+          display: block;
+          width: 100%;
+          margin: 0;
+          cursor: auto;
+          &:nth-child(2){
+            font-size: 1em;
+            line-height: 1.5em;
+            width: 90%;
+            margin: 1em auto .5em;
+          }
+        }
+    }
+    .sale {
+      span {
+        margin: 0 5px;
+        color: #ff5f89;
+      }
+      span:nth-child(1) {
+        color: $font-colour;
+        text-decoration: line-through;
+      }
+    }
+    .oos {
+      // display: inline-block;
+      // padding: 30px 10px;
+      display: none;
+    }
+  }
+
+  .flex_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      flex: 0 0 200px;
+      padding: 10px;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  footer.footer {
+    margin: 0 auto 50px;
+    max-width: 960px;
+
+    .widget-title {}
+
+    .related_product {
+      text-align: center;
+    }
+
+    img .prod-img {
+      width: 100%;
+    }
+
+    .product_price,
+    .product_title {
+      font-size: 0.7rem;
+    }
+
+    .product_title {
+      font-size: 1.4em;
+    }
+
+    .product_price:before {
+      content: "£";
+    }
+  }
+
+  #related_posts {
+    .relatedcontent {
+      .title {
+        font-size: 1.5em;
+        margin: 0.75em;
+        a {
+          text-transform: lowercase;
+        }
+      }
+    }
+    .relatedthumb img {
+      width: 100%;
+      height: auto;
+    }
+    button.cta {
+      margin: 1rem 0;
+    }
+  }
+
+  #comments {
+    display: none;
+  }
+}
