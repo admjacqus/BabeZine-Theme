@@ -31,15 +31,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, li {
   font-family: 'Missguided';
   color: $font-colour;
   font-weight: 300;
-
-  -webkit-user-select: none;
-  /* Chrome all / Safari all */
-  -moz-user-select: none;
-  /* Firefox all */
-  -ms-user-select: none;
-  /* IE 10+ */
-  user-select: none;
-  /* Likely future */
+  cursor: default;
   text-transform: initial;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -49,6 +41,7 @@ h1, h2, h3, h4, h5, h6, p, a, span, li {
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
   &:active, &:focus, &:hover {
     color: $font-colour;
