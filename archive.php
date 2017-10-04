@@ -13,7 +13,5 @@ else { _e( 'Archives', 'missguided' ); }
   <?php get_template_part( 'entry-summary' ); ?>
   <?php endwhile; endif; ?>
 </section>
-<?php get_template_part( 'nav', 'below' ); ?>
 </section>
-<!-- < ?php get_search_form(); ?> -->
 <?php get_footer(); ?>
