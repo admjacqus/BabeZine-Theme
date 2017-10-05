@@ -14,9 +14,9 @@
   function setOpacity() {
     fixed = $(".title-container");
     if ($(window).scrollTop() > hero.offset().top * 1.5) {
-      fixed.css("opacity", "0.25");
+      fixed.css("opacity", "0.2");
     } else {
-      fixed.css("opacity", "0.5");
+      fixed.css("opacity", "0.4");
     }
   }
 
@@ -39,6 +39,7 @@
       $grid.imagesLoaded().done( function() {
           // console.log('all images successfully loaded');
           body.addClass("imgLoaded");
+          setTimeout(function(){ $('.navigation').addClass('hide'); }, 2000);
       });
       // trigger initial layout
       $grid.masonry();
@@ -116,6 +117,7 @@
     } else if (body.hasClass("single")) {
       $('body.single #content .entry-content p:has(iframe)').css('width', '100%');
       $('img').parent('a').addClass('contains-image');
+      setTimeout(function(){ $('.navigation').addClass('hide'); }, 2000);
     }
   };
 
@@ -160,8 +162,11 @@
    if ($(window).width() < 1180) {
      $('.float--left').css('opacity', '0');
      $('.float--left').css('visibility', 'hidden');
-     console.log("less that 1280");
+    //  console.log("less that 1280");
    }
+
+
+$(window).on({ 'touchstart' : function(){ $('.navigation').removeClass('hide'); } });
 
 
 

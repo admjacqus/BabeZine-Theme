@@ -11,6 +11,9 @@ body {
   margin: 0;
   font-size: 12px;
   letter-spacing: 1px;
+  .user-is-touching {
+    background-color: blue;
+  }
 }
 
 #wrapper {
@@ -204,6 +207,8 @@ a.fasc-button {
   .navigation{
     background: white;
     width: 100%;
+    height: 60px;
+    transition: height ease 300ms;
     ul {
       max-width: 600px;
       display: flex;
@@ -226,6 +231,14 @@ a.fasc-button {
             }
         }
       }
+      &.hide {
+        // display: none;
+        height: 10px;
+        overflow: hidden;
+        &:hover {
+          height: 60px;
+        }
+        }
     }
 }
 

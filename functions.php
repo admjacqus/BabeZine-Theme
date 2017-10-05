@@ -12,7 +12,7 @@ add_action('init', 'replace_jquery');
 
 function my_assets() {
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css', false, filemtime(get_stylesheet_directory() . '/css/style.css'));
-	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.js', array(), '5.3111' , true);
+	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.js', array(), '5.41322' , true);
 
 if ( is_single() ) {
 	wp_enqueue_script( 'twitter', 'https://platform.twitter.com/widgets.js', array(), '1', true);

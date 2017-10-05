@@ -1,11 +1,43 @@
 // 13" macs + lappys
-@media only screen and (min-width: 1140px) {}
+@media only screen and (max-width: 1280px) and (min-width: 900px) {
+  .navbar {
+    .navigation {
+      height: 50px;
+      ul h5 {
+        font-size: 1em;
+        margin: .5em 0;
+      }
+    &.hide {
+      // display: none;
+      height: 10px;
+      overflow: hidden;
+      &:hover {
+        height: 50px;
+      }
+
+      }
+  }
+}
+#categories {
+  max-width: 768px;
+}
+  body.home, body.category, body.search, body.archive {
+    #container {
+      .title-container{
+        max-width: 768px;
+      }
+      #hero {
+    padding: 0 22.5vw;
+      }
+    }
+  }
+
+}
 // iPad in portrait
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
   #categories {
     width: 90%;
   }
-
   body.archive,
   body.home,
   body.search {
@@ -42,16 +74,23 @@
 
       .title-container {
         .subtitle {
-          font-size: 70px;
+          font-size: 5em;
         }
       }
     }
   }
-
-  .navbar .navigation ul h5 {
-    font-size: 14px;
+  .navbar {
+    .navigation {
+      height: 50px;
+      ul h5 {
+        font-size: 1em;
+        margin: .5em 0;
+      }
+      &.hide {
+        height: 50px;
   }
-
+}
+}
   body.category,
   body.home,
   body.search {
@@ -99,6 +138,15 @@
 }
 /*all mob to ipad*/
 @media only screen and (max-width: 767px) {
+  .navbar .navigation {
+        height: 100%;
+          &.hide {
+              height: 100%;
+            }
+            ul h5 {
+              font-size: 1em;
+            }
+    }
   #menu-main-menu {
     padding: 20px 0 20px 30px;
     white-space: nowrap;
@@ -176,19 +224,10 @@
   }
 }
 @media only screen and (min-device-width: 426px) and (max-device-width: 767px) {
-  .navbar {
-    .navigation {
-      ul {
-        h5 {
-          font-size: 1em;
-        }
-      }
-    }
-
     #categories {
       padding: 0;
     }
-  }
+
 
   body.single {
     article {
