@@ -1,4 +1,6 @@
 (function($) {
+  $('img').parent('a').addClass('contains-image');
+  
   var fixed = $(".title-container"),
     hero = $("#hero"),
     heroImg = $("#hero img");
@@ -116,7 +118,6 @@
 
     } else if (body.hasClass("single")) {
       $('body.single #content .entry-content p:has(iframe)').css('width', '100%');
-      $('img').parent('a').addClass('contains-image');
       setTimeout(function(){ $('.navigation').addClass('hide'); }, 2000);
     }
   };
