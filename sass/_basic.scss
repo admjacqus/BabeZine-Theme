@@ -220,6 +220,7 @@ a.fasc-button {
           text-transform: lowercase;
           padding: 4px;
           margin: 1em 0;
+          cursor: pointer;
             &:hover {
               border-bottom: 1.5px solid darken($background-colour,5%);;
             }

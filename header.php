@@ -34,7 +34,7 @@
 <div class="navigation">
 	<ul>
 		<li>
-			<a href="https://www.missguided.co.uk/blog"><h5>back to babe zine</h5></a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><h5>back to babe zine</h5></a>
 		</li>
 		<li>
 			<a href="https://www.missguided.co.uk/"><h5>shop missguided</h5></a>
