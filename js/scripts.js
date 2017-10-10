@@ -1,6 +1,6 @@
 (function($) {
   $('img').parent('a').addClass('contains-image');
-  
+
   var fixed = $(".title-container"),
     hero = $("#hero"),
     heroImg = $("#hero img");
@@ -30,7 +30,7 @@
       $grid = $('#grid').masonry({
         initLayout: false,
         itemSelector: '.item',
-        columnWidth: '.item',
+        columnWidth: '.item:not(.item-2)',
         percentPosition: true,
         horizontalOrder: true,
         stagger: 100
@@ -118,6 +118,7 @@
 
     } else if (body.hasClass("single")) {
       $('body.single #content .entry-content p:has(iframe)').css('width', '100%');
+      $('iframe').wrap('<div class="aspect-ratio" />');
       setTimeout(function(){ $('.navigation').addClass('hide'); }, 2000);
     }
   };

@@ -209,12 +209,6 @@
       .addtoany_share_save_container {
         margin: 2em 0 1em;
       }
-
-      iframe {
-        max-width: 100%;
-        height: auto;
-        margin: 1em auto 0;
-      }
     }
   }
 }
@@ -318,7 +312,10 @@
     }
 
     .entry-content {
-      h1, h2 {
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
         font-size: 1.5em;
       }
       h3, h4 {
