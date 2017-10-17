@@ -25,7 +25,6 @@
   window.onload = function() {
     var body = $("body");
     if (body.hasClass("home") || body.hasClass("category") || body.hasClass("search-results") || body.hasClass("archive")) {
-      // console.log("case1: all masonary")
       /* establish masonary grid */
       $grid = $('#grid').masonry({
         initLayout: false,
@@ -41,7 +40,7 @@
       $grid.imagesLoaded().done( function() {
           // console.log('all images successfully loaded');
           body.addClass("imgLoaded");
-          setTimeout(function(){ $('.navigation').addClass('hide'); }, 2000);
+          // setTimeout(function(){ $('.navigation').addClass('hide'); }, 2000);
       });
       // trigger initial layout
       $grid.masonry();
@@ -82,21 +81,16 @@
 
         });
 
-
-
     }
     if (body.hasClass("search") || body.hasClass("category")) {
-      //  console.log("case2: set height only")
       setHeight();
 
       $(window).on('resize orientationchange', setHeight);
 
       if (body.hasClass("category")) {
-        //  console.log("case2.1: hide grad")
         var menu = $("#menu-main-menu"),
         currentItem = $("#menu-main-menu li.current-menu-item"),
           last = $("#menu-main-menu li").last();
-          // console.log(last.offset().left);
         if (last.hasClass("current-menu-item")) {
           $(".grad").animate({
             opacity: "0"
@@ -119,7 +113,7 @@
     } else if (body.hasClass("single")) {
       $('body.single #content .entry-content p:has(iframe)').css('width', '100%');
       $('iframe').wrap('<div class="aspect-ratio" />');
-      setTimeout(function(){ $('.navigation').addClass('hide'); }, 2000);
+      // setTimeout(function(){ $('.navigation').addClass('hide'); }, 2000);
     }
   };
 
@@ -164,12 +158,6 @@
    if ($(window).width() < 1180) {
      $('.float--left').css('opacity', '0');
      $('.float--left').css('visibility', 'hidden');
-    //  console.log("less that 1280");
    }
-
-
-$(window).on({ 'touchstart' : function(){ $('.navigation').removeClass('hide'); } });
-
-
 
    })(jQuery);

@@ -12,7 +12,7 @@ add_action('init', 'replace_jquery');
 
 function my_assets() {
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css', false, filemtime(get_stylesheet_directory() . '/css/style.css'));
-	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.js', array(), '6.1' , true);
+	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.js', array(), '6.2' , true);
 
 if ( is_single() ) {
 	wp_enqueue_script( 'twitter', 'https://platform.twitter.com/widgets.js', array(), '1', true);
@@ -98,15 +98,18 @@ if ( ! isset( $content_width ) ) {
 }
 add_action( 'widgets_init', 'mg_widgets_init' );
 
-//inlcude custom shortcodes
-
-if (!is_admin()) {
-	include(WP_CONTENT_DIR . '/custom_shortcodes.php');
-	add_shortcode( 'product', 'product_func' );
-
-} else {
-	//which can also remove
-	remove_shortcode( 'product' );
+//inlcude custom shortcodes, but not on admin
+function product_short() {
+	if (!is_admin()) {
+		// comment out the next two lines to load the local copy of jQuery
+		include(WP_CONTENT_DIR . '/custom_shortcodes.php');
+		add_shortcode( 'product', 'product_func' );
+	} else {
+		//which can also remove
+		remove_shortcode( 'product' );
+	}
 }
+add_action('init', 'product_short');
+
 
 ?>
