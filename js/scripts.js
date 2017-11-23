@@ -111,7 +111,7 @@
       $(window).on('scroll', setOpacity);
 
     } else if (body.hasClass("single")) {
-      $('body.single #content .entry-content p:has(iframe))').css('width', '100%');
+      $('body.single #content .entry-content p').css('width', '100%');
       $('iframe:not(iframe.instagram-media)').wrap('<div class="aspect-ratio" />');
       // setTimeout(function(){ $('.navigation').addClass('hide'); }, 2000);
     }
