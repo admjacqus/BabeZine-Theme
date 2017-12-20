@@ -1,62 +1,50 @@
-
-body.home, body.category, body.search, body.archive {
-  #container{
+body:not(.single) {
+  #content {
     position: relative;
     max-width: 960px;
     width: 100%;
-    padding-left: 0;
     margin: 0 auto;
-    list-style: none;
-  .title {
-    font-size: 1.8em;
-    text-transform: lowercase;
-    word-wrap: break-word;
-    font-weight: normal;
-  }
-  .subtitle {
-    font-size: 1.16em;
-    text-transform: lowercase;
-    text-transform: none;
-    width: 80%;
-    margin: 0 auto;
-  }
-
-#hero {
-    padding: 0 25%;
-    margin-bottom: 3em;
     text-align: center;
-        img {
-          display:block;
-          margin: 0 auto;
-          width: 100%;
-          height: auto;
+  }
+  #hero {
+    margin: 0 25% 3em;
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      height: auto;
     }
   }
-
-#grid {
-  width: 95%;
-  margin: 0 auto;
-  z-index: 2;
+  #grid {
+    width: 95%;
+    margin: 0 auto;
+    z-index: 2;
     .item {
-      width:30%;
+      width: 30%;
       height: auto;
-      margin: 1.5%;
-      text-align: center;
-      margin-bottom: 5%;
+      margin: 0 1.5% 5%;
       border: none;
       padding: 0px;
       -webkit-box-shadow: none;
       box-shadow: none;
-        img {
-          width: 100%;
-          height: auto;
-        }
+      img {
+        width: 100%;
+        height: auto;
       }
+    }
     .item-2 {
-    width: 63%;
+      width: 60%;
+      margin: 0 3% 5%;
       .title {
-          font-size: 2.5em;
+        font-size: 300%;
       }
+    }
+    .title {
+      text-transform: lowercase;
+      margin-bottom: .5em;
+    }
+    .subtitle{
+      margin: 0;
     }
   }
   .title-container {
@@ -69,21 +57,20 @@ body.home, body.category, body.search, body.archive {
     color: #fff;
     text-align: center;
     z-index: 1;
-    pointer-events: none;
-    // causing the issue on samsung chrome and native
-    // mix-blend-mode: soft-light;
-    opacity: 0.3;
+    pointer-events: none; // causing the issue on samsung chrome and native
+    mix-blend-mode: soft-light; // opacity: 0.8;
     @extend .transition;
-  .subtitle {
-    text-transform: uppercase;
-    font-size: 7.5em;
-    color: #fff;
+    .subtitle {
+      text-transform: uppercase;
+      font-size: 7.5em;
+      color: #fff;
+      margin: 0;
+    }
   }
 }
-}
-}
+
 body.home {
   .title-container {
-    opacity: 0.3;
+    // opacity: 0.3;
   }
 }

@@ -21,7 +21,7 @@
 
   <li><a href="<?php the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>"><div class="relatedthumb"><?php the_post_thumbnail(); ?></div>
   <div class="relatedcontent">
-  <h2 class="title"><?php the_title(); ?></h3>
+  <h4 class="title"><?php the_title(); ?></h4>
   </div>
   <?php if( get_field('bz_button') ){ ?>
   <button class="cta"><?php the_field('bz_button'); ?></button>

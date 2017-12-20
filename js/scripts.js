@@ -1,6 +1,7 @@
 (function($) {
   $('img').parent('a').addClass('contains-image');
 
+
   var fixed = $(".title-container"),
     hero = $("#hero"),
     heroImg = $("#hero img");

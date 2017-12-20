@@ -17,24 +17,22 @@ body {
 }
 
 #wrapper {
-  overflow:hidden;
-}
-/* Fonts & Typography */
-@font-face {
-    font-family: 'Missguided';
-    src: url('https://static.missguided.co.uk/media/upload/FONTS/Missguided/missguided-bold.woff2') format('woff2'),
-         url('https://static.missguided.co.uk/media/upload/FONTS/Missguided/missguided-bold.woff') format('woff'),
-         url('https://static.missguided.co.uk/media/upload/FONTS/Missguided/missguided-bold.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-
+  overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, span, li {
-  font-family: 'Missguided';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+li {
+  font-family: $font-family;
   color: $font-colour;
   font-weight: 300;
-  cursor: default;
   text-transform: initial;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -46,42 +44,57 @@ h1, h2, h3, h4, h5, h6, p, a, span, li {
 a {
   cursor: pointer;
   text-decoration: none;
-  &:active, &:focus, &:hover {
+  &.contains-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  &:active,
+  &:focus,
+  &:hover {
     color: $font-colour;
     text-decoration: none;
   }
 }
 
-.h1, h1 {
+.h1,
+h1 {
   font-size: 3em;
 }
 
-.h2, h2 {
+.h2,
+h2 {
   font-size: 2.5em;
 }
 
-.h3, h3 {
+.h3,
+h3 {
   font-size: 2em;
 }
 
-.h4, h4 {
+.h4,
+h4 {
   font-size: 1.5em;
 }
 
-.h5, h5 {
+.h5,
+h5 {
   font-size: 1.2em;
 }
 
-.h6, h6 {
+.h6,
+h6 {
   font-size: 1em;
 }
+
 button,
 input,
 textarea {
   outline: none;
 }
+
 table {
-  font-family: 'Missguided';
+  font-family: $font-family;
   background: lighten($background-colour, 2);
   padding: 5px;
   margin: 0 auto 2em;
@@ -93,9 +106,7 @@ table {
   }
   tfoot {
     tr {
-      td {
-
-      }
+      td {}
     }
   }
   tbody {
@@ -108,7 +119,11 @@ table {
   }
 }
 
-ul, ol, menu, dir {
+ul,
+ol,
+menu,
+dir {
+
   display: block;
   list-style-type: none;
   -webkit-margin-before: 0;
@@ -117,21 +132,8 @@ ul, ol, menu, dir {
   -webkit-margin-end: 0;
   -webkit-padding-start: 0;
 }
-ol {
-	margin: 2rem 0;
-  li {
-    width: 70%;
-    margin: 0 auto .5em;
-    text-align: left;
-    list-style-type: decimal;
-    list-style-position: outside;
-}
-}
-ul {
-  li {
-    list-style: none;
-  }
-}
+
+
 
 //recommened content width https://codex.wordpress.org/Content_Width
 .size-auto,
@@ -142,186 +144,143 @@ ul {
   max-width: 100%;
   height: auto;
 }
+
 //extends
 .border {
   border: 5px $font-colour solid;
 }
+
 .flex {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
 }
+
 .box-shadow {
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.1);
-  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
   &:hover {
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1), 0 2px 10px rgba(0,0,0,0.14);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 2px 10px rgba(0, 0, 0, 0.14);
+  }
 }
-}
+
 .transition {
-  -webkit-transition: all 300ms cubic-bezier(0.39, 0.575, 0.565, 1);
-    transition: all 300ms cubic-bezier(0.39, 0.575, 0.565, 1);
+  transition: all 300ms cubic-bezier(0.39, 0.575, 0.565, 1);
 }
-button, .button {
-  font-family: 'Missguided', Arial, sans-serif;
+
+button,
+.button {
+  font-family: $font-family;
   font-size: 0.8rem;
-    letter-spacing: .75px;
-    text-transform: lowercase;
-    line-height: 0;
-    margin-bottom: 0;
-    color: $font-colour;
-    background: transparent;
-    text-align: center;
-    padding: 1rem;
-    min-width: 90px;
-    border: 3px solid $font-colour;;
-    cursor: pointer;
-    margin: 1.5rem 0 0;
-    @extend .transition;
-  &:hover, &:active, &:focus {
+  letter-spacing: .75px;
+  text-transform: lowercase;
+  line-height: 0;
+  margin-bottom: 0;
+  color: $font-colour;
+  background: transparent;
+  text-align: center;
+  padding: 1rem;
+  min-width: 90px;
+  border: 3px solid $font-colour;
+  margin: 1.5rem 0 0;
+  cursor: inherit;
+  @extend .transition;
+  &:hover,
+  &:active,
+  &:focus {
     color: #fff;
     background: $font-colour;
   }
 }
 
 a.fasc-button {
-      @extend .button;
-      color: $font-colour!important;
-      background: transparent!important;
-      border: 3px solid $font-colour!important;;
-    &:hover, &:active, &:focus {
-      color: #fff!important;
-      background: $font-colour!important;
+  @extend .button;
+  color: $font-colour!important;
+  background: transparent!important;
+  border: 3px solid $font-colour!important;
+  ;
+  &:hover,
+  &:active,
+  &:focus {
+    color: #fff!important;
+    background: $font-colour!important;
+  }
+}
+
+// top navbar conatiner
+.navigation {
+  background: white;
+  width: 100%;
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    h5 {
+      text-decoration: none;
+      border-bottom: 1.5px solid $background-colour;
+      text-transform: lowercase;
+      margin: 1.5em 0;
     }
   }
-
-// end of extends
-// top navbar conatiner
-.navbar {
-  //contains text links
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  .navigation{
-    background: white;
-    width: 100%;
-    height: 60px;
-    transition: height ease 300ms;
-    ul {
-      max-width: 600px;
-      display: flex;
-      justify-content: space-between;
-      padding: 0px;
-      margin: 0 auto;
-        li {
-          padding: 0 20px;
-        }
-        h5 {
-          text-decoration: none;
-          transition: all ease .5s;
-          border-bottom: 1.5px solid $background-colour;
-          text-transform: lowercase;
-          padding: 4px;
-          margin: 1em 0;
-          cursor: pointer;
-            &:hover {
-              border-bottom: 1.5px solid darken($background-colour,5%);;
-            }
-        }
-      }
-      &.hide {
-        // display: none;
-        height: 10px;
-        overflow: hidden;
-        &:hover {
-          height: 60px;
-        }
-        }
-    }
 }
 
-#nav-below {
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
-    min-width: 250px;
-    margin: 0 auto;
-    .nav-previous, .nav-next {
-      font-size: 1.2em;
-    }
+.categories {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1em 0;
 }
 
-#categories {
-  position: relative;
-    width: 100%;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 1em 0;
-}
 #menu-main-menu {
   display: flex;
-  justify-content: space-between;
-  padding: 10px 3%;
+  justify-content: space-evenly;
   li {
+    margin: 1em 0;
     a {
-        font-size: 1em;
-        text-align: center;
-        text-transform: lowercase;
-        text-decoration: none;
-        text-transform: lowercase;
-        display: block;
-        width: 100%;
-        height: 100%;
-        cursor: pointer;
-        padding: 4px 0;
-        @extend .transition;
-      }
- }
-    li.current-menu-item {
-      border-bottom: 1.5px solid $font-colour;
+      font-size: 1em;
+      text-align: center;
+      text-transform: lowercase;
+      text-decoration: none;
     }
+  &.current-menu-item {
+    border-bottom: 1.5px solid $font-colour;
+  }
+}
 }
 
-
-    /*load more*/
-    .totop {
-      position: fixed;
-      width: 4em;
-      height: 3em;
-      bottom: 5px;
-      right: 1em;
-      z-index: 2;
-        a {
-          display: none;
-          background: #fff;
-          border: 1px solid black;
-          padding: 12px 8px 5px;
-          font-weight: 700;
-           svg {
-            width: 20px;
-            height: 20px;
-          }
-        &:hover {
-          background: $font-colour;
-          fill: white;
-          }
-        }
-      }
+.totop {
+  position: fixed;
+  width: 4em;
+  height: 3em;
+  bottom: 5px;
+  right: 1em;
+  z-index: 2;
+  a {
+    display: none;
+    background: #fff;
+    border: 1px solid black;
+    padding: 12px 8px 5px;
+    font-weight: 700;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+    &:hover {
+      background: $font-colour;
+      fill: white;
+    }
+  }
+}
 
 #infscr-loading {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    img {
-      display: block;
-      width: 150px;
-      margin: 0 auto;
-    }
-    div {
-      // loading
-    }
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  img {
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+  }
+  div {
+    // loading
+  }
 }

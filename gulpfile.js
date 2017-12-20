@@ -10,7 +10,7 @@ gulp.task('sass', function () {
   return gulp.src('./sass/style.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(gulp.dest('./css'));
+      .pipe(gulp.dest('./css').on("change", browserSync.reload));
 });
 
 gulp.task('default', function() {

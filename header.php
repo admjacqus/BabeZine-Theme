@@ -3,7 +3,7 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="theme-color" content="#ffffff"/>
-<meta name="viewport" content="width=device-width" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 <?php wp_head(); ?>
 <title><?php wp_title(''); ?></title>
 </head>
@@ -29,8 +29,8 @@
 	</script>
 	<!-- end facebook SDK -->
 <div id="wrapper" class="hfeed">
+
 <header id="header" role="banner">
-<div class="navbar">
 <div class="navigation">
 	<ul>
 		<li>
@@ -41,19 +41,16 @@
 		</li>
 	</ul>
 </div>
-						<div id="categories">
-							<?php wp_nav_menu(array(
-								'theme_location' => 'top-menu',
-								'container' => '',
-								'echo' => true,
-								'depth' => 1 )
-							);
-							?>
-							<div class="grad"></div>
-						</div>
-<!-- can add serach to pages real easy (need styling) -->
+<div class="categories">
+	<?php wp_nav_menu(array(
+				'theme_location' => 'top-menu',
+				'container' => '',
+				'echo' => true,
+				'depth' => 1 )
+			);
+			?>
+	<div class="grad"></div>
+</div>
 <!-- < ?php get_search_form(); ?> -->
+</header>
 
-			</div>
-			</header>
-<div id="container">
