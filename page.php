@@ -14,10 +14,10 @@
       <?php  $do_not_duplicate[] = $post->ID; ?>
          <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
              <img src="<?php the_field('bz_image');?>" />
-          <?php if ( is_singular() ) { echo '<h1 class="entry-title">'; } else { echo '<h2 class="entry-title">'; } ?>
-            <h2 class="title"><?php the_title(); ?></h2>
+          <?php if ( is_singular() ) { echo '<h1 class="title">'; } else { echo '<h2 class="title">'; } ?>
+            <?php the_title(); ?>
           <?php if ( is_singular() ) { echo '</h1>'; } else { echo '</h2>'; } ?>
-          <h4 class="subtitle"><?php the_field('bz_excerpt'); ?></h4>
+          <h5 class="subtitle"><?php the_field('bz_excerpt'); ?></h5>
           <button class="cta"><?php the_field('bz_button'); ?></button>
         </a>
         <?php   endwhile; wp_reset_postdata(); ?>

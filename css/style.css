@@ -48,8 +48,6 @@ a {
   cursor: pointer;
   text-decoration: none; }
   a.contains-image {
-    display: block;
-    width: 100%;
     height: 100%; }
   a:active, a:focus, a:hover {
     color: #474747;
@@ -114,6 +112,18 @@ dir {
   max-width: 100%;
   height: auto; }
 
+.alignleft {
+  float: left;
+  margin: 0 15px 30px 0; }
+
+.aligncenter {
+  display: block;
+  margin: 0 auto 30px auto; }
+
+.alignright {
+  float: right;
+  margin: 0 0 30px 15px; }
+
 .border {
   border: 5px #474747 solid; }
 
@@ -139,7 +149,7 @@ dir {
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 2px 10px rgba(0, 0, 0, 0.14); }
 
 .transition, button,
-.button, a.fasc-button, input#searchsubmit, body:not(.single) .title-container, body.single .entry-content .product {
+.button, a.fasc-button, input#searchsubmit, body.single .entry-content .product {
   -webkit-transition: all 300ms cubic-bezier(0.39, 0.575, 0.565, 1);
   transition: all 300ms cubic-bezier(0.39, 0.575, 0.565, 1); }
 
@@ -258,6 +268,13 @@ body:not(.single) #content {
   margin: 0 auto;
   text-align: center; }
 
+body:not(.single) .title {
+  text-transform: lowercase;
+  margin: 1rem 0; }
+
+body:not(.single) .subtitle {
+  margin: 0; }
+
 body:not(.single) #hero {
   margin: 0 25% 3em; }
   body:not(.single) #hero img {
@@ -286,11 +303,6 @@ body:not(.single) #grid {
     margin: 0 3% 5%; }
     body:not(.single) #grid .item-2 .title {
       font-size: 300%; }
-  body:not(.single) #grid .title {
-    text-transform: lowercase;
-    margin-bottom: .5em; }
-  body:not(.single) #grid .subtitle {
-    margin: 0; }
 
 body:not(.single) .title-container {
   position: fixed;
@@ -304,7 +316,9 @@ body:not(.single) .title-container {
   text-align: center;
   z-index: 1;
   pointer-events: none;
-  mix-blend-mode: soft-light; }
+  mix-blend-mode: soft-light;
+  -webkit-transition: top ease-out 300ms;
+  transition: top ease-out 300ms; }
   body:not(.single) .title-container .subtitle {
     text-transform: uppercase;
     font-size: 7.5em;
@@ -322,7 +336,7 @@ body.single {
     position: relative;
     margin: 0 auto;
     max-width: 700px; }
-    body.single article header .entry-title {
+    body.single article header .title {
       text-transform: lowercase; }
   body.single .entry-content h1, body.single .entry-content h2, body.single .entry-content h3 {
     margin: 2em 0 .5em; }
@@ -380,20 +394,18 @@ body.single {
     margin: 0 auto 1em; }
   body.single .entry-content p.wp-caption-text {
     margin: -30px 0 10px; }
-  body.single .entry-content img {
+  body.single .entry-content img:not(.alignnone) {
     max-height: 70vh;
     max-width: 100%;
     height: auto;
     width: auto;
-    margin: 0 auto; }
-    body.single .entry-content img.size-full {
-      margin: 1em auto; }
+    margin: 1rem auto 3rem; }
   body.single .entry-content .aspect-ratio {
     position: relative;
     width: 100%;
     height: 0;
     padding-bottom: 63%;
-    margin: 10% 0 0; }
+    margin: 3rem auto; }
   body.single .entry-content .aspect-ratio iframe {
     position: absolute;
     width: 100%;
@@ -527,14 +539,18 @@ twitterwidget.twitter-tweet {
   margin-bottom: 2rem !important; }
 
 /*search/archive/tag*/
+body.archive .title-container,
+body.search .title-container,
+body.tag .title-container {
+  opacity: 0.3; }
+
 body.archive .header,
 body.search .header,
 body.tag .header {
-  margin-bottom: 50px; }
-  body.archive .header .entry-title,
-  body.search .header .entry-title,
-  body.tag .header .entry-title {
-    text-align: center;
+  margin-bottom: 3rem; }
+  body.archive .header .title,
+  body.search .header .title,
+  body.tag .header .title {
     text-transform: lowercase; }
 
 /*404*/
@@ -545,7 +561,7 @@ body.search-no-results .title-container {
 
 body.error404 header.header,
 body.search-no-results header.header {
-  margin-top: 50px; }
+  margin: 3rem 0; }
 
 body.error404 .entry-content p,
 body.error404 .entry-title,
@@ -602,6 +618,12 @@ body.imgLoaded .item {
    768-480     - tablet 
    480-less    - phone landscape & smaller
 --------------------------------------------*/
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  body:not(.single) .subtitle {
+    display: block;
+    width: 80%;
+    margin: 0 auto; } }
+
 /*------------------------------------------
   Foundation Media Queries 
    http://foundation.zurb.com/docs/media-queries.html

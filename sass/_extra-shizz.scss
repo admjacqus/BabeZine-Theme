@@ -17,11 +17,13 @@ twitterwidget.twitter-tweet {
 body.archive,
 body.search,
 body.tag {
-  .header {
-    margin-bottom: 50px;
+    .title-container {
+      opacity: 0.3;
+    }
 
-    .entry-title {
-      text-align: center;
+  .header {
+    margin-bottom: 3rem;
+    .title {
       text-transform: lowercase;
     }
   }
@@ -35,7 +37,7 @@ body.search-no-results {
   }
 
   header.header {
-    margin-top: 50px;
+    margin: 3rem 0;
   }
 
   .entry-content p,

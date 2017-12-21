@@ -4,7 +4,7 @@
                 <!-- conditional header -->
                 <?php if(is_single()){?>
 
-                    <?php if ( is_singular() ) { echo '<h1 class="entry-title">'; } else { echo '<h2 class="entry-title">'; } ?>
+                    <?php if ( is_singular() ) { echo '<h1 class="title">'; } else { echo '<h2 class="title">'; } ?>
                       <?php the_title(); ?>
                       <?php if ( is_singular() ) { echo '</h1>'; } else { echo '</h2>'; } ?>
 
@@ -12,7 +12,7 @@
                           <?php }else{?>
                             <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
                               <div class="thumbnail"><?php if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?></div>
-                              <?php if ( is_singular() ) { echo '<h1 class="entry-title">'; } else { echo '<h2 class="entry-title">'; } ?>
+                              <?php if ( is_singular() ) { echo '<h1 class="title">'; } else { echo '<h2 class="title">'; } ?>
                                 <?php the_title(); ?>
                                 <?php if ( is_singular() ) { echo '</h1>'; } else { echo '</h2>'; } ?>
                               </a>

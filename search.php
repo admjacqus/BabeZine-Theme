@@ -13,7 +13,7 @@
 <?php else : ?>
 <article id="post-0" class="post no-results not-found">
 <header class="header">
-<h2 class="entry-title"><?php _e( 'Nothing Found', 'missguided' ); ?></h2>
+<h2 class="title"><?php _e( 'Nothing Found', 'missguided' ); ?></h2>
 </header>
 <section class="entry-content">
 <p><?php _e( 'Sorry, nothing matched your search. Please try again.', 'missguided' ); ?></p>
