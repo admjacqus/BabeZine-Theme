@@ -278,7 +278,7 @@ body:not(.single) .subtitle {
   margin: 0; }
 
 body:not(.single) #hero {
-  margin: 0 25% 3em; }
+  margin: 0 25% 5%; }
   body:not(.single) #hero img {
     display: block;
     margin: 0 auto;
@@ -318,7 +318,7 @@ body:not(.single) .title-container {
   text-align: center;
   z-index: 1;
   pointer-events: none;
-  mix-blend-mode: soft-light;
+  opacity: .5;
   -webkit-transition: all ease-out 300ms;
   transition: all ease-out 300ms; }
   body:not(.single) .title-container .subtitle {
@@ -620,18 +620,17 @@ body.imgLoaded .item {
    768-480     - tablet 
    480-less    - phone landscape & smaller
 --------------------------------------------*/
+@media all and (min-width: 1024px) {
+  body:not(.single) .title-container {
+    opacity: 1;
+    mix-blend-mode: soft-light; } }
+
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .navigation ul h5 {
     font-size: 1em;
     margin: 1.2em 0; }
   .categories {
     max-width: 800px; }
-  body:not(.single) .title-container {
-    width: 90vw; }
-    body:not(.single) .title-container .subtitle {
-      font-size: 8vw;
-      color: #fff;
-      margin: 0; }
   body:not(.single) #hero {
     width: 46%;
     margin: 0 auto 5%; }
@@ -649,12 +648,35 @@ body.imgLoaded .item {
     width: 60%;
     margin: 0 auto 5%; } }
 
+@media all and (max-width: 767px) {
+  body:not(.single) .title-container {
+    position: fixed; } }
+
 @media all and (max-width: 480px) {
   body.single #related_posts {
     width: 100%; }
   body.single footer.entry-footer {
     width: 90%;
     margin: 0 auto 15%; }
+  body:not(.single) .title-container {
+    width: 90vw; }
+    body:not(.single) .title-container .subtitle {
+      font-size: 7vw;
+      color: #fff;
+      margin: 0; }
+  body:not(.single) #hero {
+    margin: 0 5% 5%; }
+  body:not(.single) #grid {
+    width: 100%;
+    margin-left: 5%; }
+    body:not(.single) #grid .gutter-sizer {
+      width: 5%; }
+    body:not(.single) #grid .item {
+      width: 42.5%;
+      margin-bottom: 10%; }
+    body:not(.single) #grid .item-2 {
+      width: 80%;
+      margin-left: 5%; }
   .navigation ul h5 {
     font-size: 1em;
     margin: 1.2em 0; } }

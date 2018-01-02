@@ -6,7 +6,14 @@
    480-less    - phone landscape & smaller
 --------------------------------------------*/
 
-@media all and (min-width: 1024px) and (max-width: 1280px) {}
+@media all and (min-width: 1024px) {
+body:not(.single) {
+  .title-container {
+    opacity: 1;
+    mix-blend-mode: soft-light;
+    }
+  }
+}
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
 
@@ -14,19 +21,11 @@
   font-size: 1em;
   margin: 1.2em 0;
 }
-  .categories {
+.categories {
   max-width: 800px;
-  }
+}
 
-  body:not(.single) {
-    .title-container {
-      width: 90vw;
-      .subtitle {
-        font-size: 8vw;
-        color: #fff;
-        margin: 0;
-      }
-    }
+body:not(.single) {
     #hero {
       width: 46%;
       margin: 0 auto 5%;
@@ -41,7 +40,7 @@
         font-size: 250%;
       }
     }
-    }
+  }
     
   }
   body.single {
@@ -54,28 +53,64 @@
     }
   }
 
-  
-
-
-
 }
 
-@media all and (min-width: 480px) and (max-width: 768px) {
+@media all and (max-width: 767px) {
 
+  body:not(.single) {
+    .title-container {
+      position: fixed;
 
+    }
+  }
 
 }
 
 @media all and (max-width: 480px) {
-  body.single {
-    #related_posts {
-      width: 100%;
-    }
-    footer.entry-footer {
-      width: 90%;
-      margin: 0 auto 15%;
+
+body.single {
+  #related_posts {
+    width: 100%;
+  }
+  footer.entry-footer {
+    width: 90%;
+    margin: 0 auto 15%;
+  }
+}
+
+
+body:not(.single) {
+  .title-container {
+    width: 90vw;
+    .subtitle {
+      font-size: 7vw;
+      color: #fff;
+      margin: 0;
     }
   }
+  #hero {
+    margin: 0 5% 5%;
+  }
+
+  #grid {
+    width: 100%;
+    margin-left: 5%;
+    .gutter-sizer {
+      width: 5%;
+    }
+   .item {
+     width: 42.5%;
+     margin-bottom: 10%;
+   }
+   .item-2 {
+     width: 80%;
+     margin-left: 5%;
+   }
+  }
+}
+
+
+
     .navigation ul h5 {
       font-size: 1em;
       margin: 1.2em 0;
@@ -97,6 +132,7 @@
 
 @media screen and (orientation:landscape) {
   /* Landscape styles here */
+
 }
 
 

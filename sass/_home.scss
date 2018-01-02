@@ -11,12 +11,11 @@ body:not(.single) {
         text-transform: lowercase;
         margin: 1rem 0;
       }
-
       .subtitle {
         margin: 0;
       }
   #hero {
-    margin: 0 25% 3em;
+    margin: 0 25% 5%;
     img {
       display: block;
       margin: 0 auto;
@@ -64,7 +63,7 @@ body:not(.single) {
     text-align: center;
     z-index: 1;
     pointer-events: none; // causing the issue on samsung chrome and native
-    mix-blend-mode: soft-light;
+    opacity: .5;
     transition: all ease-out 300ms;
     .subtitle {
       text-transform: uppercase;
