@@ -621,29 +621,44 @@ body.imgLoaded .item {
    480-less    - phone landscape & smaller
 --------------------------------------------*/
 @media all and (min-width: 768px) and (max-width: 1024px) {
-  body:not(.single) .subtitle {
-    display: block;
-    width: 80%;
-    margin: 0 auto; } }
+  .navigation ul h5 {
+    font-size: 1em;
+    margin: 1.2em 0; }
+  .categories {
+    max-width: 800px; }
+  body:not(.single) .title-container {
+    width: 90vw; }
+    body:not(.single) .title-container .subtitle {
+      font-size: 8vw;
+      color: #fff;
+      margin: 0; }
+  body:not(.single) #hero {
+    width: 46%;
+    margin: 0 auto 5%; }
+  body:not(.single) #grid {
+    width: 97%;
+    margin: 0 0 0 3%; }
+    body:not(.single) #grid .item-2 {
+      width: 50%;
+      margin-left: 6%; }
+      body:not(.single) #grid .item-2 .title {
+        font-size: 250%; }
+  body.single #related_posts {
+    width: 100%; }
+  body.single footer.entry-footer {
+    width: 60%;
+    margin: 0 auto 5%; } }
 
-/*------------------------------------------
-  Foundation Media Queries 
-   http://foundation.zurb.com/docs/media-queries.html
---------------------------------------------*/
-/* Small screens - MOBILE */
-/* Define mobile styles - Mobile First */
-/* max-width 640px, mobile-only styles, use when QAing mobile issues */
-/* Medium screens - TABLET */
-/* min-width 641px, medium screens */
-/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
-/* Large screens - DESKTOP */
-/* min-width 1025px, large screens */
-/* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
-/* XLarge screens */
-/* min-width 1441px, xlarge screens */
-/* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
-/* XXLarge screens */
-/* min-width 1921px, xlarge screens */
+@media all and (max-width: 480px) {
+  body.single #related_posts {
+    width: 100%; }
+  body.single footer.entry-footer {
+    width: 90%;
+    margin: 0 auto 15%; }
+  .navigation ul h5 {
+    font-size: 1em;
+    margin: 1.2em 0; } }
+
 /*------------------------------------------*/
 /* Portrait */
 @media screen and (orientation: portrait) {

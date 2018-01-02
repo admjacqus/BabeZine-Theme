@@ -15,11 +15,8 @@
   }
 
   function setOpacity() {
-    console.log( $(window).scrollTop() )
-    if ($(window).scrollTop() > hero.outerHeight() / 2 ) {
+    if ($(window).scrollTop() > hero.outerHeight() / 4 ) {
       fixed.css("opacity", "0.4");
-      // alert("up");
-      console.log( hero.outerHeight() );
     } else {
       fixed.css("opacity", "1");
     }

@@ -9,85 +9,78 @@
 @media all and (min-width: 1024px) and (max-width: 1280px) {}
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
-body:not(.single){
-  .subtitle {
-    display: block;
-    width: 80%;
-    margin: 0 auto;
+
+.navigation ul h5 {
+  font-size: 1em;
+  margin: 1.2em 0;
+}
+  .categories {
+  max-width: 800px;
   }
-}
+
+  body:not(.single) {
+    .title-container {
+      width: 90vw;
+      .subtitle {
+        font-size: 8vw;
+        color: #fff;
+        margin: 0;
+      }
+    }
+    #hero {
+      width: 46%;
+      margin: 0 auto 5%;
+    }
+    #grid {
+      width: 97%;
+      margin: 0 0 0 3%;
+      .item-2 {
+        width: 50%;
+        margin-left: 6%;
+      .title {
+        font-size: 250%;
+      }
+    }
+    }
+    
+  }
+  body.single {
+      #related_posts {
+        width: 100%;
+      }
+    footer.entry-footer {
+      width: 60%;
+      margin: 0 auto 5%;
+    }
+  }
+
+  
+
+
 
 }
 
-@media all and (min-width: 480px) and (max-width: 768px) {}
-
-@media all and (max-width: 480px) {}
+@media all and (min-width: 480px) and (max-width: 768px) {
 
 
-/*------------------------------------------
-  Foundation Media Queries 
-   http://foundation.zurb.com/docs/media-queries.html
---------------------------------------------*/
 
+}
 
-/* Small screens - MOBILE */
-
-@media only screen {}
-
-
-/* Define mobile styles - Mobile First */
-
-@media only screen and (max-width: 40em) {}
-
-
-/* max-width 640px, mobile-only styles, use when QAing mobile issues */
-
-
-/* Medium screens - TABLET */
-
-@media only screen and (min-width: 40.063em) {}
-
-
-/* min-width 641px, medium screens */
-
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {}
-
-
-/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
-
-
-/* Large screens - DESKTOP */
-
-@media only screen and (min-width: 64.063em) {}
-
-
-/* min-width 1025px, large screens */
-
-@media only screen and (min-width: 64.063em) and (max-width: 90em) {}
-
-
-/* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
-
-
-/* XLarge screens */
-
-@media only screen and (min-width: 90.063em) {}
-
-
-/* min-width 1441px, xlarge screens */
-
-@media only screen and (min-width: 90.063em) and (max-width: 120em) {}
-
-
-/* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
-
-
-/* XXLarge screens */
-
-@media only screen and (min-width: 120.063em) {}
-
-
-/* min-width 1921px, xlarge screens */
+@media all and (max-width: 480px) {
+  body.single {
+    #related_posts {
+      width: 100%;
+    }
+    footer.entry-footer {
+      width: 90%;
+      margin: 0 auto 15%;
+    }
+  }
+    .navigation ul h5 {
+      font-size: 1em;
+      margin: 1.2em 0;
+    }
+}
 
 
 /*------------------------------------------*/
@@ -125,7 +118,11 @@ only screen and (min-device-pixel-ratio: 1.5) {}
 
 /* iPhone Portrait */
 
-@media screen and (max-device-width: 480px) and (orientation:portrait) {}
+@media screen and (max-device-width: 480px) and (orientation:portrait) {
+
+
+
+}
 
 
 /* iPhone Landscape */
