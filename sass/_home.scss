@@ -2,6 +2,7 @@ body:not(.single) {
   #content {
     position: relative;
     max-width: 960px;
+    overflow: hidden;
     width: 100%;
     margin: 0 auto;
     text-align: center;
@@ -24,15 +25,19 @@ body:not(.single) {
     }
   }
   #grid {
-    width: 95%;
-    margin: 0 auto;
+    //extra width to counteract the right side gutter
+    width: 103.33%;
+    // margin: 0 auto;
     z-index: 2;
+    .gutter-sizer {
+      width: 3.3%;
+    }
     .item {
       width: 30%;
       height: auto;
-      margin: 0 1.5% 5%;
+      margin-bottom: 5%;
       border: none;
-      padding: 0px;
+      padding: 0;
       -webkit-box-shadow: none;
       box-shadow: none;
       img {
@@ -42,7 +47,7 @@ body:not(.single) {
     }
     .item-2 {
       width: 60%;
-      margin: 0 3% 5%;
+      // margin: 0 3% 5%;
       .title {
         font-size: 300%;
       }
@@ -60,7 +65,7 @@ body:not(.single) {
     z-index: 1;
     pointer-events: none; // causing the issue on samsung chrome and native
     mix-blend-mode: soft-light;
-    transition: top ease-out 300ms;
+    transition: all ease-out 300ms;
     .subtitle {
       text-transform: uppercase;
       font-size: 7.5em;

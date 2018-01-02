@@ -8,6 +8,7 @@
 </header>
 
 <div id="grid">
+ <div class="gutter-sizer"></div>
   <?php
   $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
   $curauth = (get_query_var('author_name')) ? get_user_by('slug', get_query_var('author_name')) : get_userdata(get_query_var('author'));

@@ -33,6 +33,7 @@ h6,
 p,
 a,
 span,
+em,
 li {
   font-family: "Missguided", "Lucida Console", Monaco, monospace;
   color: #474747;
@@ -227,7 +228,7 @@ a.fasc-button {
       text-align: center;
       text-transform: lowercase;
       text-decoration: none; }
-    #menu-main-menu li.current-menu-item {
+    #menu-main-menu li.current-menu-main-menu-item {
       border-bottom: 1.5px solid #474747; }
 
 .totop {
@@ -264,6 +265,7 @@ a.fasc-button {
 body:not(.single) #content {
   position: relative;
   max-width: 960px;
+  overflow: hidden;
   width: 100%;
   margin: 0 auto;
   text-align: center; }
@@ -284,23 +286,23 @@ body:not(.single) #hero {
     height: auto; }
 
 body:not(.single) #grid {
-  width: 95%;
-  margin: 0 auto;
+  width: 103.33%;
   z-index: 2; }
+  body:not(.single) #grid .gutter-sizer {
+    width: 3.3%; }
   body:not(.single) #grid .item {
     width: 30%;
     height: auto;
-    margin: 0 1.5% 5%;
+    margin-bottom: 5%;
     border: none;
-    padding: 0px;
+    padding: 0;
     -webkit-box-shadow: none;
     box-shadow: none; }
     body:not(.single) #grid .item img {
       width: 100%;
       height: auto; }
   body:not(.single) #grid .item-2 {
-    width: 60%;
-    margin: 0 3% 5%; }
+    width: 60%; }
     body:not(.single) #grid .item-2 .title {
       font-size: 300%; }
 
@@ -317,8 +319,8 @@ body:not(.single) .title-container {
   z-index: 1;
   pointer-events: none;
   mix-blend-mode: soft-light;
-  -webkit-transition: top ease-out 300ms;
-  transition: top ease-out 300ms; }
+  -webkit-transition: all ease-out 300ms;
+  transition: all ease-out 300ms; }
   body:not(.single) .title-container .subtitle {
     text-transform: uppercase;
     font-size: 7.5em;

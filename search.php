@@ -5,6 +5,7 @@
 <h1 class="entry-title"><?php printf( __( 'Search Results for: %s', 'missguided' ), get_search_query() ); ?></h1>
 </header>
     <div id="grid">
+     <div class="gutter-sizer"></div>
 <?php while ( have_posts() ) : the_post(); ?>
 <?php get_template_part( 'entry-summary' ); ?>
 <?php endwhile; ?>

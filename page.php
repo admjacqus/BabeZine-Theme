@@ -24,6 +24,7 @@
      </div>
 
       <section id="grid">
+       <div class="gutter-sizer"></div>
         <?php
           // set up or arguments for our custom query
           $paged = ( get_query_var('page') ) ? get_query_var('page') : 1;

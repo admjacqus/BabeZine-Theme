@@ -29,6 +29,7 @@ h6,
 p,
 a,
 span,
+em,
 li {
   font-family: $font-family;
   color: $font-colour;
@@ -240,7 +241,7 @@ a.fasc-button {
       text-transform: lowercase;
       margin: 1.5em 0;
     }
-  }
+  } 
 }
 
 .categories {
@@ -260,7 +261,7 @@ a.fasc-button {
       text-transform: lowercase;
       text-decoration: none;
     }
-  &.current-menu-item {
+  &.current-menu-main-menu-item {
     border-bottom: 1.5px solid $font-colour;
   }
 }
@@ -299,8 +300,5 @@ a.fasc-button {
     display: block;
     width: 150px;
     margin: 0 auto;
-  }
-  div {
-    // loading
   }
 }

@@ -31,10 +31,12 @@
       /* establish masonary grid */
       $grid = $('#grid').masonry({
         initLayout: false,
-        itemSelector: '.item',
         columnWidth: '.item:not(.item-2)',
+        gutter: '.gutter-sizer',
+        itemSelector: '.item',
         percentPosition: true,
         horizontalOrder: true,
+        transitionDuration: '0.3s',
         stagger: 100
       });
       // bind event
@@ -89,7 +91,7 @@
 
       if (body.hasClass("category")) {
         var menu = $("#menu-main-menu"),
-        currentItem = $("#menu-main-menu li.current-menu-item"),
+        currentItem = $("#menu-main-menu li.current-menu-main-menu-item"),
           last = $("#menu-main-menu li").last();
         if (last.hasClass("current-menu-item")) {
           $(".grad").animate({
@@ -100,7 +102,7 @@
         menu.animate({
           scrollLeft: currentItem.offset().left - 20
         }, 800, function() {
-          //  console.log('menu item visible');
+          //  console.log('menu-main-menu item visible');
         });
       }
 

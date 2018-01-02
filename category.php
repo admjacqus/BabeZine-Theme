@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <section id="content" role="main">
   <div id="grid">
+  <div class="gutter-sizer"></div>
     <?php
     $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
     $currCat = get_category(get_query_var('cat'));
