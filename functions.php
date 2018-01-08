@@ -12,11 +12,11 @@ add_action('init', 'replace_jquery');
 
 function my_assets() {
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css', false, filemtime(get_stylesheet_directory() . '/css/style.css'));
-	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.js', array(), '6.716' , true);
+	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.js', array(), '6.91' , true);
 
 if ( is_single() ) {
 	wp_enqueue_script( 'twitter', 'https://platform.twitter.com/widgets.js', array(), '1', true);
-}else if ( is_page( 'babezine' ) || is_category() || is_archive() ) {
+}else if ( is_page( 'babezine' ) || is_category() || is_archive() || is_search() ) {
 	wp_enqueue_script( 'infinte', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-infinitescroll/2.0b2.120519/jquery.infinitescroll.min.js', array( 'jquery' ), '1', true );
 	wp_enqueue_script( 'masonry', array('jquery'), null, true);
 }

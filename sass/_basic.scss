@@ -228,6 +228,9 @@ a.fasc-button {
   }
 }
 
+header {
+  margin-bottom: 2em;
+}
 // top navbar conatiner
 .navigation {
   background: white;
@@ -245,14 +248,16 @@ a.fasc-button {
 }
 
 .categories {
-  max-width: 960px;
+  position: relative;
+  width: 100%;
+  max-width: 620px;
   margin: 0 auto;
   padding: 1em 0;
 }
 
 #menu-main-menu {
-  display: flex;
-  justify-content: space-evenly;
+      display: flex;
+      justify-content: space-between;
   li {
     margin: 1em 0;
     a {
@@ -261,11 +266,35 @@ a.fasc-button {
       text-transform: lowercase;
       text-decoration: none;
     }
-  &.current-menu-main-menu-item {
+    &.current-menu-item {
     border-bottom: 1.5px solid $font-colour;
   }
+  // &:last-child {
+    // margin-right: 10px;
+  // }
 }
 }
+
+  .title-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    max-width: 960px;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+    pointer-events: none; // causing the issue on samsung chrome and native
+    opacity: .25;
+    transition: all ease-out 300ms;
+    .subtitle {
+      text-transform: uppercase;
+      font-size: 7.5em;
+      color: #fff;
+      margin: 0;
+    }
+  }
 
 .totop {
   position: fixed;
@@ -296,6 +325,7 @@ a.fasc-button {
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
+  font-family: $font-family;
   img {
     display: block;
     width: 150px;

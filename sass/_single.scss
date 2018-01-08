@@ -120,7 +120,8 @@ body.single {
     
     //shortcode product
     .product {
-      max-width: 230px;
+      width: 230px;
+      max-width: 30%;
       display: inline-flex;
       margin: .5em 0 2em;
       padding: 1em .5em;
@@ -130,17 +131,17 @@ body.single {
       }
       img {
         margin: 0;
-        width: 95%;
-        height: auto;
-        max-width: 270px;
+        max-width: 95%;
+        // width: auto;
+        // height: auto;
       }
       p {
-        font-size: 1em;
+        // font-size: 1em;
         display: block;
         width: 100%;
         margin: 0;
         &:nth-child(2) {
-          font-size: 1em;
+          // font-size: 1em;
           line-height: 1.5em;
           width: 90%;
           margin: 1em auto .5em;

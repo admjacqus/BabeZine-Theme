@@ -17,17 +17,17 @@
   function setOpacity() {
     if ( $(window).width() >= 737 ) {
       if ($(window).scrollTop() > hero.outerHeight() / 4) {
-        fixed.css("opacity", ".3");
+        fixed.css("opacity", ".25");
       } else {
-        fixed.css("opacity", "1");
+        fixed.css("opacity", ".5");
       }
 
     } else {
 
       if ($(window).scrollTop() > hero.outerHeight() / 4 ) {
-        fixed.css("opacity", ".3");
+        fixed.css("opacity", ".15");
       } else {
-        fixed.css("opacity", ".5");
+        fixed.css("opacity", ".25");
       }
 
     }
@@ -70,7 +70,8 @@
           itemSelector: ".item",
           // finished message
           loading: {
-          finishedMsg: 'fin.',
+            msgText: "",
+            finishedMsg: '🏁 congrats, you completed the internet 🏁',
           //spinner
           // img: 'https://media.missguided.co.uk/image/upload/v1476782121/Loading-Small2_tjqqro.gif'
           //yappy doge
@@ -100,7 +101,7 @@
 
       if (body.hasClass("category")) {
         var menu = $("#menu-main-menu"),
-        currentItem = $("#menu-main-menu li.current-menu-main-menu-item"),
+          currentItem = $("#menu-main-menu li.current-menu-item"),
           last = $("#menu-main-menu li").last();
         if (last.hasClass("current-menu-item")) {
           $(".grad").animate({
