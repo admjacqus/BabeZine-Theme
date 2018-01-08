@@ -147,8 +147,11 @@ body.single {
           margin: 1em auto .5em;
         }
       }
-    }
-    .sale {
+      &.oos {
+        display: none;
+      }
+    
+    &.sale {
       span {
         margin: 0 5px;
         color: #ff5f89;
@@ -158,11 +161,7 @@ body.single {
         text-decoration: line-through;
       }
     }
-    .oos {
-      // display: inline-block;
-      // padding: 30px 10px;
-      display: none;
-    }
+  }
   }
 
 

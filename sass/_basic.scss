@@ -125,6 +125,10 @@ dir {
 
 
 //recommened content width https://codex.wordpress.org/Content_Width
+img {
+  max-width: 100%;
+  height: auto;
+}
 .size-auto,
 .size-full,
 .size-large,
