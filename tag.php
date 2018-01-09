@@ -10,7 +10,7 @@
     $currTag = get_tag(get_query_var('tag'));
     $tag_name = $currTag->name;
     $args = array(
-      'tag_name' => $tag_name,
+      'tag' => $tag,
       'posts_per_page' => 5,
       'paged'          => $paged
     );
