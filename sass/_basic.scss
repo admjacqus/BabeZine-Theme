@@ -232,6 +232,8 @@ header {
   ul {
     display: flex;
     justify-content: space-evenly;
+    max-width: 1000px;
+    margin: 0 auto;
     h5 {
       text-decoration: none;
       border-bottom: 1.5px solid $background-colour;
@@ -263,9 +265,6 @@ header {
     &.current-menu-item {
     border-bottom: 1.5px solid $font-colour;
   }
-  // &:last-child {
-    // margin-right: 10px;
-  // }
 }
 }
 

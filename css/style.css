@@ -209,7 +209,9 @@ header {
     display: flex;
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
-            justify-content: space-evenly; }
+            justify-content: space-evenly;
+    max-width: 1000px;
+    margin: 0 auto; }
     .navigation ul h5 {
       text-decoration: none;
       border-bottom: 1.5px solid #f8e7e4;
@@ -336,7 +338,7 @@ header {
   #grid .item-2 {
     width: 60%; }
     #grid .item-2 .title {
-      font-size: 300%; }
+      font-size: 200%; }
 
 body.single {
   text-align: center; }
@@ -659,6 +661,8 @@ body.imgLoaded .item {
     margin: 0 auto 5%; } }
 
 @media only screen and (max-width: 767px) {
+  header {
+    margin-bottom: 1em; }
   #menu-main-menu {
     padding: 1em;
     white-space: nowrap;
@@ -681,7 +685,18 @@ body.imgLoaded .item {
     height: 65px;
     background: -webkit-gradient(linear, left top, right top, from(rgba(125, 185, 232, 0)), color-stop(38%, rgba(125, 185, 232, 0)), color-stop(10%, rgba(209, 226, 240, 0.01)), to(#fde1de));
     background: linear-gradient(to right, rgba(125, 185, 232, 0) 0%, rgba(125, 185, 232, 0) 38%, rgba(209, 226, 240, 0.01) 10%, #fde1de 100%);
-    pointer-events: none; } }
+    pointer-events: none; }
+  body:not(.single) .title {
+    font-size: 2em; }
+  body:not(.single) .item,
+  body:not(.single) .item-2 {
+    width: 80%;
+    margin-bottom: 10%; }
+    body:not(.single) .item .title,
+    body:not(.single) .item-2 .title {
+      font-size: 1em; }
+  body:not(.single) .item-2 .title {
+    font-size: 2em; } }
 
 @media all and (max-width: 767px) and (min-width: 481px) {
   body:not(.single) .title {
@@ -696,9 +711,7 @@ body.imgLoaded .item {
       width: 5%; }
     body:not(.single) #grid .item {
       width: 45%;
-      margin-bottom: 10%; }
-    body:not(.single) #grid .item-2 .title {
-      font-size: 2.5em; } }
+      margin-bottom: 10%; } }
 
 @media all and (max-width: 480px) {
   .navigation ul h5 {
@@ -741,7 +754,7 @@ body.imgLoaded .item {
       color: #fff;
       margin: 0; }
   body:not(.single) .title {
-    font-size: 2.5em; }
+    font-size: 2.25em; }
   body:not(.single) #hero {
     width: 90%;
     margin: 0 5% 15%; }
@@ -756,7 +769,7 @@ body.imgLoaded .item {
       body:not(.single) #grid .item .title, body:not(.single) #grid .item-2 .title {
         font-size: 1.5em; }
     body:not(.single) #grid .item-2 .title {
-      font-size: 2.5em; } }
+      font-size: 2em; } }
 
 @media only screen and (max-device-width: 375px) and (min-device-width: 10px) {
   #menu-main-menu {
