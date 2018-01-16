@@ -3,13 +3,13 @@ Content Hub for all Missguided content, from our biggest campaigns to our daily 
 
 WordPress Theme. Based on [BlankSlate](https://en-gb.wordpress.org/themes/blankslate/).
 
-* ###### Design,###### Ben Perry.
-* ###### Built & Maintained,###### Adam Jacques and Adam Collier.
-* ###### PHP Guru,###### Phil Elson (Product Shortcode Cache).
+* ###### Design, ###### Ben Perry.
+* ###### Built & Maintained, ###### Adam Jacques and Adam Collier.
+* ###### PHP Guru, ###### Phil Elson (Product Shortcode Cache).
 
-* ######Curators,###### Sam Helligso and Skye Smith.
-* ######SEO Lead,###### Heather Kipling.
-* ######Author Lead,###### Imogen Ruddick.
+* ###### Curators, ###### Sam Helligso and Skye Smith.
+* ###### SEO Lead, ###### Heather Kipling.
+* ###### Author Lead, ###### Imogen Ruddick.
 
 ## Getting Started
 See [BabeZine](https://github.com/ishiiprints/BabeZine) for Local Dev Environment set-up.
