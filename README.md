@@ -1,22 +1,22 @@
 # BabeZine Theme - Documentation
-Content Hub for all Missguided content, from our biggest campaigns to daily our daily blog posts. 
+Content Hub for all Missguided content, from our biggest campaigns to our daily blog posts. 
 
 WordPress Theme. Based on [BlankSlate](https://en-gb.wordpress.org/themes/blankslate/).
 
-Design, Ben Perry.
-Built & Maintained, Adam Jacques and Adam Collier.
-PHP Guru, Phil Elson (Product Shortcode Cache).
+* ###### Design,###### Ben Perry.
+* ###### Built & Maintained,###### Adam Jacques and Adam Collier.
+* ###### PHP Guru,###### Phil Elson (Product Shortcode Cache).
 
-Curators, Sam Helligso and Skye Smith.
-SEO Lead, Heather Kipling.
-Author Lead, Imogen Ruddick.
+* ######Curators,###### Sam Helligso and Skye Smith.
+* ######SEO Lead,###### Heather Kipling.
+* ######Author Lead,###### Imogen Ruddick.
 
 ## Getting Started
 See [BabeZine](https://github.com/ishiiprints/BabeZine) for Local Dev Environment set-up.
 
 No strict SASS / PHP rules yet, use default [Beautify](https://www.npmjs.com/package/beautify) settings.
 
-##The Grid
+## The Grid
 Combing Masonry, Infinite scroll & ImagesLoaded.
 Dependencies enqueued; functions.php (line 13).
 Established; js/script.js (line 36).
@@ -40,10 +40,10 @@ add_action('wp_enqueue_scripts', 'enqueue_masonry_script');
 ### Infinite Scroll
 [Append items/pages to Masonry Grid](https://codepen.io/desandro/pen/eRRQVo)
 
-###ImagesLoaded
+### ImagesLoaded
 [Images loaded](https://codepen.io/desandro/pen/RPKgEN)
 
-###Version Control
+### Version Control
 script.js is enqueued with manual version control, when making updates to script.js you must increase the version number. 
 [Reference; $ver](https://developer.wordpress.org/reference/functions/wp_enqueue_script/)
 
