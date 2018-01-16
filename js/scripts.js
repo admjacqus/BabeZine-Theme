@@ -1,6 +1,5 @@
-(function($) {
+(function ($) {
   $('img').parent('a').addClass('contains-image');
-
 
   var fixed = $(".title-container"),
     hero = $("#hero"),
@@ -15,7 +14,7 @@
   }
 
   function setOpacity() {
-    if ( $(window).width() >= 737 ) {
+    if ($(window).width() >= 737) {
       if ($(window).scrollTop() > hero.outerHeight() / 4) {
         fixed.css("opacity", ".25");
       } else {
@@ -24,7 +23,7 @@
 
     } else {
 
-      if ($(window).scrollTop() > hero.outerHeight() / 4 ) {
+      if ($(window).scrollTop() > hero.outerHeight() / 4) {
         fixed.css("opacity", ".15");
       } else {
         fixed.css("opacity", ".25");
@@ -34,7 +33,7 @@
 
   }
 
-  window.onload = function() {
+  window.onload = function () {
     var body = $("body");
     if (body.hasClass("home") || body.hasClass("category") || body.hasClass("search-results") || body.hasClass("archive")) {
       /* establish masonary grid */
@@ -49,12 +48,11 @@
         stagger: 100
       });
       // bind event
-      $grid.masonry('on', 'layoutComplete', function() {
-      });
-      $grid.imagesLoaded().done( function() {
-          // console.log('all images successfully loaded');
-          body.addClass("imgLoaded");
-          // setTimeout(function(){ $('.navigation').addClass('hide'); }, 2000);
+      $grid.masonry('on', 'layoutComplete', function () {});
+      $grid.imagesLoaded().done(function () {
+        // console.log('all images successfully loaded');
+        body.addClass("imgLoaded");
+        // setTimeout(function(){ $('.navigation').addClass('hide'); }, 2000);
       });
       // trigger initial layout
       $grid.masonry();
@@ -72,21 +70,21 @@
           loading: {
             msgText: "",
             finishedMsg: '🏁 congrats, you completed the internet 🏁',
-          //spinner
-          // img: 'https://media.missguided.co.uk/image/upload/v1476782121/Loading-Small2_tjqqro.gif'
-          //yappy doge
-          img: 'https://i.giphy.com/media/5xtDarniHFmiZuCoW40/200w_d.gif'
+            //spinner
+            // img: 'https://media.missguided.co.uk/image/upload/v1476782121/Loading-Small2_tjqqro.gif'
+            //yappy doge
+            img: 'https://i.giphy.com/media/5xtDarniHFmiZuCoW40/200w_d.gif'
           }
         },
 
         // Trigger Masonry as a callback
-        function(newElements) {
+        function (newElements) {
           // hide new items while they are loading
           var $newElems = $(newElements).css({
             opacity: 0
           });
           // ensure that images load before adding to masonry layout
-          $newElems.imagesLoaded(function() {
+          $newElems.imagesLoaded(function () {
             // show elems now they're ready
             $newElems.animate({
               opacity: 1
@@ -111,7 +109,7 @@
 
         menu.animate({
           scrollLeft: currentItem.offset().left - 20
-        }, 800, function() {
+        }, 800, function () {
           //  console.log('menu-main-menu item visible');
         });
       }
@@ -128,7 +126,7 @@
       // setTimeout(function(){ $('.navigation').addClass('hide'); }, 2000);
     }
   };
-  
+
 
   function toTop(e) {
     $("html, body").animate({
@@ -138,7 +136,7 @@
   }
   $("a[href='#top']").click(toTop);
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop() > 300) {
       $('.totop a').fadeIn();
     } else {
@@ -146,31 +144,31 @@
     }
   });
 
-   $(window).scroll(function () {
-     if ($(this).scrollTop() > ($(document).height() / 2) && $(window).width() > 1180) {
-       $('.float--left, .float--right').css('visibility', 'visible');
-       $('.float--left, .float--right').css('opacity', '1');
-       $('.float--left').css('left', '0');
-       $('.float--right').css('right', '0');
-     } else {
-       $('.float--left, .float--right').css('visibility', 'hidden');
-       $('.float--left, .float--right').css('opacity', '0');
-     }
-   });
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > ($(document).height() / 2) && $(window).width() > 1180) {
+      $('.float--left, .float--right').css('visibility', 'visible');
+      $('.float--left, .float--right').css('opacity', '1');
+      $('.float--left').css('left', '0');
+      $('.float--right').css('right', '0');
+    } else {
+      $('.float--left, .float--right').css('visibility', 'hidden');
+      $('.float--left, .float--right').css('opacity', '0');
+    }
+  });
 
-   $(window).resize(function () {
-     if ($(window).width() < 1180) {
-       $('.float--left, .float--right').css('opacity', '0');
-       $('.float--left, .float--right').css('visibility', 'hidden');
-     } else if ($(this).scrollTop() > ($(document).height() / 2) ) {
-       $('.float--left, .float--right').css('visibility', 'visible');
-       $('.float--left, .float--right').css('opacity', '1');
-     }
-   });
+  $(window).resize(function () {
+    if ($(window).width() < 1180) {
+      $('.float--left, .float--right').css('opacity', '0');
+      $('.float--left, .float--right').css('visibility', 'hidden');
+    } else if ($(this).scrollTop() > ($(document).height() / 2)) {
+      $('.float--left, .float--right').css('visibility', 'visible');
+      $('.float--left, .float--right').css('opacity', '1');
+    }
+  });
 
-   if ($(window).width() < 1180) {
-     $('.float--left').css('opacity', '0');
-     $('.float--left').css('visibility', 'hidden');
-   }
+  if ($(window).width() < 1180) {
+    $('.float--left').css('opacity', '0');
+    $('.float--left').css('visibility', 'hidden');
+  }
 
-   })(jQuery);
+})(jQuery);

@@ -2,7 +2,7 @@
 //Making jQuery to load from Google Library
 function replace_jquery() {
 	if (!is_admin()) {
-		// comment out the next two lines to load the local copy of jQuery
+		// comment out the next two lines for local development
 		wp_deregister_script('jquery');
 		wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js', false, '3.2.1');
 		wp_enqueue_script('jquery');
@@ -13,7 +13,6 @@ add_action('init', 'replace_jquery');
 function my_assets() {
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css', false, filemtime(get_stylesheet_directory() . '/css/style.css'));
 	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.js', array(), '6.91' , true);
-
 if ( is_single() ) {
 	wp_enqueue_script( 'twitter', 'https://platform.twitter.com/widgets.js', array(), '1', true);
 }else if ( is_page( 'babezine' ) || is_category() || is_archive() || is_search() ) {

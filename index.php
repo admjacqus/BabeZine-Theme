@@ -11,7 +11,7 @@
       <?php  $do_not_duplicate[] = $post->ID; ?>
 
          <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" rel="bookmark">
-             <img src="<?php the_field('bz_image');?>" />
+             <img src="< ?php the_field('bz_image');?>" />
         <?php if ( is_singular() ) { echo '<h1 class="title">'; } else { echo '<h2 class="title">'; } ?>
           <h2 class="title"><?php the_title(); ?></h2>
           <?php if ( is_singular() ) { echo '</h1>'; } else { echo '</h2>'; } ?>
