@@ -18,9 +18,9 @@ No strict SASS / PHP rules yet, use default [Beautify](https://www.npmjs.com/pac
 
 ## The Grid
 Combing Masonry, Infinite scroll & ImagesLoaded.
-Dependencies enqueued; functions.php (line 13).
-Established; js/script.js (line 36).
-Styled; sass/extra_shizz.scss (line 80).
+* Dependencies enqueued; functions.php (line 13).
+* Established; js/script.js (line 36).
+* Styled; sass/extra_shizz.scss (line 80).
 
 ### Masonry Grid
 [Masonary by Desandro](https://masonry.desandro.com/)
