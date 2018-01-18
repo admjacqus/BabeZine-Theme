@@ -32,30 +32,46 @@
     }
 
   }
-
+//commmented out below
   window.onload = function () {
+
+
     var body = $("body");
     if (body.hasClass("home") || body.hasClass("category") || body.hasClass("search-results") || body.hasClass("archive")) {
       /* establish masonary grid */
-      $grid = $('#grid').masonry({
-        initLayout: false,
+    var $grid = $('.grid').masonry({
+        // initLayout: false,
+      // select none at first
+        itemSelector: 'none',
         columnWidth: '.item:not(.item-2)',
         gutter: '.gutter-sizer',
-        itemSelector: '.item',
         percentPosition: true,
-        horizontalOrder: true,
-        transitionDuration: '0.3s',
-        stagger: 100
+        // horizontalOrder: true,
+        stagger: 30,
+          // nicer reveal transition
+          visibleStyle: {
+              transform: 'translateY(0)',
+              opacity: 1
+            },
+            hiddenStyle: {
+              transform: 'translateY(100px)',
+              opacity: 0
+            }
       });
-      // bind event
-      $grid.masonry('on', 'layoutComplete', function () {});
-      $grid.imagesLoaded().done(function () {
-        // console.log('all images successfully loaded');
-        body.addClass("imgLoaded");
-        // setTimeout(function(){ $('.navigation').addClass('hide'); }, 2000);
+
+      var msnry = $grid.data('masonry');
+
+      // initial items reveal
+      $grid.imagesLoaded(function () {
+        $grid.removeClass('are-images-unloaded');
+        $grid.masonry('option', {
+          itemSelector: '.item'
+        });
+        var $items = $grid.find('.item');
+        $grid.masonry('appended', $items, true);
       });
-      // trigger initial layout
-      $grid.masonry();
+
+      // $grid.masonry();
 
 
       // Infinite Scroll
@@ -66,13 +82,11 @@
           nextSelector: ".nav-previous a",
           // selector for all items you'll retrieve
           itemSelector: ".item",
+          outlayer: msnry,
           // finished message
           loading: {
             msgText: "",
             finishedMsg: '🏁 congrats, you completed the internet 🏁',
-            //spinner
-            // img: 'https://media.missguided.co.uk/image/upload/v1476782121/Loading-Small2_tjqqro.gif'
-            //yappy doge
             img: 'https://i.giphy.com/media/5xtDarniHFmiZuCoW40/200w_d.gif'
           }
         },
@@ -125,6 +139,7 @@
       $('iframe:not(iframe.instagram-media)').wrap('<div class="aspect-ratio" />');
       // setTimeout(function(){ $('.navigation').addClass('hide'); }, 2000);
     }
+    //end window.onload
   };
 
 

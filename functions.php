@@ -12,7 +12,7 @@ add_action('init', 'replace_jquery');
 
 function my_assets() {
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css', false, filemtime(get_stylesheet_directory() . '/css/style.css'));
-	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.js', array(), '6.91' , true);
+	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.js', array(), '6.94' , true);
 if ( is_single() ) {
 	wp_enqueue_script( 'twitter', 'https://platform.twitter.com/widgets.js', array(), '1', true);
 }else if ( is_page( 'babezine' ) || is_category() || is_archive() || is_search() ) {
@@ -34,13 +34,16 @@ function theme_functions() {
 
 // Remove p tags from images, scripts, and iframes.
 function remove_some_ptags( $content ) {
+if ( is_single() ){
   $content = preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
   $content = preg_replace('/<p>\s*(<script.*>*.<\/script>)\s*<\/p>/iU', '\1', $content);
   $content = preg_replace('/<p>\s*(<iframe.*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
-	$content = preg_replace('/<p style="text-align: center;">\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
+  $content = preg_replace('/<p style="text-align: center;">\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
   $content = preg_replace('/<p style="text-align: center;">\s*(<script.*>*.<\/script>)\s*<\/p>/iU', '\1', $content);
   $content = preg_replace('/<p style="text-align: center;">\s*(<iframe.*>*.<\/iframe>)\s*<\/p>/iU', '\1', $content);
-  return $content;
+}
+    // Returns the content.
+    return $content;
 }
 add_filter( 'the_content', 'remove_some_ptags' );
 
@@ -93,7 +96,7 @@ if ( ! isset( $content_width ) ) {
 
 }
 //Adding a custom menu location
-		register_nav_menus( array( 'top-menu' => 'Top primary menu') );
+register_nav_menus( array( 'top-menu' => 'Top primary menu') );
 }
 add_action( 'widgets_init', 'mg_widgets_init' );
 
@@ -109,6 +112,4 @@ function product_short() {
 	}
 }
 add_action('init', 'product_short');
-
-
 ?>

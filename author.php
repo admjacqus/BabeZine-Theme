@@ -7,7 +7,7 @@
 <?php rewind_posts(); ?>
 </header>
 
-<div id="grid">
+<div class="grid are-images-unloaded">
  <div class="gutter-sizer"></div>
   <?php
   $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
@@ -25,6 +25,7 @@
     <?php endwhile; wp_reset_postdata(); ?>
 </div>
 <?php if ($auth_query->max_num_pages > 1) { // check if the max number of pages is greater than 1  ?>
+
 <nav id="nav-below" class="navigation" role="navigation">
 <div class="nav-previous">
  <?php echo get_next_posts_link( 'Older', $auth_query->max_num_pages ); // display older posts link ?>
@@ -33,6 +34,7 @@
  <?php echo get_previous_posts_link( 'Newer' ); // display newer posts link ?>
 </div>
 </nav>
+
 <?php } endif; ?>
 </section>
 <?php get_footer(); ?>

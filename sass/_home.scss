@@ -25,10 +25,13 @@
   }
 }
 
-#grid {
+.grid {
   //extra width to counteract the right side gutter
-  width: 103.33%; // margin: 0 auto;
+  width: 103.33%;
   z-index: 2;
+  &.are-images-unloaded {
+    opacity: 0;
+  }
   .gutter-sizer {
     width: 3.3%;
   }
@@ -43,9 +46,6 @@
     img {
       width: 100%;
       height: auto;
-    }
-    &:last-of-type{
-      margin-bottom: 15%;
     }
   }
   .item-2 {

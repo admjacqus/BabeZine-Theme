@@ -72,17 +72,6 @@ input#searchsubmit {
   margin: 0;
 }
 
-//imagesLoaded
-.item {
-  opacity: 0;
-  transition: opacity ease 300ms;
-}
-body.imgLoaded {
-  .item {
-    opacity: 1;
-  }
-}
-
 // shit dflt video player
 .mejs-container * {
     color: white;

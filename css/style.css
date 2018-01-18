@@ -283,6 +283,9 @@ header {
       background: #474747;
       fill: white; }
 
+#nav-below {
+  opacity: 0; }
+
 #infscr-loading {
   position: absolute;
   bottom: 10px;
@@ -317,12 +320,14 @@ header {
     width: 100%;
     height: auto; }
 
-#grid {
+.grid {
   width: 103.33%;
   z-index: 2; }
-  #grid .gutter-sizer {
+  .grid.are-images-unloaded {
+    opacity: 0; }
+  .grid .gutter-sizer {
     width: 3.3%; }
-  #grid .item {
+  .grid .item {
     width: 30%;
     height: auto;
     margin-bottom: 5%;
@@ -330,14 +335,12 @@ header {
     padding: 0;
     -webkit-box-shadow: none;
     box-shadow: none; }
-    #grid .item img {
+    .grid .item img {
       width: 100%;
       height: auto; }
-    #grid .item:last-of-type {
-      margin-bottom: 15%; }
-  #grid .item-2 {
+  .grid .item-2 {
     width: 60%; }
-    #grid .item-2 .title {
+    .grid .item-2 .title {
       font-size: 200%; }
 
 body.single {
@@ -602,14 +605,6 @@ body.search-no-results .entry-title {
 input#searchsubmit {
   margin: 0; }
 
-.item {
-  opacity: 0;
-  -webkit-transition: opacity ease 300ms;
-  transition: opacity ease 300ms; }
-
-body.imgLoaded .item {
-  opacity: 1; }
-
 .mejs-container * {
   color: white; }
 
@@ -644,13 +639,13 @@ body.imgLoaded .item {
   body:not(.single) #hero {
     width: 50%;
     margin: 0 auto 5%; }
-  body:not(.single) #grid {
+  body:not(.single) .grid {
     width: 97%;
     margin: 0 0 0 3%; }
-    body:not(.single) #grid .item-2 {
+    body:not(.single) .grid .item-2 {
       width: 50%;
       margin-left: 6%; }
-      body:not(.single) #grid .item-2 .title {
+      body:not(.single) .grid .item-2 .title {
         font-size: 250%; }
   body.single .entry-content .product {
     max-width: 25%; }
@@ -704,12 +699,12 @@ body.imgLoaded .item {
   body:not(.single) #hero {
     width: 95%;
     margin: 0 auto 5%; }
-  body:not(.single) #grid {
+  body:not(.single) .grid {
     width: 100%;
     margin-left: 5%; }
-    body:not(.single) #grid .gutter-sizer {
+    body:not(.single) .grid .gutter-sizer {
       width: 5%; }
-    body:not(.single) #grid .item {
+    body:not(.single) .grid .item {
       width: 45%;
       margin-bottom: 10%; } }
 
@@ -758,17 +753,17 @@ body.imgLoaded .item {
   body:not(.single) #hero {
     width: 90%;
     margin: 0 5% 15%; }
-  body:not(.single) #grid {
+  body:not(.single) .grid {
     width: 100%;
     margin-left: 10%; }
-    body:not(.single) #grid .gutter-sizer {
+    body:not(.single) .grid .gutter-sizer {
       width: 10%; }
-    body:not(.single) #grid .item, body:not(.single) #grid .item-2 {
+    body:not(.single) .grid .item, body:not(.single) .grid .item-2 {
       width: 80%;
       margin-bottom: 10%; }
-      body:not(.single) #grid .item .title, body:not(.single) #grid .item-2 .title {
+      body:not(.single) .grid .item .title, body:not(.single) .grid .item-2 .title {
         font-size: 1.5em; }
-    body:not(.single) #grid .item-2 .title {
+    body:not(.single) .grid .item-2 .title {
       font-size: 2em; } }
 
 @media only screen and (max-device-width: 375px) and (min-device-width: 10px) {

@@ -8,7 +8,7 @@ elseif ( is_year() ) { printf( __( 'Yearly Archives: %s', 'missguided' ), get_th
 else { _e( 'Archives', 'missguided' ); }
 ?></h1>
 </header>
-<section id="grid">
+<section class="grid are-images-unloaded">
   <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
   <?php get_template_part( 'entry-summary' ); ?>
   <?php endwhile; endif; ?>
