@@ -1,8 +1,8 @@
 .embed-responsive {
   margin-bottom: 3rem;
 }
-iframe.instagram-media {
-  margin: 10px auto 15px!important;
+ig-embed {
+  margin: 0 auto 30px!important;
 }
 iframe.giphy-embed {
     position: absolute;
@@ -71,18 +71,11 @@ input#searchsubmit {
   @extend .button;
   margin: 0;
 }
+.mejs-time span {
+  color: white!important;
+}
 
-// shit dflt video player
-.mejs-container * {
-    color: white;
+.wp-video {
+	margin: 0 auto;
 }
-.mejs-container, .mejs-container .mejs-controls, .mejs-embed, .mejs-embed body {
-  background: #424242!important;
-}
-.wp-playlist .mejs-controls .mejs-button button {
-  outline: 0;
-  min-width: 1px;
-}
-.mejs-controls .mejs-time-rail .mejs-time-current {
-  background: darken($background-colour, 5)!important;
-}
+

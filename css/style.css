@@ -153,15 +153,11 @@ img {
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 2px 10px rgba(0, 0, 0, 0.14);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 2px 10px rgba(0, 0, 0, 0.14); }
 
-.transition, button,
-.button, a.fasc-button, input#searchsubmit, body.single .entry-content .product {
+.transition, .button, a.fasc-button, input#searchsubmit, body.single .entry-content .product {
   -webkit-transition: all 300ms cubic-bezier(0.39, 0.575, 0.565, 1);
   transition: all 300ms cubic-bezier(0.39, 0.575, 0.565, 1); }
 
-button,
-.button,
-a.fasc-button,
-input#searchsubmit {
+.button, a.fasc-button, input#searchsubmit {
   font-family: "Missguided", "Lucida Console", Monaco, monospace;
   font-size: 0.8rem;
   letter-spacing: .75px;
@@ -176,16 +172,7 @@ input#searchsubmit {
   border: 3px solid #474747;
   margin: 1.5rem 0 0;
   cursor: inherit; }
-  button:hover, button:active, button:focus,
-  .button:hover,
-  a.fasc-button:hover,
-  input#searchsubmit:hover,
-  .button:active,
-  a.fasc-button:active,
-  input#searchsubmit:active,
-  .button:focus,
-  a.fasc-button:focus,
-  input#searchsubmit:focus {
+  .button:hover, a.fasc-button:hover, input#searchsubmit:hover, .button:active, a.fasc-button:active, input#searchsubmit:active, .button:focus, a.fasc-button:focus, input#searchsubmit:focus {
     color: #fff;
     background: #474747; }
 
@@ -413,7 +400,7 @@ body.single {
   body.single .entry-content p.wp-caption-text {
     margin: -30px 0 10px; }
   body.single .entry-content img:not(.alignnone) {
-    max-height: 70vh;
+    max-height: 95vh;
     max-width: 100%;
     height: auto;
     width: auto;
@@ -503,8 +490,6 @@ body.single {
       content: '';
       padding-top: 100%;
       display: block; }
-    body.single #related_posts button.cta {
-      margin: 0; }
   body.single #comments {
     display: none; }
 
@@ -541,8 +526,8 @@ body.single {
 .embed-responsive {
   margin-bottom: 3rem; }
 
-iframe.instagram-media {
-  margin: 10px auto 15px !important; }
+ig-embed {
+  margin: 0 auto 30px !important; }
 
 iframe.giphy-embed {
   position: absolute;
@@ -605,18 +590,11 @@ body.search-no-results .entry-title {
 input#searchsubmit {
   margin: 0; }
 
-.mejs-container * {
-  color: white; }
+.mejs-time span {
+  color: white !important; }
 
-.mejs-container, .mejs-container .mejs-controls, .mejs-embed, .mejs-embed body {
-  background: #424242 !important; }
-
-.wp-playlist .mejs-controls .mejs-button button {
-  outline: 0;
-  min-width: 1px; }
-
-.mejs-controls .mejs-time-rail .mejs-time-current {
-  background: #f3d5d0 !important; }
+.wp-video {
+  margin: 0 auto; }
 
 /*------------------------------------------
   Responsive Grid Media Queries - 1280, 1024, 768, 480

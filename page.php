@@ -15,7 +15,7 @@
             <?php the_title(); ?>
           <?php if ( is_singular() ) { echo '</h1>'; } else { echo '</h2>'; } ?>
           <h5 class="subtitle"><?php the_field('bz_excerpt'); ?></h5>
-          <button class="cta"><?php the_field('bz_button'); ?></button>
+          <button class="button"><?php the_field('bz_button'); ?></button>
         </a>
         <?php   endwhile; wp_reset_postdata(); ?>
      </div>

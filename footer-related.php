@@ -24,9 +24,9 @@
   <h4 class="title"><?php the_title(); ?></h4>
   </div>
   <?php if( get_field('bz_button') ){ ?>
-  <button class="cta"><?php the_field('bz_button'); ?></button>
+  <button class="button"><?php the_field('bz_button'); ?></button>
     <?php } else { ?>
-        <button class="cta">check it out</button>
+        <button class="button">check it out</button>
         <?php } ?>
     </a></li>
 

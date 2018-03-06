@@ -1,4 +1,8 @@
 <?php
+//File Limit
+@ini_set( 'upload_max_size' , '1M' );
+@ini_set( 'post_max_size', '10M');
+@ini_set( 'max_execution_time', '300' );
 //Making jQuery to load from Google Library
 function replace_jquery() {
 	if (!is_admin()) {
