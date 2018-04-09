@@ -2,14 +2,14 @@
 <section id="content" role="main">
   <?php get_template_part('title-container') ?>
 <header class="header">
-<h1 class="title"><?php _e( 'everything tagged with ', 'missguided' ); ?><?php single_tag_title(); ?></h1>
+<h1 class="title"><?php single_tag_title('everything tagged with '); ?>.</h1>
 </header>
   <div class="grid are-images-unloaded">
   <div class="gutter-sizer"></div>
     <?php
     $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
     $currTag = get_tag(get_query_var('tag'));
-    $tag_name = $currTag->name;
+    $tag_name = $currTag;
     $args = array(
       'tag' => $tag,
       'posts_per_page' => 20,

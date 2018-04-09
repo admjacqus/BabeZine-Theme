@@ -160,7 +160,7 @@ img {
 .button, a.fasc-button, input#searchsubmit {
   font-family: "Missguided", "Lucida Console", Monaco, monospace;
   font-size: 0.8rem;
-  letter-spacing: .75px;
+  letter-spacing: 0.75px;
   text-transform: lowercase;
   line-height: 0;
   margin-bottom: 0;
@@ -241,7 +241,7 @@ header {
   text-align: center;
   z-index: 1;
   pointer-events: none;
-  opacity: .25;
+  opacity: 0.25;
   -webkit-transition: all ease-out 300ms;
   transition: all ease-out 300ms; }
   .title-container .subtitle {

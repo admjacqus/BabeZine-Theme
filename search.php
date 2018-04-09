@@ -1,17 +1,33 @@
 <?php get_header(); ?>
 <section id="content" role="main">
-<?php get_template_part('title-container') ?>
 <?php if ( have_posts() ) : ?>
+<!-- < ?php get_template_part('title-container') ?> -->
 <header class="header">
 <h1 class="entry-title"><?php printf( __( 'everything %s', 'missguided' ), get_search_query() ); ?></h1>
 </header>
     <div class="grid are-images-unloaded">
      <div class="gutter-sizer"></div>
-<?php while ( have_posts() ) : the_post(); ?>
+<?php
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+$s = get_search_query();
+$args = array('s' =>$s);
+// The Query
+$search_query = new WP_Query( $args ); ?>
+<?php if ( $search_query->have_posts() ) : while ( $search_query->have_posts() ) : $search_query->the_post(); // run the loop ?>
 <?php get_template_part( 'entry-summary' ); ?>
-<?php endwhile; ?>
+<?php endwhile; wp_reset_postdata(); ?>
   </div>
-<?php get_template_part( 'nav', 'below' ); ?>
+  <?php if ($search_query->max_num_pages > 1) { // check if the max number of pages is greater than 1  ?>
+<nav id="nav-below" class="navigation" role="navigation">
+ <div class="nav-previous">
+   <?php echo get_next_posts_link( 'Older', $search_query->max_num_pages ); // display older posts link ?>
+ </div>
+   <div class="nav-next">
+   <?php echo get_previous_posts_link( 'Newer' ); // display newer posts link ?>
+ </div>
+</nav>
+
+<?php } endif; ?>
 <?php else : ?>
 <article id="post-0" class="post no-results not-found">
 <header class="header">
