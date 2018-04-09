@@ -526,7 +526,8 @@ body.single {
 .embed-responsive {
   margin-bottom: 3rem; }
 
-ig-embed {
+ig-embed,
+iframe.instagram-media {
   margin: 0 auto 30px !important; }
 
 iframe.giphy-embed {

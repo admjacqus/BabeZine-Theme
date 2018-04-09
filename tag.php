@@ -12,7 +12,7 @@
     $tag_name = $currTag;
     $args = array(
       'tag' => $tag,
-      'posts_per_page' => 20,
+      'posts_per_page' => 10,
       'paged'          => $paged
     );
     $tag_query = new WP_Query( $args );

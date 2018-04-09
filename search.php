@@ -10,7 +10,11 @@
 <?php
 $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 $s = get_search_query();
-$args = array('s' =>$s);
+$args = array(
+  's' =>$s,
+  'posts_per_page' => 10,
+  'paged' => $paged
+);
 // The Query
 $search_query = new WP_Query( $args ); ?>
 <?php if ( $search_query->have_posts() ) : while ( $search_query->have_posts() ) : $search_query->the_post(); // run the loop ?>

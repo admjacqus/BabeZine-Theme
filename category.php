@@ -8,7 +8,7 @@
     $cat_name = $currCat->name;
     $args = array(
       'category_name' => $cat_name,
-      'posts_per_page' => 20,
+      'posts_per_page' => 10,
       'paged'          => $paged
     );
     $cat_query = new WP_Query( $args );

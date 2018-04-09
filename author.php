@@ -15,7 +15,7 @@
  $auth_name = $curauth->ID;
   $args = array(
     'author'=>  $auth_name,
-    'posts_per_page' => 20,
+    'posts_per_page' => 10,
     'paged'          => $paged
   );
   $auth_query = new WP_Query( $args );

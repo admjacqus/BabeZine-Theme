@@ -1,25 +1,26 @@
 .embed-responsive {
   margin-bottom: 3rem;
 }
-ig-embed {
-  margin: 0 auto 30px!important;
+ig-embed,
+iframe.instagram-media {
+  margin: 0 auto 30px !important;
 }
 iframe.giphy-embed {
-    position: absolute;
-    left: 0%;
+  position: absolute;
+  left: 0%;
 }
 twitterwidget.twitter-tweet {
-    margin: 0 auto;
-    border: white solid 20px;
-    margin-bottom: 2rem!important;
+  margin: 0 auto;
+  border: white solid 20px;
+  margin-bottom: 2rem !important;
 }
 /*search/archive/tag*/
 body.archive,
 body.search,
 body.tag {
-    .title-container {
-      opacity: 0.3;
-    }
+  .title-container {
+    opacity: 0.3;
+  }
 
   .header {
     margin-bottom: 3rem;
@@ -72,10 +73,9 @@ input#searchsubmit {
   margin: 0;
 }
 .mejs-time span {
-  color: white!important;
+  color: white !important;
 }
 
 .wp-video {
-	margin: 0 auto;
+  margin: 0 auto;
 }
-

@@ -29,7 +29,7 @@
           $query_args = array(
             'post_type' => 'post',
             'category_name' => 'BabeZine',
-            'posts_per_page' => 20,
+            'posts_per_page' => 10,
             'paged' => $paged,
             'post__not_in' => $do_not_duplicate
           );
