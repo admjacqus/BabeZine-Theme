@@ -25,7 +25,6 @@ if ( is_single() ) {
 }
 
 }
-
 add_action( 'wp_enqueue_scripts', 'my_assets' );
 
 //theme support
@@ -35,6 +34,7 @@ function theme_functions() {
 		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'automatic-feed-links' );
 }
+
 
 // Remove p tags from images, scripts, and iframes.
 function remove_some_ptags( $content ) {

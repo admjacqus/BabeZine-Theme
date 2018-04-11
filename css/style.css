@@ -332,19 +332,24 @@ header {
 
 body.single {
   text-align: center; }
-  body.single #content {
+  body.single section {
     padding-left: 15px;
     padding-right: 15px;
-    max-width: 960px;
     margin: 0 auto; }
+    body.single section .single {
+      max-width: 960px; }
+    body.single section .lookbook {
+      max-width: 1800px; }
   body.single article header {
     position: relative;
     margin: 0 auto;
     max-width: 700px; }
     body.single article header .title {
       text-transform: lowercase; }
-  body.single .entry-content h1, body.single .entry-content h2, body.single .entry-content h3 {
-    margin: 2em 0 .5em; }
+  body.single .entry-content h1,
+  body.single .entry-content h2,
+  body.single .entry-content h3 {
+    margin: 2em 0 0.5em; }
   body.single .entry-content p {
     max-width: 60em;
     margin: 0 auto 1em; }
@@ -360,7 +365,7 @@ body.single {
     max-width: 600px; }
     body.single .entry-content ol li,
     body.single .entry-content ul li {
-      margin: 0 auto .5em;
+      margin: 0 auto 0.5em;
       text-align: left; }
   body.single .entry-content ol {
     counter-reset: ol-count; }
@@ -423,8 +428,8 @@ body.single {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    margin: .5em 0 2em;
-    padding: 1em .5em; }
+    margin: 0.5em 0 2em;
+    padding: 1em 0.5em; }
     body.single .entry-content .product:hover {
       background: #fdf9f8; }
     body.single .entry-content .product img {
@@ -437,7 +442,7 @@ body.single {
       body.single .entry-content .product p:nth-child(2) {
         line-height: 1.5em;
         width: 90%;
-        margin: 1em auto .5em; }
+        margin: 1em auto 0.5em; }
     body.single .entry-content .product.oos {
       display: none; }
     body.single .entry-content .product.sale span {
@@ -487,7 +492,7 @@ body.single {
       position: relative;
       width: 100%; }
     body.single #related_posts .relatedthumb:before {
-      content: '';
+      content: "";
       padding-top: 100%;
       display: block; }
   body.single #comments {

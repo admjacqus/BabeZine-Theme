@@ -1,0 +1,14 @@
+<?php
+/*
+ * Template Name: Lookbook
+ * Template Post Type: post
+ */
+  
+ get_header();  ?>
+<section class="lookbook" role="main">
+	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+		<?php get_template_part( 'entry' ); ?>
+	<?php endwhile; endif; ?>
+	<?php get_footer(); ?>
+	<!-- < ?php get_template_part( 'nav', 'below-single' ); ?> -->
+</section>
