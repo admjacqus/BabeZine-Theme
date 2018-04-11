@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<section id="content" role="main">
   <div class="grid are-images-unloaded">
   <div class="gutter-sizer"></div>
     <?php
@@ -18,7 +17,7 @@
       <?php endwhile; wp_reset_postdata(); ?>
   </div>
   <?php if ($cat_query->max_num_pages > 1) { // check if the max number of pages is greater than 1  ?>
-<nav id="nav-below" class="navigation" role="navigation">
+<nav id="nav-below" role="navigation">
  <div class="nav-previous">
    <?php echo get_next_posts_link( 'Older', $cat_query->max_num_pages ); // display older posts link ?>
  </div>
@@ -30,5 +29,5 @@
 <?php } endif; ?>
 
 <?php get_template_part('title-container') ?>
-</section>
+
 <?php get_footer(); ?>

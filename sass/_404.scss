@@ -1,0 +1,17 @@
+/*404*/
+body.error404,
+body.search-no-results {
+  .title-container {
+    top: 70%;
+    opacity: 0.25;
+  }
+
+  header.header {
+    margin: 3rem 0;
+  }
+
+  .entry-content p,
+  .entry-title {
+    text-align: center;
+  }
+}

@@ -14,7 +14,7 @@
 
   $my_query = new wp_query( $args );
   if( $my_query->have_posts() ) {
-  echo '<div id="related_posts"><h3>more cool stuff</h3><ul class="flex_list">';
+  echo '<div id="related_posts"><h3>more cool stuff</h3><ul class="flex_list horiz-on-mob">';
   while( $my_query->have_posts() ) {
   $my_query->the_post();?>
 

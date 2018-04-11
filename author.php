@@ -1,12 +1,5 @@
 <?php get_header(); ?>
-<section id="content" role="main">
-<header class="header">
-<?php the_post(); ?>
-<h1 class="title author"><?php _e( 'all posts by', 'missguided' ); ?> <?php the_author_link(); ?></h1>
-<?php if ( '' != get_the_author_meta( 'user_description' ) ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . get_the_author_meta( 'user_description' ) . '</div>' ); ?>
-<?php rewind_posts(); ?>
-</header>
-
+<?php get_template_part( 'header', 'author' ); ?>
 <div class="grid are-images-unloaded">
  <div class="gutter-sizer"></div>
   <?php
@@ -26,7 +19,7 @@
 </div>
 <?php if ($auth_query->max_num_pages > 1) { // check if the max number of pages is greater than 1  ?>
 
-<nav id="nav-below" class="navigation" role="navigation">
+<nav id="nav-below" role="navigation">
 <div class="nav-previous">
  <?php echo get_next_posts_link( 'Older', $auth_query->max_num_pages ); // display older posts link ?>
 </div>
@@ -36,5 +29,5 @@
 </nav>
 
 <?php } endif; ?>
-</section>
+
 <?php get_footer(); ?>
