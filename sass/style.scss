@@ -1,22 +1,33 @@
 $background-colour: #f8e7e4;
 $font-colour: #474747;
-$font-family:  "Missguided", "Lucida Console", Monaco, monospace;
+$font-family: "Missguided", "Lucida Console", Monaco, monospace;
 
 /* Fonts & Typography */
 @font-face {
-    font-family: 'Missguided';
-    src: url('https://static.missguided.co.uk/media/upload/FONTS/Missguided/missguided-bold.woff2') format('woff2'), url('https://static.missguided.co.uk/media/upload/FONTS/Missguided/missguided-bold.woff') format('woff'), url('https://static.missguided.co.uk/media/upload/FONTS/Missguided/missguided-bold.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-    letter-spacing: 1px;
+  font-family: "Missguided";
+  src: url("https://static.missguided.co.uk/media/upload/FONTS/Missguided/missguided-bold.woff2")
+      format("woff2"),
+    url("https://static.missguided.co.uk/media/upload/FONTS/Missguided/missguided-bold.woff")
+      format("woff"),
+    url("https://static.missguided.co.uk/media/upload/FONTS/Missguided/missguided-bold.ttf")
+      format("ttf");
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: 1px;
 }
 
-@import 'basic';
+@import "basic";
 
-@import 'home';
+@import "menu";
 
-@import 'single';
+@import "grid";
 
-@import 'extra-shizz';
+@import "single";
 
-@import 'media';
+@import "search";
+
+@import "404";
+
+@import "extra-shizz";
+
+@import "media";

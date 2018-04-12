@@ -1,28 +1,15 @@
 // relative to post
 body.single {
-  text-align: center;
-  section {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
-    .single {
-      max-width: 960px;
-    }
-    .lookbook {
-      max-width: 1800px;
-    }
-  }
   article {
     header {
       position: relative;
       margin: 0 auto;
-      max-width: 700px;
-      .title {
-        text-transform: lowercase;
-      }
+      max-width: 720px;
     }
   }
   .entry-content {
+    max-width: 720px;
+    margin: 0 auto;
     h1,
     h2,
     h3 {
@@ -100,12 +87,20 @@ body.single {
     p.wp-caption-text {
       margin: -30px 0 10px;
     }
-    img:not(.alignnone) {
+    img {
       max-height: 95vh;
       max-width: 100%;
       height: auto;
       width: auto;
-      margin: 1rem auto 3rem;
+      margin: 0 auto 1rem;
+      &.alignleft {
+        max-width: 50%;
+        margin: 0 2em 0 0;
+      }
+      &.alignright {
+        max-width: 50%;
+        margin: 0 0 0 2em;
+      }
     }
 
     // iframes
@@ -130,27 +125,21 @@ body.single {
       max-width: 30%;
       display: inline-flex;
       margin: 0.5em 0 2em;
-      padding: 1em 0.5em;
+      padding: 0.75em;
       @extend .transition;
       &:hover {
         background: lighten($background-colour, 5);
       }
-      img {
-        margin: 0;
-        max-width: 95%;
-        // width: auto;
-        // height: auto;
-      }
       p {
-        // font-size: 1em;
+        font-size: 1em;
         display: block;
+        margin: 0 auto;
         width: 100%;
-        margin: 0;
-        &:nth-child(2) {
-          // font-size: 1em;
-          line-height: 1.5em;
+        &:nth-of-type(2) {
+          font-size: 1.2em;
+          line-height: 1em;
+          margin: 1em auto 0;
           width: 90%;
-          margin: 1em auto 0.5em;
         }
       }
       &.oos {
@@ -195,6 +184,9 @@ body.single {
     .relatedcontent {
       .title {
         margin: 1em 0;
+      }
+      button.button {
+        margin: 0;
       }
     }
     .relatedthumb img {

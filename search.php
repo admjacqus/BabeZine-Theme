@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-<section id="content" role="main">
 <?php if ( have_posts() ) : ?>
 <!-- < ?php get_template_part('title-container') ?> -->
 <header class="header">
@@ -22,7 +21,7 @@ $search_query = new WP_Query( $args ); ?>
 <?php endwhile; wp_reset_postdata(); ?>
   </div>
   <?php if ($search_query->max_num_pages > 1) { // check if the max number of pages is greater than 1  ?>
-<nav id="nav-below" class="navigation" role="navigation">
+<nav id="nav-below" role="navigation">
  <div class="nav-previous">
    <?php echo get_next_posts_link( 'Older', $search_query->max_num_pages ); // display older posts link ?>
  </div>
@@ -43,5 +42,4 @@ $search_query = new WP_Query( $args ); ?>
 </section>
 </article>
 <?php endif; ?>
-</section>
 <?php get_footer(); ?>

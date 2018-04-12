@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section id="content" role="main">
+
    <?php if ( is_page( 'babezine' ) ) { ?>
 
 <?php get_template_part('title-container') ?>
@@ -40,10 +40,10 @@
         <?php   $do_not_duplicate[] = $post->ID; ?>
         <?php get_template_part( 'entry-summary' ); ?>
         <?php endwhile; wp_reset_postdata(); ?>
-     </section>
+</section>
 
      <?php if ($babeposts->max_num_pages > 1) { // check if the max number of pages is greater than 1  ?>
-  <nav id="nav-below" class="navigation" role="navigation">
+  <nav id="nav-below" role="navigation">
     <div class="nav-previous">
       <?php echo get_next_posts_link( 'Older', $babeposts->max_num_pages ); // display older posts link ?>
     </div>
@@ -62,8 +62,6 @@
 <?php endif; ?>
 <?php } else { ?>
 
-
-  <section id="content" role="main">
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <header class="header">
@@ -77,7 +75,6 @@
 </article>
 <?php if ( ! post_password_required() ) comments_template( '', true ); ?>
 <?php endwhile; endif; ?>
-</section>
 <?php } ?>
-</section>
+
 <?php get_footer(); ?>

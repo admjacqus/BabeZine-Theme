@@ -11,13 +11,10 @@ body {
   margin: 0;
   font-size: 12px;
   letter-spacing: 1px;
+  text-align: center;
   .user-is-touching {
     background-color: blue;
   }
-}
-
-#wrapper {
-  overflow: hidden;
 }
 
 h1,
@@ -29,6 +26,7 @@ h6,
 p,
 a,
 span,
+input,
 em,
 li {
   font-family: $font-family;
@@ -149,12 +147,6 @@ img {
   margin: 0 0 30px 15px;
 }
 
-// .alignnone {
-//   float: none;
-//   display: block;
-//   margin: 0 0 30px 0;
-// }
-
 //extends
 .border {
   border: 5px $font-colour solid;
@@ -183,7 +175,7 @@ img {
   font-size: 0.8rem;
   letter-spacing: 0.75px;
   text-transform: lowercase;
-  line-height: 0;
+  line-height: 1rem;
   margin-bottom: 0;
   color: $font-colour;
   background: transparent;
@@ -204,6 +196,10 @@ img {
 
 a.fasc-button {
   @extend .button;
+
+  display: inline-block;
+  margin: 0 10px;
+
   color: $font-colour !important;
   background: transparent !important;
   border: 3px solid $font-colour !important;
@@ -212,52 +208,6 @@ a.fasc-button {
   &:focus {
     color: #fff !important;
     background: $font-colour !important;
-  }
-}
-
-header {
-  margin-bottom: 2em;
-}
-// top navbar conatiner
-.navigation {
-  background: white;
-  width: 100%;
-  ul {
-    display: flex;
-    justify-content: space-evenly;
-    max-width: 1000px;
-    margin: 0 auto;
-    h5 {
-      text-decoration: none;
-      border-bottom: 1.5px solid $background-colour;
-      text-transform: lowercase;
-      margin: 1.5em 0;
-    }
-  }
-}
-
-.categories {
-  position: relative;
-  width: 100%;
-  max-width: 620px;
-  margin: 0 auto;
-  padding: 1em 0;
-}
-
-#menu-main-menu {
-  display: flex;
-  justify-content: space-between;
-  li {
-    margin: 1em 0;
-    a {
-      font-size: 1em;
-      text-align: center;
-      text-transform: lowercase;
-      text-decoration: none;
-    }
-    &.current-menu-item {
-      border-bottom: 1.5px solid $font-colour;
-    }
   }
 }
 
@@ -311,10 +261,11 @@ header {
 
 #infscr-loading {
   position: absolute;
-  bottom: 10px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   font-family: $font-family;
+  transition: all ease 1s;
   img {
     display: block;
     width: 150px;

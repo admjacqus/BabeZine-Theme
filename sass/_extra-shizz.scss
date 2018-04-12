@@ -14,64 +14,15 @@ twitterwidget.twitter-tweet {
   border: white solid 20px;
   margin-bottom: 2rem !important;
 }
+
 /*search/archive/tag*/
 body.archive,
-body.search,
 body.tag {
   .title-container {
     opacity: 0.3;
   }
-
-  .header {
-    margin-bottom: 3rem;
-    .title {
-      text-transform: lowercase;
-    }
-  }
-}
-/*404*/
-body.error404,
-body.search-no-results {
-  .title-container {
-    top: 70%;
-    opacity: 0.25;
-  }
-
-  header.header {
-    margin: 3rem 0;
-  }
-
-  .entry-content p,
-  .entry-title {
-    text-align: center;
-  }
 }
 
-#searchform {
-  display: block;
-  margin: 0 auto;
-  width: 50%;
-  min-width: 370px;
-  max-width: 500px;
-}
-
-#searchform .screen-reader-text {
-  display: none;
-}
-
-#s {
-  float: left;
-  font-size: 1rem;
-  padding: 10px;
-  border: none;
-  background: #fff;
-  width: 70%;
-}
-
-input#searchsubmit {
-  @extend .button;
-  margin: 0;
-}
 .mejs-time span {
   color: white !important;
 }

@@ -8,7 +8,7 @@
 
 @media all and (min-width: 768px) {
   .title-container {
-    opacity: .5;
+    opacity: 0.5;
     mix-blend-mode: soft-light;
   }
 }
@@ -52,11 +52,11 @@
   }
 }
 
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 767px) {
   header {
     margin-bottom: 1em;
   }
-  #menu-main-menu{
+  #menu-main-menu {
     padding: 1em;
     white-space: nowrap;
     overflow-x: scroll;
@@ -73,73 +73,80 @@
       }
     }
   }
-      .grad {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 150px;
-        height: 65px;
-        background: linear-gradient(to right, rgba(125, 185, 232, 0) 0%, rgba(125, 185, 232, 0) 38%, rgba(209, 226, 240, 0.01) 10%, #fde1de 100%);
-        pointer-events: none;
+  .grad {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 65px;
+    background: linear-gradient(
+      to right,
+      rgba(125, 185, 232, 0) 0%,
+      rgba(125, 185, 232, 0) 38%,
+      rgba(209, 226, 240, 0.01) 10%,
+      #fde1de 100%
+    );
+    pointer-events: none;
+  }
+
+  body:not(.single) {
+    .title {
+      font-size: 2em;
+    }
+    .item,
+    .item-2 {
+      width: 80%;
+      margin-bottom: 10%;
+      .title {
+        font-size: 1em;
       }
-
-        body:not(.single) {
-          .title {
-            font-size: 2em;
-          }
-            .item,
-            .item-2 {
-              width: 80%;
-              margin-bottom: 10%;
-              .title {
-                font-size: 1em;
-              }
-            }
-            .item-2 {
-              .title {
-                font-size: 2em;
-              }
-            }
-          }
-        
-}
-
-@media all and (max-width: 767px) and (min-width: 481px) {
-    body:not(.single) {
+    }
+    .item-2 {
       .title {
         font-size: 2em;
       }
-      #hero {
-        width: 95%;
-        margin: 0 auto 5%;
+    }
+  }
+}
+
+@media all and (max-width: 767px) and (min-width: 481px) {
+  body:not(.single) {
+    .title {
+      font-size: 2em;
+    }
+    #hero {
+      width: 95%;
+      margin: 0 auto 5%;
+    }
+    .grid {
+      width: 100%;
+      margin-left: 5%;
+      .gutter-sizer {
+        width: 5%;
       }
-      .grid {
-        width: 100%;
-        margin-left: 5%;
-        .gutter-sizer {
-          width: 5%;
-        }
-        .item {
-          width: 45%;
-          margin-bottom: 10%;
+      .item {
+        width: 45%;
+        margin-bottom: 10%;
       }
     }
-}
+  }
 }
 @media all and (max-width: 480px) {
-
-    .navigation ul h5 {
-      font-size: 1em;
-      margin: 1.2em 0;
-    }
+  .navigation ul h5 {
+    font-size: 1em;
+    margin: 1.2em 0;
+  }
 
   body.single {
     .entry-content {
+      p {
+        margin: 1em;
+      }
       //social buttons
       .addtoany_share_save_container {
         margin: 2em 0;
       }
-      .addtoany_list.a2a_kit_size_32 a>span {
+      .addtoany_list.a2a_kit_size_32 a > span {
         height: 26px;
         line-height: 26px;
         width: 26px;
@@ -148,29 +155,38 @@
         width: 230px;
         max-width: 30%;
         display: inline-flex;
-        margin: 0;
-        padding: 1em .25em;
+        margin: 2em 0 1em;
+        padding: 0.5em;
         p {
-          font-size: 0.8em;
+          font-size: 1em;
+          &:nth-of-type(2) {
+            font-size: 1.15em;
+            margin-top: 0.75em;
+            line-height: 1.75em;
+          }
         }
       }
-      .flex_list li {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 300px;
-        flex: 0 0 300px;
-        padding: 10px;
-      }
+
       .wp-caption {
         max-width: 85vw;
       }
     }
+
     article {
       header .title {
         font-size: 2em;
       }
     }
+
     #related_posts {
       width: 100%;
+      ul {
+        flex-wrap: wrap;
+        li {
+          flex: 1 1 250px;
+          padding: 0 30px;
+        }
+      }
     }
     footer.entry-footer {
       width: 90%;
@@ -199,7 +215,8 @@
       .gutter-sizer {
         width: 10%;
       }
-      .item, .item-2 {
+      .item,
+      .item-2 {
         width: 80%;
         margin-bottom: 10%;
         .title {
@@ -213,77 +230,64 @@
       }
     }
   }
-
 }
-@media only screen and (max-device-width: 375px) and (min-device-width: 10px){
- #menu-main-menu {
+@media only screen and (max-device-width: 375px) and (min-device-width: 10px) {
+  #menu-main-menu {
     padding: 10px;
   }
 }
 
-
 /*------------------------------------------*/
-
 
 /* Portrait */
 
-@media screen and (orientation:portrait) {
+@media screen and (orientation: portrait) {
   /* Portrait styles here */
 }
 
-
 /* Landscape */
 
-@media screen and (orientation:landscape) {
+@media screen and (orientation: landscape) {
   /* Landscape styles here */
 }
 
-
 /* CSS for iPhone, iPad, and Retina Displays */
-
 
 /* Non-Retina */
 
-@media screen and (-webkit-max-device-pixel-ratio: 1) {}
-
+@media screen and (-webkit-max-device-pixel-ratio: 1) {
+}
 
 /* Retina */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min--moz-device-pixel-ratio: 1.5),
-only screen and (min-device-pixel-ratio: 1.5) {
-
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min--moz-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
 }
-
 
 /* iPhone Portrait */
 
-@media screen and (max-device-width: 480px) and (orientation:portrait) {
-
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
 }
-
 
 /* iPhone Landscape */
 
-@media screen and (max-device-width: 480px) and (orientation:landscape) {}
-
+@media screen and (max-device-width: 480px) and (orientation: landscape) {
+}
 
 /* iPad Portrait */
 
-@media screen and (min-device-width: 481px) and (orientation:portrait) {
-
+@media screen and (min-device-width: 481px) and (orientation: portrait) {
 }
-
 
 /* iPad Landscape */
 
-@media screen and (min-device-width: 481px) and (orientation:landscape) {
+@media screen and (min-device-width: 481px) and (orientation: landscape) {
   .title-container {
     top: 60%;
-        }
+  }
 }
-
 
 /*------------------------------------------
   Live demo samples

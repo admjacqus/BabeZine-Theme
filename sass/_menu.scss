@@ -1,0 +1,45 @@
+header {
+  margin-bottom: 2em;
+}
+// top navbar conatiner
+.navigation {
+  background: white;
+  width: 100%;
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 1000px;
+    margin: 0 auto;
+    h5 {
+      text-decoration: none;
+      border-bottom: 1.5px solid $background-colour;
+      text-transform: lowercase;
+      margin: 1em 0;
+    }
+  }
+}
+
+.categories {
+  position: relative;
+  width: 100%;
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 1em 0;
+}
+
+#menu-main-menu {
+  display: flex;
+  justify-content: space-between;
+  li {
+    margin: 1em 0;
+    a {
+      font-size: 1em;
+      text-align: center;
+      text-transform: lowercase;
+      text-decoration: none;
+    }
+    &.current-menu-item {
+      border-bottom: 1.5px solid $font-colour;
+    }
+  }
+}
