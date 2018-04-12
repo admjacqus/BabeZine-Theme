@@ -116,7 +116,7 @@ function product_func( $atts ) {
             }
         }
         //output what we have
-        return '<div class="product sale"><a target="_blank" href="{$a['product_url']}"><img src="$product_img" alt="product_img"><p class"product_title">$product_title</p><p><span class"product_price old">$product_old_price</span><span class"product_price new">$product_new_price</span></p></a></div>';
+        return "<div class='product sale'><a target='_blank' href='{$a['product_url']}'><img src='$product_img' alt='product_img'><p class'product_title'>$product_title</p><p><span class'product_price old'>$product_old_price</span><span class'product_price new'>$product_new_price</span></p></a></div>";
     } else if ($product->length > 0) {
         //loop through all the products
         foreach ($product as $pat) {
