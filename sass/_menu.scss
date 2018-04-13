@@ -1,39 +1,42 @@
-header {
+header#header {
   margin-bottom: 2em;
-}
-// top navbar conatiner
-.navigation {
-  background: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  ul {
-    display: flex;
-    justify-content: space-evenly;
-    max-width: 1000px;
-    margin: 0 auto;
-    h5 {
-      text-decoration: none;
-      border-bottom: 1.5px solid $background-colour;
-      text-transform: lowercase;
-      margin: 1em 0;
-    }
+  height: 80px;
+}
+
+.menu-home,
+.categories,
+.menu-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+// top navbar conatiner
+.menu-home {
+  flex: 250px 0 1;
+  h5 {
+    text-decoration: none;
+    text-transform: lowercase;
   }
 }
 
 .categories {
-  position: relative;
-  width: 100%;
-  max-width: 620px;
-  margin: 0 auto;
-  padding: 1em 0;
+  flex: calc(960px - 2em) 0 1;
+  margin: 0 1em;
 }
 
 #menu-main-menu {
   display: flex;
   justify-content: space-between;
+  width: 100%;
   li {
-    margin: 1em 0;
     a {
-      font-size: 1em;
       text-align: center;
       text-transform: lowercase;
       text-decoration: none;
@@ -42,4 +45,70 @@ header {
       border-bottom: 1.5px solid $font-colour;
     }
   }
+}
+
+.menu-search {
+  flex: 250px 0 0;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  transition: all ease 300ms;
+  input.search-field {
+    font-size: 0.8em;
+    text-transform: lowercase;
+    opacity: 0;
+    transition: all ease 300ms;
+  }
+  form.search-form {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    min-width: 100px;
+    max-width: 300px;
+    .search-form label {
+      flex: auto 1 0;
+    }
+    input.search-field {
+      float: none;
+      &:focus {
+        form.search-form input.search-field {
+          opacity: 1;
+        }
+      }
+    }
+    button.search-submit {
+      background: none;
+      border: none;
+      position: absolute;
+      right: 8%;
+      top: 50%;
+      transform: translate(0, -50%);
+      svg.search-icon {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+  &:hover {
+    form.search-form input.search-field {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translatey(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translatey(0);
+  }
+}
+.in-down {
+  animation-name: fadeInDown;
+  animation-fill-mode: both;
+  animation-duration: 1s;
 }

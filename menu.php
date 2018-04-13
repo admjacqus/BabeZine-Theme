@@ -1,12 +1,5 @@
-<div class="navigation">
-	<ul>
-		<li>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><h5>back to babe zine</h5></a>
-		</li>
-		<li>
-			<a href="https://www.missguided.co.uk/"><h5>shop missguided</h5></a>
-		</li>
-	</ul>
+<div class="menu-home">
+	<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><h5>babeZine</h5></a>
 </div>
 <div class="categories">
 	<?php wp_nav_menu(array(
@@ -18,3 +11,8 @@
 			?>
 	<div class="grad"></div>
 </div>
+<div class="menu-search">
+	<?php get_template_part('search', 'menu'); ?>
+</div>
+
+
