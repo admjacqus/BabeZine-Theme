@@ -685,7 +685,7 @@ body.tag .title-container {
     margin-bottom: 10%; }
     body:not(.single) .item .title,
     body:not(.single) .item-2 .title {
-      font-size: 1em; }
+      font-size: 1.25em; }
   body:not(.single) .item-2 .title {
     font-size: 2em; } }
 
@@ -693,16 +693,16 @@ body.tag .title-container {
   body:not(.single) .title {
     font-size: 2em; }
   body:not(.single) #hero {
-    width: 95%;
-    margin: 0 auto 5%; }
+    width: 80%;
+    margin: 0 10% 10%; }
   body:not(.single) .grid {
     width: 100%;
-    margin-left: 5%; }
+    margin-left: 3%; }
     body:not(.single) .grid .gutter-sizer {
       width: 5%; }
     body:not(.single) .grid .item {
-      width: 45%;
-      margin-bottom: 10%; } }
+      width: 46%;
+      margin-bottom: 5%; } }
 
 @media all and (max-width: 480px) {
   .navigation ul h5 {
@@ -743,7 +743,8 @@ body.tag .title-container {
         -webkit-box-flex: 1;
             -ms-flex: 1 1 250px;
                 flex: 1 1 250px;
-        padding: 0 30px; }
+        padding: 0 30px;
+        margin-bottom: 2em; }
   body.single footer.entry-footer {
     width: 90%;
     margin: 0 auto 15%; }
