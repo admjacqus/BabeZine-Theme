@@ -153,6 +153,11 @@
     // $(".menu-search").addClass("in-down");
   });
 
+  $("#mobile-btn").click(function() {
+    $(this).toggleClass("active");
+    $(".categories").toggleClass("open");
+  });
+
   // Close after clicking on a li
 
   $("#menu-main-menu li").on("click", function() {
