@@ -12,7 +12,7 @@
 				'depth' => 1 )
 			);
 			?>
-	<div class="grad"></div>
+			<div class="mobile-search"><?php get_template_part('search', 'menu'); ?></div>
 </div>
 <div class="menu-search">
 	<?php get_template_part('search', 'menu'); ?>

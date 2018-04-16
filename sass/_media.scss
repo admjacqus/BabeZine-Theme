@@ -21,6 +21,7 @@
   .categories {
     padding: 2em;
   }
+
   body:not(.single) {
     #hero {
       width: 50%;
@@ -39,8 +40,16 @@
     }
   }
   body.single {
-    .entry-content .product {
-      max-width: 25%;
+    .entry-content {
+      img {
+        max-height: 75vh;
+      }
+      p {
+        max-width: 45em;
+      }
+      .product {
+        max-width: 25%;
+      }
     }
     #related_posts {
       width: 100%;
@@ -54,6 +63,13 @@
 @media (max-width: 960px) {
   .menu-search {
     display: none;
+  }
+  form.search-form {
+    input {
+      &.search-field {
+        width: 75%;
+      }
+    }
   }
 }
 
@@ -73,6 +89,19 @@
     .item-2 {
       .title {
         font-size: 2em;
+      }
+    }
+  }
+  body.single {
+    .entry-content {
+      img {
+        max-height: 85vh;
+        padding: 0 1em;
+      }
+      p {
+        display: block;
+        max-width: 85%;
+        margin: 0 auto;
       }
     }
   }
@@ -108,9 +137,6 @@
 
   body.single {
     .entry-content {
-      p {
-        margin: 1em;
-      }
       //social buttons
       .addtoany_share_save_container {
         margin: 2em 0;
