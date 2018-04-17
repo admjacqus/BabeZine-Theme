@@ -1,45 +1,274 @@
-header {
-  margin-bottom: 2em;
-}
-// top navbar conatiner
-.navigation {
-  background: white;
-  width: 100%;
-  ul {
+@media (min-width: 768px) {
+  header#header {
+    margin-bottom: 2em;
     display: flex;
-    justify-content: space-evenly;
-    max-width: 1000px;
-    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+  }
+
+  .menu-home,
+  .categories,
+  .menu-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+  }
+
+  // top navbar conatiner
+  .menu-home {
+    flex: 250px 0 1;
+    .mobile-btn {
+      display: none;
+    }
     h5 {
       text-decoration: none;
-      border-bottom: 1.5px solid $background-colour;
       text-transform: lowercase;
-      margin: 1em 0;
     }
+  }
+
+  .categories {
+    flex: 768px 0 1;
+    margin: 0 1em;
+  }
+
+  #menu-main-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    li {
+      order: 1;
+
+      a {
+        text-align: center;
+        text-transform: lowercase;
+        text-decoration: none;
+      }
+      &.current-menu-item {
+        order: 0;
+        border-bottom: 1.5px solid $font-colour;
+      }
+    }
+  }
+  .mobile-search {
+    display: none;
+  }
+  .menu-search {
+    flex: 250px 0 0;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    transition: all ease 300ms;
+    input.search-field {
+      font-size: 0.8em;
+      text-transform: lowercase;
+
+      opacity: 0;
+      transition: opacity 300ms ease-out 2s;
+    }
+    form.search-form {
+      position: relative;
+      width: 100%;
+      min-width: 100px;
+      max-width: 250px;
+      .search-form label {
+        flex: auto 1 0;
+      }
+      input.search-field {
+        float: none;
+        padding: 5% 13% 5% 3%;
+        font-size: 1em;
+      }
+      button.search-submit {
+        background: none;
+        border: none;
+        position: absolute;
+        right: 10%;
+        top: 50%;
+
+        height: 100%;
+        transform: translate(0, -50%);
+        svg.search-icon {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+    &:hover {
+      form.search-form input.search-field {
+        opacity: 1;
+        transition: opacity 300ms ease-out 0s;
+      }
+    }
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translatey(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translatey(0);
+    }
+  }
+  .in-down {
+    animation-name: fadeInDown;
+    animation-fill-mode: both;
+    animation-duration: 1s;
   }
 }
 
-.categories {
-  position: relative;
-  width: 100%;
-  max-width: 620px;
-  margin: 0 auto;
-  padding: 1em 0;
-}
-
-#menu-main-menu {
-  display: flex;
-  justify-content: space-between;
-  li {
-    margin: 1em 0;
+@media (max-width: 767px) {
+  header#header {
+    margin-bottom: 1em;
+    display: block;
+  }
+  .menu-home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1.5em;
     a {
-      font-size: 1em;
-      text-align: center;
-      text-transform: lowercase;
-      text-decoration: none;
+      z-index: 100;
     }
-    &.current-menu-item {
-      border-bottom: 1.5px solid $font-colour;
+    .mobile-btn {
+      width: 20px;
+      display: block;
+      z-index: 100;
+    }
+  }
+  .categories {
+    opacity: 0;
+
+    transition: all 300ms ease;
+
+    background: linear-gradient(
+      338deg,
+      #f0c9c9,
+      #f2e7fd,
+      #e8fdfa,
+      #c7aecf,
+      #fceae1
+    );
+    background-size: 1000% 1000%;
+
+    -webkit-animation: animBG 30s ease infinite;
+    -moz-animation: animBG 30s ease infinite;
+    animation: animBG 30s ease infinite;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    .menu {
+      opacity: 0;
+      transform: translateY(50px);
+      // transition: all 300ms ease 0s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 70%;
+      margin-top: 15%;
+      li {
+        font-size: 5vw;
+        &.current-menu-item {
+          border-bottom: 0.8vw solid #323223;
+        }
+        a {
+          text-transform: lowercase;
+        }
+      }
+    }
+    &.open {
+      opacity: 1;
+      z-index: 10;
+      // transition: opacity 300ms ease 0s;
+      .menu {
+        opacity: 1;
+        transform: translateY(0px);
+        // transition: all 300ms ease 300s;
+      }
+    }
+
+    .mobile-search {
+      flex: auto 0 0;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      transition: all ease 300ms;
+      input.search-field {
+        font-size: 0.8em;
+        text-transform: lowercase;
+        transition: opacity 300ms ease-out 2s;
+      }
+      form.search-form {
+        position: relative;
+        width: 100%;
+        min-width: 100px;
+        max-width: 90%;
+        .search-form label {
+          flex: auto 1 0;
+        }
+        input.search-field {
+          float: none;
+          padding: 5% 13% 5% 3%;
+          font-size: 1em;
+        }
+        button.search-submit {
+          background: none;
+          border: none;
+          position: absolute;
+          right: 15%;
+          top: 50%;
+
+          height: 100%;
+          transform: translate(0, -50%);
+          svg.search-icon {
+            width: 18px;
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+  @-webkit-keyframes animBG {
+    0% {
+      background-position: 86% 0%;
+    }
+    50% {
+      background-position: 15% 100%;
+    }
+    100% {
+      background-position: 86% 0%;
+    }
+  }
+  @-moz-keyframes animBG {
+    0% {
+      background-position: 86% 0%;
+    }
+    50% {
+      background-position: 15% 100%;
+    }
+    100% {
+      background-position: 86% 0%;
+    }
+  }
+  @keyframes animBG {
+    0% {
+      background-position: 86% 0%;
+    }
+    50% {
+      background-position: 15% 100%;
+    }
+    100% {
+      background-position: 86% 0%;
     }
   }
 }

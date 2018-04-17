@@ -145,6 +145,26 @@
     //end window.onload
   };
 
+  //search toggle
+
+  $("#search-btn").click(function() {
+    $(this).toggleClass("active");
+    $(".menu-search").toggleClass("open");
+    // $(".menu-search").addClass("in-down");
+  });
+
+  $("#mobile-btn").click(function() {
+    $(this).toggleClass("active");
+    $(".categories").toggleClass("open");
+  });
+
+  // Close after clicking on a li
+
+  $("#menu-main-menu li").on("click", function() {
+    $("#nav-overlay").hide();
+    $("#search-btn").removeClass("active");
+  });
+
   function toTop(e) {
     $("html, body").animate(
       {

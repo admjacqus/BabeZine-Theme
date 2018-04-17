@@ -31,6 +31,7 @@
   .categories {
     padding: 2em;
   }
+
   body:not(.single) {
     #hero {
       width: 50%;
@@ -49,8 +50,16 @@
     }
   }
   body.single {
-    .entry-content .product {
-      max-width: 25%;
+    .entry-content {
+      img {
+        max-height: 75vh;
+      }
+      p {
+        max-width: 45em;
+      }
+      .product {
+        max-width: 25%;
+      }
     }
     #related_posts {
       width: 100%;
@@ -61,44 +70,20 @@
     }
   }
 }
-
-@media only screen and (max-width: 767px) {
-  header {
-    margin-bottom: 1em;
+@media (max-width: 960px) {
+  .menu-search {
+    display: none;
   }
-  #menu-main-menu {
-    padding: 1em;
-    white-space: nowrap;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    white-space: nowrap;
-    overflow-x: auto;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    li {
-      margin: 0 9vw 0 10px;
-      display: inline-block;
-      vertical-align: middle;
-      &:last-of-type {
-        width: 150px;
+  form.search-form {
+    input {
+      &.search-field {
+        width: 75%;
       }
     }
   }
-  .grad {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 150px;
-    height: 65px;
-    background: linear-gradient(
-      to right,
-      rgba(125, 185, 232, 0) 0%,
-      rgba(125, 185, 232, 0) 38%,
-      rgba(209, 226, 240, 0.01) 10%,
-      #fde1de 100%
-    );
-    pointer-events: none;
-  }
+}
 
+@media only screen and (max-width: 767px) {
   body:not(.single) {
     .title {
       font-size: 2em;
@@ -114,6 +99,18 @@
     .item-2 {
       .title {
         font-size: 2em;
+      }
+    }
+  }
+  body.single {
+    .entry-content {
+      img {
+        max-height: 85vh;
+      }
+      p {
+        display: block;
+        max-width: 95%;
+        margin: 0 auto 2em;
       }
     }
   }
@@ -157,9 +154,6 @@
 
   body.single {
     .entry-content {
-      p {
-        margin: 1em;
-      }
       //social buttons
       .addtoany_share_save_container {
         margin: 2em 0;

@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <article id="post-0" class="post not-found">
 <header class="header">
 <h1 class="entry-title"><?php _e( 'oops, we can&#39;t find that.', 'missguided' ); ?></h1>
