@@ -246,6 +246,9 @@ a.fasc-button {
     width: 150px;
     margin: 0 auto; }
 
+body.archive header.header {
+  margin-bottom: 3rem; }
+
 @media (min-width: 768px) {
   header#header {
     margin-bottom: 2em;
@@ -891,12 +894,11 @@ body.tag .title-container {
   body:not(.single) .item-2 .title {
     font-size: 2em; }
   body.single .entry-content img {
-    max-height: 85vh;
-    padding: 0 1em; }
+    max-height: 85vh; }
   body.single .entry-content p {
     display: block;
-    max-width: 85%;
-    margin: 0 auto; } }
+    max-width: 95%;
+    margin: 0 auto 2em; } }
 
 @media all and (max-width: 767px) and (min-width: 481px) {
   body:not(.single) .title {
