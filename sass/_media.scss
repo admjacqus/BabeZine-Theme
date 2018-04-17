@@ -13,6 +13,16 @@
   }
 }
 
+@media (max-width: 1000px) {
+  form.searchform {
+    input {
+      &:nth-of-type(1) {
+        width: 64%;
+      }
+    }
+  }
+}
+
 @media all and (min-width: 768px) and (max-width: 1024px) {
   .navigation ul h5 {
     font-size: 1em;
@@ -110,6 +120,14 @@
 }
 
 @media all and (max-width: 767px) and (min-width: 481px) {
+  body.single {
+    .entry-content {
+      p {
+        max-width: 90%;
+        margin: 0 auto 1em;
+      }
+    }
+  }
   body:not(.single) {
     .title {
       font-size: 2em;
@@ -230,6 +248,12 @@
         }
       }
     }
+  }
+  form.searchform {
+    min-width: 300px;
+  }
+  form.searchform input:nth-of-type(1) {
+    width: 56%;
   }
 }
 @media only screen and (max-device-width: 375px) and (min-device-width: 10px) {
