@@ -145,24 +145,13 @@
     //end window.onload
   };
 
-  //search toggle
+  // Set button to click.
+  var button = $("#mobile-btn"),
+    category = $(".categories");
 
-  $("#search-btn").click(function() {
+  button.click(function() {
     $(this).toggleClass("active");
-    $(".menu-search").toggleClass("open");
-    // $(".menu-search").addClass("in-down");
-  });
-
-  $("#mobile-btn").click(function() {
-    $(this).toggleClass("active");
-    $(".categories").toggleClass("open");
-  });
-
-  // Close after clicking on a li
-
-  $("#menu-main-menu li").on("click", function() {
-    $("#nav-overlay").hide();
-    $("#search-btn").removeClass("active");
+    category.toggleClass("open");
   });
 
   function toTop(e) {

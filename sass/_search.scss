@@ -19,11 +19,13 @@ form.search-form {
       float: left;
       font-size: 1rem;
       letter-spacing: 1px;
-
+      border-bottom: 3px solid $font-colour;
       padding: 14px 3%;
       border: none;
-      background: #fff;
+      background-color: #fff;
       width: 82%;
+      text-transform: lowercase;
+      transition: opacity 300ms ease-out 2s;
     }
     &.search-submit {
       @extend .button;

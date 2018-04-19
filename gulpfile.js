@@ -16,7 +16,8 @@ gulp.task("sass", function() {
 
 gulp.task("default", function() {
   browserSync.init({
-    proxy: "http://localhost:8888"
+    proxy: "http://localhost:8888",
+    notify: false
   });
   gulp.watch("./sass/**/*.scss", ["sass"]);
   gulp.watch("./css/**/*.css").on("change", browserSync.reload);

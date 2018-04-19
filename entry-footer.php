@@ -1,5 +1,8 @@
 <footer class="entry-footer">
-<p class="cat-links"><?php the_category( ', ' ); ?>
-<?php the_tags('<span class="meta-sep"> | </span> Tags: ', ', ', '')?>
-</p>
+
+    <div class="tag-links">
+       
+            <?php the_tags( '<p>the tags:</p><ul><li>', '</li><li>', '</li></ul>' ); ?>
+        </div>
+<!-- <p class="cat-links">< ?php the_category( ', ' ); ?> -->
 </footer>
