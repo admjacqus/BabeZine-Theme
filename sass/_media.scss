@@ -6,15 +6,23 @@
    480-less    - phone landscape & smaller
 --------------------------------------------*/
 
+@media all and (min-width: 1200px) {
+  .title-container {
+    max-width: 1200px;
+  }
+}
+
 @media all and (min-width: 768px) {
   .title-container {
     opacity: 0.5;
     mix-blend-mode: soft-light;
   }
+
+  a.back-home {
+    display: none;
+  }
+
   #related_posts {
-    width: 80%;
-    max-width: 960px;
-    margin: 0 auto;
     ul {
       display: flex;
       justify-content: center;
@@ -72,8 +80,28 @@
     font-size: 1em;
     margin: 1.2em 0;
   }
+  header#header {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 96%;
+    margin: 0 auto 2em;
+  }
+  .menu-home {
+    order: 1;
+  }
+  .menu-search {
+    order: 2;
+    padding-top: 1em;
+    display: block;
+  }
   .categories {
-    padding: 0 2em;
+    order: 3;
+    flex: 1024px 0 1;
+  }
+  .menu-home,
+  .categories,
+  .menu-search {
+    height: 50px;
   }
 
   body:not(.single) {
@@ -115,21 +143,77 @@
   }
 }
 @media (max-width: 960px) {
-  .menu-search {
-    display: none;
-  }
   form.search-form {
     input {
       &.search-field {
-        width: 75%;
+        width: 85%;
       }
     }
   }
 }
 
 @media only screen and (max-width: 767px) {
+  body {
+    &.push {
+      margin-top: 83px;
+    }
+    .categories {
+      background-image: linear-gradient(-20deg, #a8edea 0%, #fed6e3 100%);
+    }
+
+    &.single {
+      .categories {
+        background-image: linear-gradient(-60deg, #fbc2eb 0%, #e6dee9 100%);
+      }
+    }
+    &.search {
+      .categories {
+        background-image: linear-gradient(-120deg, #febfa1 0%, #f3adbb 100%);
+      }
+    }
+    &.category {
+      .categories {
+        // background-image: linear-gradient(30deg, #ffc3a0 0%, #ffafbd 100%);
+        background-image: linear-gradient(to bottom, #feada6 0%, #f5efef 100%);
+      }
+      &.category-babes-2 {
+        .categories {
+          background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+        }
+      }
+      &.category-culture {
+        .categories {
+          background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
+        }
+      }
+      &.category-fashion {
+        .categories {
+          background-image: linear-gradient(to top, #ebbba7 0%, #cfc7f8 100%);
+        }
+      }
+      &.category-beauty {
+        .categories {
+          background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%);
+        }
+      }
+      &.category-discovered {
+        .categories {
+          background-image: linear-gradient(100deg, #74ebd5 0%, #9face6 100%);
+        }
+      }
+    }
+  }
+
   .categories {
     padding-top: 20%;
+    a.back-home {
+      position: absolute;
+      top: 75%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 4vw;
+      width: 100%;
+    }
   }
 
   body:not(.single) {
@@ -165,6 +249,9 @@
       }
     }
   }
+  .menu-search {
+    display: none;
+  }
 }
 
 @media all and (max-width: 767px) and (min-width: 481px) {
@@ -198,15 +285,7 @@
   }
 }
 @media all and (max-width: 480px) {
-  .navigation ul h5 {
-    font-size: 1em;
-    margin: 1.2em 0;
-  }
-
   body.single {
-    article {
-      padding: 0 1em;
-    }
     .entry-content {
       //social buttons
       .addtoany_share_save_container {
@@ -286,6 +365,7 @@
       }
     }
   }
+
   form.searchform {
     min-width: 300px;
   }

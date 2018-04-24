@@ -34,11 +34,25 @@ $search_query = new WP_Query( $args ); ?>
 <?php else : ?>
 <article id="post-0" class="post no-results not-found">
 <header class="header">
-<h2 class="title"><?php _e( 'Nothing Found', 'missguided' ); ?></h2>
+<!-- <h2 class="title">< ?php _e( '🤷', 'missguided' ); ?></h2> -->
+<img src="https://emojipedia-us.s3.amazonaws.com/thumbs/120/apple/129/shrug_emoji-modifier-fitzpatrick-type-5_1f937-1f3fe_1f3fe.png" alt="">
 </header>
 <section class="entry-content">
 <p><?php _e( 'Sorry, nothing matched your search. Please try again.', 'missguided' ); ?></p>
-<?php get_search_form(); ?>
+<?php get_template_part('search', 'menu'); ?>
+<h3>here's some new, too</h3>
+<ul class="recent">
+<?php
+	$recent_posts = wp_get_recent_posts();
+	foreach( $recent_posts as $recent ){
+		echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'<p>' . $recent["post_excerpt"] . '</p></a> </li> ';
+
+	}
+	wp_reset_query();
+?>
+</ul>
+
+
 </section>
 </article>
 <?php endif; ?>

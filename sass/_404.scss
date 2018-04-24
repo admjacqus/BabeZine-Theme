@@ -5,16 +5,22 @@ body.search-no-results {
     top: 70%;
     opacity: 0.25;
   }
-
-  header.header {
-    margin: 3rem 0;
-    .entry-title {
-      font-size: 2em;
-    }
-  }
-
   .entry-content p,
   .entry-title {
     text-align: center;
+  }
+
+  ul.recent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc(60% - 4em);
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 2em;
+    li {
+      list-style: circle;
+      text-align: left;
+    }
   }
 }

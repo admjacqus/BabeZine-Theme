@@ -40,38 +40,3 @@
     transform: translatey(0);
   }
 }
-
-// background
-@-webkit-keyframes animBG {
-  0% {
-    background-position: 0% 2%;
-  }
-  50% {
-    background-position: 100% 99%;
-  }
-  100% {
-    background-position: 0% 2%;
-  }
-}
-@-moz-keyframes animBG {
-  0% {
-    background-position: 0% 2%;
-  }
-  50% {
-    background-position: 100% 99%;
-  }
-  100% {
-    background-position: 0% 2%;
-  }
-}
-@keyframes animBG {
-  0% {
-    background-position: 0% 2%;
-  }
-  50% {
-    background-position: 100% 99%;
-  }
-  100% {
-    background-position: 0% 2%;
-  }
-}

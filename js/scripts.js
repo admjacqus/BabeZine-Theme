@@ -147,11 +147,15 @@
 
   // Set button to click.
   var button = $("#mobile-btn"),
-    category = $(".categories");
+    category = $(".categories"),
+    menu = $(".menu-home"),
+    push = $("body");
 
   button.click(function() {
     $(this).toggleClass("active");
     category.toggleClass("open");
+    menu.toggleClass("open");
+    push.toggleClass("push");
   });
 
   function toTop(e) {

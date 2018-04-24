@@ -5,7 +5,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     width: 100%;
   }
 
@@ -15,7 +15,9 @@
     animation: fade-in-right ease 0.4s forwards;
     animation-delay: 0.8s;
   }
-
+  .search {
+    width: 100%;
+  }
   .menu-home {
     transform: scaleX(0);
     transform-origin: left;
@@ -62,6 +64,7 @@
   .categories {
     flex: 768px 0 1;
     margin: 0 1em;
+    transition: all ease 300ms;
   }
 
   #menu-main-menu {
@@ -110,7 +113,7 @@
       }
       input.search-field {
         float: none;
-        padding: 5% 13% 5% 3%;
+        padding: 15px 35px 15px 15px;
         font-size: 1em;
       }
       button.search-submit {
@@ -158,7 +161,7 @@
       opacity: 1;
       transform: rotate(0) translateY(0) translateX(0);
       transform-origin: 1em 1em;
-      transition: transform 300ms ease-in-out, opacity 150ms ease-in-out;
+      transition: transform 200ms ease-in-out, opacity 150ms ease-in-out;
     }
     .line-1 {
       transform-origin: 25px;
@@ -187,6 +190,13 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 1.5em;
+    &.open {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 200;
+      width: calc(100% - 3em);
+    }
     a {
       z-index: 100;
     }
@@ -197,13 +207,15 @@
       &.active {
         .svg-menu-toggle {
           .line-1 {
-            transform: rotate(45deg) translateY(0) translateX(0);
+            // transform: rotate(45deg) translateY(0) translateX(0);
+            transform: rotate(45deg) translate3d(5px, 5px, 0);
           }
           .line-2 {
             opacity: 0;
           }
           .line-3 {
-            transform: rotate(-45deg) translateY(0em) translateX(0em);
+            // transform: rotate(-45deg) translateY(0em) translateX(0em);
+            transform: rotate(-45deg) translate3d(5px, -5px, 0);
           }
         }
       }
@@ -218,31 +230,28 @@
 
   .categories {
     opacity: 0;
-    // transition: all 300ms ease;
-
-    background: linear-gradient(236deg, #a18cd1, #fbc2eb, #fad0c4);
-    background-size: 200% 600%;
-
-    animation: animBG 10s ease infinite;
-
+    // background-image: linear-gradient(-40deg, #fad0c4 0%, #ffd1ff 100%);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
+    transition: opacity ease 300ms;
     .menu {
       opacity: 0;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-      height: 70%;
-      margin-top: 5%;
+      height: 60%;
+      margin-top: 1em;
       li {
         font-size: 5vw;
+        order: 1;
         &.current-menu-item {
-          border-bottom: 0.8vw solid #323223;
+          order: 0;
+          border-bottom: 0.6vw solid $font-colour;
         }
         a {
           text-transform: lowercase;
@@ -265,23 +274,17 @@
       transition: all ease 300ms;
       input.search-field {
         font-size: 0.8em;
-        border-bottom: 2px solid #323232;
-        background-color: transparent;
+        background-color: white;
         transition: background-color ease 300ms;
-        transition: border-bottom ease 300ms 300ms;
-        &:hover {
-          background-color: white;
-        }
+        &:hover,
         &:focus {
           background-color: white;
-          border-bottom: 2px white solid;
         }
       }
       form.search-form {
         position: relative;
         width: 100%;
         min-width: 100px;
-        max-width: 90%;
         .search-form label {
           flex: auto 1 0;
         }
@@ -289,20 +292,6 @@
           float: none;
           padding: 5% 13% 5% 3%;
           font-size: 1em;
-        }
-        button.search-submit {
-          background: none;
-          border: none;
-          position: absolute;
-          right: 15%;
-          top: 50%;
-
-          height: 100%;
-          transform: translate(0, -50%);
-          svg.search-icon {
-            width: 18px;
-            height: 18px;
-          }
         }
       }
     }

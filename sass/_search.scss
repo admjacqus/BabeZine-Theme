@@ -6,6 +6,7 @@ body.error404 {
 }
 
 form.search-form {
+  position: relative;
   display: block;
   margin: 0 auto;
   width: 50%;
@@ -14,25 +15,43 @@ form.search-form {
   span.screen-reader-text {
     display: none;
   }
+  label {
+    flex: auto 1 0;
+  }
   input {
     &.search-field {
-      float: left;
       font-size: 1rem;
       letter-spacing: 1px;
       border-bottom: 3px solid $font-colour;
-      padding: 14px 3%;
+      padding: 5% 13% 5% 3%;
       border: none;
       background-color: #fff;
       width: 82%;
       text-transform: lowercase;
       transition: opacity 300ms ease-out 2s;
     }
-    &.search-submit {
-      @extend .button;
-      margin: 0;
-    }
     &:-webkit-autofill {
       background-color: red !important;
+    }
+  }
+  .search-submit {
+    background: none;
+    border: none;
+    position: absolute;
+    right: 10%;
+    top: 50%;
+
+    height: 100%;
+    transform: translate(0, -50%);
+    svg.search-icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  &:hover {
+    form.search-form input.search-field {
+      opacity: 1;
+      transition: opacity 300ms ease-out 0s;
     }
   }
 }
