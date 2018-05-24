@@ -34,8 +34,7 @@ $search_query = new WP_Query( $args ); ?>
 <?php else : ?>
 <article id="post-0" class="post no-results not-found">
 <header class="header">
-<!-- <h2 class="title">< ?php _e( '🤷', 'missguided' ); ?></h2> -->
-<img src="https://emojipedia-us.s3.amazonaws.com/thumbs/120/apple/129/shrug_emoji-modifier-fitzpatrick-type-5_1f937-1f3fe_1f3fe.png" alt="">
+<img src="https://media.missguided.co.uk/image/upload/v1524579662/shrug_cx2jaa.png" alt="">
 </header>
 <section class="entry-content">
 <p><?php _e( 'Sorry, nothing matched your search. Please try again.', 'missguided' ); ?></p>

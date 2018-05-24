@@ -131,18 +131,21 @@ body.single {
       &:hover {
         background: lighten($background-colour, 5);
       }
-      p {
+      h5 {
         font-size: 1em;
         display: block;
         margin: 0 auto;
         width: 100%;
-        &:nth-of-type(2) {
-          font-size: 1.2em;
-          line-height: 1em;
-          margin: 1em auto 0;
-          width: 90%;
-        }
       }
+      h4 {
+        font-size: 1.2em;
+        display: block;
+        margin: 0 auto;
+        line-height: 1em;
+        margin: 1em auto 0;
+        width: 90%;
+      }
+
       &.oos {
         display: none;
       }

@@ -22,6 +22,11 @@
     display: none;
   }
 
+  .categories {
+    flex: 538px 0 1;
+    margin: 0 10% 0 1em;
+  }
+
   #related_posts {
     ul {
       display: flex;
@@ -52,6 +57,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      object-position: top center;
     }
     .relatedthumb {
       position: relative;
@@ -300,15 +306,16 @@
         width: 230px;
         max-width: 30%;
         display: inline-flex;
-        margin: 2em 0 1em;
+        margin: 1em 0;
         padding: 0.5em;
-        p {
-          font-size: 1em;
-          &:nth-of-type(2) {
-            font-size: 1.15em;
-            margin-top: 0.75em;
-            line-height: 1.75em;
-          }
+        h5 {
+          font-size: 0.85em;
+          line-height: 1.5em;
+        }
+        h4 {
+          font-size: 1.15em;
+          margin-top: 0.5em;
+          line-height: 1.75em;
         }
       }
 
