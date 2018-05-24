@@ -1,6 +1,5 @@
 <div class="menu-home">
-
-   <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><h5>babeZine</h5></a>
+	 <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><h5>babeZine</h5></a>
 	<div id="mobile-btn" class="mobile-btn">
 		<svg class="icon icon-menu-toggle" aria-hidden="true"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 50">
 		<g class="svg-menu-toggle">

@@ -1,3 +1,6 @@
+@media (max-width: 1400px) {
+}
+
 @media (min-width: 768px) {
   header#header {
     margin-bottom: 2em;
@@ -62,7 +65,7 @@
   }
 
   .categories {
-    flex: 768px 0 1;
+    flex: 538px 0 1;
     margin: 0 1em;
     transition: all ease 300ms;
   }
