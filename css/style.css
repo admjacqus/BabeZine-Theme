@@ -324,13 +324,6 @@ body.archive header.header {
     .menu-home h5 {
       text-decoration: none;
       text-transform: lowercase; }
-  .categories {
-    -webkit-box-flex: 538px;
-        -ms-flex: 538px 0 1;
-            flex: 538px 0 1;
-    margin: 0 1em;
-    -webkit-transition: all ease 300ms;
-    transition: all ease 300ms; }
   #menu-main-menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -678,16 +671,18 @@ body.single .entry-content {
     margin: 0 auto 1em; }
   body.single .entry-content p.wp-caption-text {
     margin: -30px 0 10px; }
-  body.single .entry-content img {
+  body.single .entry-content img:not(.alignnone) {
     max-height: 95vh;
     max-width: 100%;
     height: auto;
     width: auto;
     margin: 0 auto 1rem; }
-    body.single .entry-content img.alignleft {
+    body.single .entry-content img:not(.alignnone).alignnone {
+      margin: 0; }
+    body.single .entry-content img:not(.alignnone).alignleft {
       max-width: 50%;
       margin: 0 2em 0 0; }
-    body.single .entry-content img.alignright {
+    body.single .entry-content img:not(.alignnone).alignright {
       max-width: 50%;
       margin: 0 0 0 2em; }
   body.single .entry-content .aspect-ratio {
@@ -1019,7 +1014,9 @@ body.tag .title-container {
     -webkit-box-flex: 538px;
         -ms-flex: 538px 0 1;
             flex: 538px 0 1;
-    margin: 0 10% 0 1em; }
+    margin: 0 1em;
+    -webkit-transition: all ease 300ms;
+    transition: all ease 300ms; }
   #related_posts ul {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1077,7 +1074,7 @@ body.tag .title-container {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 96%;
-    margin: 0 auto 2em; }
+    margin: 1em auto 2em; }
   .menu-home {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -1094,7 +1091,8 @@ body.tag .title-container {
             order: 3;
     -webkit-box-flex: 1024px;
         -ms-flex: 1024px 0 1;
-            flex: 1024px 0 1; }
+            flex: 1024px 0 1;
+    margin-right: 1.5em; }
   .menu-home,
   .categories,
   .menu-search {

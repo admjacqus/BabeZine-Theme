@@ -88,12 +88,15 @@ body.single {
     p.wp-caption-text {
       margin: -30px 0 10px;
     }
-    img {
+    img:not(.alignnone) {
       max-height: 95vh;
       max-width: 100%;
       height: auto;
       width: auto;
       margin: 0 auto 1rem;
+      &.alignnone {
+        margin: 0;
+      }
       &.alignleft {
         max-width: 50%;
         margin: 0 2em 0 0;
