@@ -297,3 +297,7 @@ img.alignleft {
     left: 0;
     top: 0;
 }
+
+img.wp-more-tag.mce-wp-more {
+    max-height: 10px;
+}
