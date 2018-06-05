@@ -1,0 +1,299 @@
+/* custom-editor-style.css */
+
+/* Fonts & Typography */
+
+@font-face {
+    font-family: "Missguided";
+    src: url("https://static.missguided.co.uk/media/upload/FONTS/Missguided/missguided-bold.woff2") format("woff2"), url("https://static.missguided.co.uk/media/upload/FONTS/Missguided/missguided-bold.woff") format("woff"), url("https://static.missguided.co.uk/media/upload/FONTS/Missguided/missguided-bold.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    background-color: #f8e7e4;
+    overflow-x: hidden;
+    margin: 0;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.user-is-touching {
+    background-color: blue;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, span, input, em, li {
+    font-family: "Missguided", "Lucida Console", Monaco, monospace;
+    color: #474747;
+    font-weight: 300;
+    text-transform: initial;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: greyscale;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a.contains-image {
+    height: 100%;
+}
+
+a:active, a:focus, a:hover {
+    color: #474747;
+    text-decoration: none;
+}
+
+strong {
+    font-weight: 500;
+}
+
+.h1, h1 {
+    font-size: 3em;
+}
+
+.h2, h2 {
+    font-size: 2.5em;
+}
+
+.h3, h3 {
+    font-size: 2em;
+}
+
+.h4, h4 {
+    font-size: 1.5em;
+}
+
+.h5, h5 {
+    font-size: 1.2em;
+}
+
+.h6, h6 {
+    font-size: 1em;
+}
+
+button, input, textarea {
+    outline: none;
+}
+
+table {
+    font-family: "Missguided", "Lucida Console", Monaco, monospace;
+    background: #faeeec;
+    padding: 5px;
+    margin: 0 auto 2em;
+    width: auto;
+}
+
+table ttr td {
+    max-width: 200px;
+    padding: 10px;
+}
+
+ul, ol, menu, dir {
+    display: block;
+    list-style-type: none;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.size-auto, .size-full, .size-large, .size-medium, .size-thumbnail {
+    max-width: 100%;
+    height: auto;
+}
+
+.alignleft {
+    float: left;
+    margin: 0 15px 30px 0;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto 30px auto;
+}
+
+.alignright {
+    float: right;
+    margin: 0 0 30px 15px;
+}
+
+.title {
+    text-transform: lowercase;
+    margin: 1rem 0;
+}
+
+.button, a.fasc-button {
+    font-family: "Missguided", "Lucida Console", Monaco, monospace;
+    font-size: 0.8rem!important;
+    letter-spacing: 0.75px!important;
+    text-transform: lowercase!important;
+    line-height: 1rem!important;
+    margin-bottom: 0!important;
+    color: #474747!important;
+    background: transparent!important;
+    text-align: center;
+    padding: 1rem!important;
+    min-width: 90px!important;
+    border: 3px solid #474747!important;
+    margin: 1.5rem 0 0!important;
+    cursor: inherit;
+}
+
+.button:hover, a.fasc-button:hover, .button:active, a.fasc-button:active, .button:focus, a.fasc-button:focus {
+    color: #fff!important;
+    background: #474747!important;
+}
+
+.subtitle {
+    margin: 0;
+}
+
+header {
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 720px;
+}
+
+body {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    margin: 2em 0 0.5em;
+}
+
+p {
+    max-width: 60em;
+    margin: 0 auto 1em;
+}
+
+p>a {
+    border-bottom: 1.5px solid #474747;
+    cursor: pointer;
+}
+
+.contains-image {
+    border: none;
+}
+
+ol, ul {
+    margin: 2rem auto;
+    width: 70%;
+    max-width: 600px;
+}
+
+ol li, ul li {
+    margin: 0 auto 0.5em;
+    text-align: left;
+}
+
+ol {
+    counter-reset: ol-count;
+}
+
+ol li:before {
+    content: counter(ol-count);
+    counter-increment: ol-count;
+    background: #474747;
+    color: #fff;
+    border-radius: 13px;
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 20px;
+    line-height: 24px;
+}
+
+ul {
+    list-style: circle;
+}
+
+ul li {
+    margin-left: 5%;
+}
+
+.addtoany_share_save_container {
+    margin: 3em 0;
+}
+
+.column {
+    margin-bottom: 70px;
+    height: 100%;
+    display: inline-block;
+}
+
+.wp-caption {
+    border: none;
+    text-align: center;
+    background: white;
+    padding: 20px 15px 15px;
+    margin: 0 0 30px 0;
+    border-radius: 4px;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
+    max-width: 90vw;
+    margin: 0 auto 1em;
+}
+
+p.wp-caption-text {
+    margin: 0px 0 10px;
+}
+
+img:not(.alignnone):not(.size-full) {
+    max-height: 910px;
+    max-width: 100%;
+    height: auto;
+    /* width: auto; */
+    margin: 0 auto 1rem;
+}
+
+img.alignnone {
+    width: 100%;
+    max-width: 100%;
+}
+
+img.alignright.size-large {
+    width: auto;
+}
+
+img.alignleft {
+    max-width: 50%!important;
+}
+
+.aspect-ratio {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 63%;
+    margin: 3rem auto;
+}
+
+.aspect-ratio iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}

@@ -1,17 +1,14 @@
 <?php
-//Removed: File Limit
-//Removed: Making jQuery to load from Google Library (bad practice)
-
 function my_assets() {
 	wp_enqueue_style( 'main', get_template_directory_uri() . '/css/style.css', false, filemtime(get_stylesheet_directory() . '/css/style.css'));
 	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/scripts.js', array(), '1.356' , true);
 if ( is_single() ) {
 	wp_enqueue_script( 'twitter', 'https://platform.twitter.com/widgets.js', array(), '1', true);
+	wp_enqueue_script( 'shed', get_template_directory_uri() . '/js/shed.js', array('jquery'), '2.1', true);
 }else if ( is_page( 'babezine' ) || is_category() || is_archive() || is_search() ) {
 	wp_enqueue_script( 'infinte', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-infinitescroll/2.0b2.120519/jquery.infinitescroll.min.js', array( 'jquery' ), '1', true );
 	wp_enqueue_script( 'masonry', array('jquery'), null, true);
 }
-
 }
 add_action( 'wp_enqueue_scripts', 'my_assets' );
 
@@ -92,6 +89,14 @@ if ( ! isset( $content_width ) ) {
 register_nav_menus( array( 'top-menu' => 'Top primary menu') );
 }
 add_action( 'widgets_init', 'mg_widgets_init' );
+
+/**
+* Registers an editor stylesheet for the theme.
+*/
+function wpdocs_theme_add_editor_styles() {
+add_editor_style( 'custom-editor-style.css' );
+}
+add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
 
 //inlcude custom shortcodes, but not on admin
 function product_short() {
