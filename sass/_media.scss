@@ -117,6 +117,9 @@
     #hero {
       width: 50%;
       margin: 0 auto 5%;
+      h1.title {
+        font-size: 2.25em;
+      }
     }
     .grid {
       width: 97%;
@@ -125,7 +128,7 @@
         width: 50%;
         margin-left: 6%;
         .title {
-          font-size: 250%;
+          font-size: 2em;
         }
       }
     }
@@ -211,17 +214,17 @@
         }
       }
     }
-  }
 
-  .categories {
-    padding-top: 20%;
-    a.back-home {
-      position: absolute;
-      top: 75%;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 4vw;
-      width: 100%;
+    .categories {
+      padding-top: 20%;
+      a.back-home {
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 4vw;
+        width: 100%;
+      }
     }
   }
 
@@ -245,6 +248,14 @@
   }
   body.single {
     .entry-content {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0 1em 1em;
+      }
       img {
         max-height: 85vh;
       }
@@ -255,6 +266,13 @@
         display: block;
         max-width: 95%;
         margin: 0 auto 2em;
+      }
+    }
+    .entry-content {
+      ol,
+      ul {
+        margin: 1em 0 2em 50px;
+        width: 82.5%;
       }
     }
   }
@@ -296,6 +314,20 @@
 @media all and (max-width: 480px) {
   body.single {
     .entry-content {
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.75em;
+      }
+      h3 {
+        font-size: 1.5em;
+      }
+      h4,
+      h4,
+      h6 {
+        font-size: 1.25em;
+      }
       //social buttons
       .addtoany_share_save_container {
         margin: 2em 0;
@@ -353,6 +385,9 @@
     #hero {
       width: 90%;
       margin: 0 5% 15%;
+      h1.title {
+        font-size: 2em;
+      }
     }
     .grid {
       width: 100%;
@@ -370,7 +405,7 @@
       }
       .item-2 {
         .title {
-          font-size: 2em;
+          font-size: 1.75em;
         }
       }
     }

@@ -635,19 +635,30 @@ body.single .entry-content {
       margin: 0 auto 0.5em;
       text-align: left; }
   body.single .entry-content ol {
-    counter-reset: ol-count; }
-    body.single .entry-content ol li:before {
-      content: counter(ol-count);
-      counter-increment: ol-count;
-      background: #474747;
-      color: #fff;
-      border-radius: 13px;
-      width: 26px;
-      height: 26px;
-      display: inline-block;
-      text-align: center;
-      margin-right: 20px;
-      line-height: 24px; }
+    counter-reset: ol-count;
+    background: #fdf9f8;
+    border-right: solid 2px pink;
+    border-left: solid 2px pink;
+    border-bottom: solid 2px pink; }
+    body.single .entry-content ol li {
+      position: relative;
+      margin-bottom: 10px;
+      padding: 0 10px;
+      border-top: 2px solid pink; }
+      body.single .entry-content ol li:before {
+        content: counter(ol-count);
+        counter-increment: ol-count;
+        text-align: center;
+        font-size: 16px;
+        background: pink;
+        color: white;
+        border-radius: 15px 0 0 15px;
+        width: 28px;
+        display: inline-block;
+        margin-top: -2px;
+        margin-left: -50px;
+        margin-right: 15px;
+        padding: 0 5px; }
   body.single .entry-content ul {
     list-style: circle; }
     body.single .entry-content ul li {
@@ -1102,6 +1113,8 @@ body.tag .title-container {
   body:not(.single) #hero {
     width: 50%;
     margin: 0 auto 5%; }
+    body:not(.single) #hero h1.title {
+      font-size: 2.25em; }
   body:not(.single) .grid {
     width: 97%;
     margin: 0 0 0 3%; }
@@ -1109,7 +1122,7 @@ body.tag .title-container {
       width: 50%;
       margin-left: 6%; }
       body:not(.single) .grid .item-2 .title {
-        font-size: 250%; }
+        font-size: 2em; }
   body.single .entry-content img {
     max-height: 75vh; }
   body.single .entry-content p {
@@ -1152,9 +1165,9 @@ body.tag .title-container {
     background-image: linear-gradient(to top, #ebc0fd 0%, #d9ded8 100%); }
   body.category.category-discovered .categories {
     background-image: linear-gradient(100deg, #74ebd5 0%, #9face6 100%); }
-  .categories {
+  body .categories {
     padding-top: 20%; }
-    .categories a.back-home {
+    body .categories a.back-home {
       position: absolute;
       top: 75%;
       left: 50%;
@@ -1173,6 +1186,13 @@ body.tag .title-container {
       font-size: 1.25em; }
   body:not(.single) .item-2 .title {
     font-size: 2em; }
+  body.single .entry-content h1,
+  body.single .entry-content h2,
+  body.single .entry-content h3,
+  body.single .entry-content h4,
+  body.single .entry-content h5,
+  body.single .entry-content h6 {
+    margin: 0 1em 1em; }
   body.single .entry-content img {
     max-height: 85vh; }
   body.single .entry-content h3 {
@@ -1181,6 +1201,10 @@ body.tag .title-container {
     display: block;
     max-width: 95%;
     margin: 0 auto 2em; }
+  body.single .entry-content ol,
+  body.single .entry-content ul {
+    margin: 1em 0 2em 50px;
+    width: 82.5%; }
   .menu-search {
     display: none; } }
 
@@ -1203,6 +1227,16 @@ body.tag .title-container {
       margin-bottom: 5%; } }
 
 @media all and (max-width: 480px) {
+  body.single .entry-content h1 {
+    font-size: 2em; }
+  body.single .entry-content h2 {
+    font-size: 1.75em; }
+  body.single .entry-content h3 {
+    font-size: 1.5em; }
+  body.single .entry-content h4,
+  body.single .entry-content h4,
+  body.single .entry-content h6 {
+    font-size: 1.25em; }
   body.single .entry-content .addtoany_share_save_container {
     margin: 2em 0; }
   body.single .entry-content .addtoany_list.a2a_kit_size_32 a > span {
@@ -1242,6 +1276,8 @@ body.tag .title-container {
   body:not(.single) #hero {
     width: 90%;
     margin: 0 5% 15%; }
+    body:not(.single) #hero h1.title {
+      font-size: 2em; }
   body:not(.single) .grid {
     width: 100%;
     margin-left: 10%; }
@@ -1255,7 +1291,7 @@ body.tag .title-container {
       body:not(.single) .grid .item-2 .title {
         font-size: 1.5em; }
     body:not(.single) .grid .item-2 .title {
-      font-size: 2em; }
+      font-size: 1.75em; }
   form.searchform {
     min-width: 300px; }
   form.searchform input:nth-of-type(1) {

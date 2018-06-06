@@ -94,7 +94,7 @@ add_action( 'widgets_init', 'mg_widgets_init' );
 * Registers an editor stylesheet for the theme.
 */
 function wpdocs_theme_add_editor_styles() {
-add_editor_style( 'custom-editor-style.css' );
+add_editor_style( 'editor-style.css' );
 }
 add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
 
