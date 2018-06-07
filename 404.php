@@ -2,18 +2,19 @@
 <style>.menu-search{display:none;}</style>
 <article id="post-0" class="post not-found">
 <header class="header">
-<h2 class="title"><?php _e( '🤷', 'missguided' ); ?></h2>
+<img src="" alt="" id="shrug">
 </header>
 <section class="entry-content">
-<p><?php _e( 'Try a search or pick a category instead?', 'missguided' ); ?></p>
-<!-- < ?php get_search_form(); ?> -->
+<h2>try a search or pick a category instead?</h2>
 <?php get_template_part('search', 'menu'); ?>
 </section>
 
-<h3>here's some new, too</h3>
+<h4>here's some new, too</h4>
 <ul class="recent">
 <?php
-	$recent_posts = wp_get_recent_posts();
+// except 'how to 223' and 'uncategorised 1'
+$args = array ('category__not_in' => array( 223, 1 ) );
+	$recent_posts = wp_get_recent_posts($args);
 	foreach( $recent_posts as $recent ){
 		echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
 	}
