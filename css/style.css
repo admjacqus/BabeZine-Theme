@@ -604,6 +604,45 @@ body.archive header.header {
 .subtitle {
   margin: 0; }
 
+.swp_social_panel {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .swp_social_panel:not(.nc_floater):not(.swp_social_panelSide) {
+    max-width: 250px;
+    margin: 0 auto; }
+
+.swp_social_panel.swp_default_full_color .swp_facebook,
+.swp_social_panel.swp_default_full_color .swp_twitter,
+.swp_social_panel.swp_default_full_color .swp_google_plus,
+.swp_social_panel.swp_default_full_color .swp_pinterest {
+  background: rgba(0, 0, 0, 0);
+  border: none; }
+
+.swp_social_panel.swp_default_full_color .swp_facebook,
+.swp_social_panel.swp_default_full_color .swp_twitter,
+.swp_social_panel.swp_default_full_color .swp_google_plus,
+.swp_social_panel.swp_default_full_color .swp_pinterest {
+  background: rgba(0, 0, 0, 0);
+  border: none; }
+
+body .swp_social_panel.swp_other_full_color:hover .swp_facebook,
+body .swp_social_panel.swp_other_full_color:hover .swp_twitter,
+body .swp_social_panel.swp_other_full_color:hover .swp_google_plus,
+body .swp_social_panel.swp_other_full_color:hover .swp_pinterest {
+  background: rgba(0, 0, 0, 0);
+  border: none; }
+
+html body .swp_social_panel.swp_individual_full_color .swp_facebook:hover,
+html body .swp_social_panel.swp_individual_full_color .swp_twitter:hover,
+html body .swp_social_panel.swp_individual_full_color .swp_google_plus:hover,
+html body .swp_social_panel.swp_individual_full_color .swp_pinterest:hover {
+  background: rgba(0, 0, 0, 0);
+  border: none; }
+
 body.single article header {
   position: relative;
   margin: 0 auto;
@@ -663,8 +702,6 @@ body.single .entry-content {
     list-style: circle; }
     body.single .entry-content ul li {
       margin-left: 5%; }
-  body.single .entry-content .addtoany_share_save_container {
-    margin: 3em 0; }
   body.single .entry-content .column {
     margin-bottom: 70px;
     height: 100%;
@@ -1240,12 +1277,6 @@ body.tag .title-container {
   body.single .entry-content h4,
   body.single .entry-content h6 {
     font-size: 1.25em; }
-  body.single .entry-content .addtoany_share_save_container {
-    margin: 2em 0; }
-  body.single .entry-content .addtoany_list.a2a_kit_size_32 a > span {
-    height: 26px;
-    line-height: 26px;
-    width: 26px; }
   body.single .entry-content .product {
     width: 230px;
     max-width: 30%;
