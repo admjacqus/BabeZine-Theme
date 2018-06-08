@@ -990,6 +990,9 @@ iframe.giphy-embed {
   position: absolute;
   left: 0%; }
 
+input[type="search"] {
+  -webkit-appearance: textfield; }
+
 twitterwidget.twitter-tweet {
   margin: 0 auto;
   border: white solid 20px;
@@ -1027,7 +1030,7 @@ body.tag .title-container {
     -webkit-box-flex: 538px;
         -ms-flex: 538px 0 1;
             flex: 538px 0 1;
-    margin: 0 1em;
+    margin: 0 10% 0 1em;
     -webkit-transition: all ease 300ms;
     transition: all ease 300ms; }
   #related_posts ul {
@@ -1300,28 +1303,3 @@ body.tag .title-container {
 @media only screen and (max-device-width: 375px) and (min-device-width: 10px) {
   #menu-main-menu {
     padding: 10px; } }
-
-/*------------------------------------------*/
-/* Portrait */
-@media screen and (orientation: portrait) {
-  /* Portrait styles here */ }
-
-/* Landscape */
-@media screen and (orientation: landscape) {
-  /* Landscape styles here */ }
-
-/* CSS for iPhone, iPad, and Retina Displays */
-/* Non-Retina */
-/* Retina */
-/* iPhone Portrait */
-/* iPhone Landscape */
-/* iPad Portrait */
-/* iPad Landscape */
-@media screen and (min-device-width: 481px) and (orientation: landscape) {
-  .title-container {
-    top: 60%; } }
-
-/*------------------------------------------
-  Live demo samples
-   - http://andrelion.github.io/mediaquery/livedemo.html
---------------------------------------------*/

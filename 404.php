@@ -13,7 +13,8 @@
 <ul class="recent">
 <?php
 // except 'how to 223' and 'uncategorised 1'
-$args = array ('category__not_in' => array( 223, 1 ) );
+// $args = array ('category__not_in' => array( 223, 1 ) );
+$args = array ('category__not_in' => array( 1387, 1 ) );
 	$recent_posts = wp_get_recent_posts($args);
 	foreach( $recent_posts as $recent ){
 		echo '<li><a href="' . get_permalink($recent["ID"]) . '">' .   $recent["post_title"].'</a> </li> ';
