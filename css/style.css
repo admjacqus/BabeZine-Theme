@@ -1233,7 +1233,7 @@ body.tag .title-container {
   body.single .entry-content h5,
   body.single .entry-content h6 {
     margin: 0 1em 1em; }
-  body.single .entry-content img {
+  body.single .entry-content img:not(.alignnone) {
     max-height: 85vh; }
   body.single .entry-content h3 {
     font-size: 1.75em; }

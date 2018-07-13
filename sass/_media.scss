@@ -256,7 +256,7 @@
       h6 {
         margin: 0 1em 1em;
       }
-      img {
+      img:not(.alignnone) {
         max-height: 85vh;
       }
       h3 {
