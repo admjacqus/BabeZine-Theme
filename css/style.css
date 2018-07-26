@@ -263,12 +263,8 @@ body.archive header.header {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     width: 100%; }
@@ -316,9 +312,9 @@ body.archive header.header {
       margin: 0 2em;
       text-align: left; }
   .menu-home {
-    -webkit-box-flex: 100px;
-        -ms-flex: 100px 0 1;
-            flex: 100px 0 1; }
+    -webkit-box-flex: 180px;
+        -ms-flex: 180px 0 1;
+            flex: 180px 0 1; }
     .menu-home .mobile-btn {
       display: none; }
     .menu-home h5 {
@@ -328,14 +324,15 @@ body.archive header.header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     width: 100%; }
     #menu-main-menu li {
       -webkit-box-ordinal-group: 2;
           -ms-flex-order: 1;
-              order: 1; }
+              order: 1;
+      margin-right: 2em; }
       #menu-main-menu li a {
         text-align: center;
         text-transform: lowercase;
@@ -647,7 +644,7 @@ body.single article header {
   position: relative;
   margin: 0 auto;
   width: 90%;
-  max-width: 720px;
+  max-width: 960px;
   text-align: left;
   border-bottom: 2px solid #474747; }
 
@@ -1112,10 +1109,12 @@ body.tag .title-container {
   a.back-home {
     display: none; }
   .categories {
-    -webkit-box-flex: 538px;
-        -ms-flex: 538px 0 1;
-            flex: 538px 0 1;
-    margin: 0 10% 0 1em;
+    -webkit-box-flex: 900px;
+        -ms-flex: 900px 0 1;
+            flex: 900px 0 1;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-transition: all ease 300ms;
     transition: all ease 300ms; }
   #related_posts ul {
