@@ -1,6 +1,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <header>
+    <!-- < ?php edit_post_link(); ?> -->
     <!-- conditional header -->
     <?php if(is_single()){?>
 
@@ -17,10 +18,16 @@
                     <?php if ( is_singular() ) { echo '</h1>'; } else { echo '</h2>'; } ?>
                   </a>
                   <?php }?>
-                  <?php edit_post_link(); ?>
-                  <?php get_template_part( 'entry', 'meta' ); ?>
+                   
+                  <div class="meta">
+  <?php get_template_part( 'entry', 'meta' ); ?>
+                 <div class="tags"><?php the_tags( '<ul><li>#', '<li>#', '</li></ul>' ); ?></div>
+                   
+                  </div>
+                
                   <!-- < ?php if ( !is_search() ) get_template_part( 'entry', 'meta' ); ?> -->
                 </header>
                 <?php get_template_part( 'entry', ( is_archive() || is_search() ? 'summary' : 'content' ) ); ?>
                 <!-- < ?php if ( !is_search() ) get_template_part( 'entry-footer' ); ?> -->
+             
               </article>

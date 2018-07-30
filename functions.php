@@ -101,11 +101,9 @@ add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
 //inlcude custom shortcodes, but not on admin
 function product_short() {
 	if (!is_admin()) {
-		// comment out the next two lines to load the local copy of jQuery
 		include(WP_CONTENT_DIR . '/custom_shortcodes.php');
 		add_shortcode( 'product', 'product_func' );
 	} else {
-		//which can also remove
 		remove_shortcode( 'product' );
 	}
 }

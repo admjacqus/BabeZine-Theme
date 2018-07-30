@@ -1,15 +1,12 @@
-@media (max-width: 1400px) {
-}
-
 @media (min-width: 768px) {
   header#header {
-    margin-bottom: 2em;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: nowrap;
-    width: 100%;
+    max-width: 960px;
   }
 
   // initial states
@@ -17,9 +14,6 @@
     opacity: 0;
     animation: fade-in-right ease 0.4s forwards;
     animation-delay: 0.8s;
-  }
-  .search {
-    width: 100%;
   }
   .menu-home {
     transform: scaleX(0);
@@ -34,16 +28,6 @@
       forwards;
     animation-delay: 0.4s;
   }
-
-  .menu-home,
-  .categories,
-  .menu-search {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    height: 80px;
-  }
   .cat {
     height: 50px;
     h5 {
@@ -53,8 +37,16 @@
   }
 
   // top navbar conatiner
+  .menu-home,
+  .categories,
+  .menu-search {
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
   .menu-home {
     flex: 100px 0 1;
+    margin-left: 2em;
     .mobile-btn {
       display: none;
     }
@@ -64,13 +56,18 @@
     }
   }
 
+  .categories {
+    flex: auto;
+    transition: all ease 300ms;
+  }
+
   #menu-main-menu {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
     width: 100%;
     li {
       order: 1;
-
       a {
         text-align: center;
         text-transform: lowercase;
@@ -85,11 +82,12 @@
   .mobile-search {
     display: none;
   }
+
   .menu-search {
-    flex: 250px 0 0;
+    flex: 220px 0 0;
     flex-direction: column;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: space-evenly;
     transition: all ease 300ms;
 
     input.search-field {
@@ -147,11 +145,6 @@
 }
 
 @media (max-width: 767px) {
-  header#header {
-    margin-bottom: 1em;
-    display: block;
-  }
-
   /* Animate menu icon (lines). */
   .svg-menu-toggle {
     .line {
@@ -186,13 +179,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 1.5em;
+    margin: 0 2em;
     &.open {
       position: fixed;
       top: 0;
       left: 0;
       z-index: 200;
-      width: calc(100% - 3em);
+      width: calc(100% - 4em);
     }
     a {
       z-index: 100;
