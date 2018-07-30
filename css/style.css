@@ -253,6 +253,10 @@ a.fasc-button {
 body.archive header.header {
   margin-bottom: 3rem; }
 
+@media all and (max-width: 1020px) {
+  .menu-home {
+    margin-left: 2em; } }
+
 @media (min-width: 768px) {
   header#header {
     margin: 0 auto;
@@ -311,8 +315,7 @@ body.archive header.header {
   .menu-home {
     -webkit-box-flex: 100px;
         -ms-flex: 100px 0 1;
-            flex: 100px 0 1;
-    margin-left: 2em; }
+            flex: 100px 0 1; }
     .menu-home .mobile-btn {
       display: none; }
     .menu-home h5 {
@@ -592,7 +595,7 @@ body.archive header.header {
       width: 100%;
       height: auto; }
   .grid .item-2 {
-    width: 60%; }
+    width: 64%; }
     .grid .item-2 .title {
       font-size: 200%; }
 
@@ -1060,8 +1063,8 @@ body.tag .title-container {
     width: 97%;
     margin: 0 0 0 3%; }
     body:not(.single) .grid .item-2 {
-      width: 50%;
-      margin-left: 6%; }
+      width: 60%;
+      margin-left: 3%; }
       body:not(.single) .grid .item-2 .title {
         font-size: 2em; }
   body.single .entry-content p {

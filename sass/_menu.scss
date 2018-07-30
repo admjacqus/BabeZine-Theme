@@ -1,3 +1,8 @@
+@media all and (max-width: 1020px) {
+  .menu-home {
+    margin-left: 2em;
+  }
+}
 @media (min-width: 768px) {
   header#header {
     margin: 0 auto;
@@ -46,7 +51,7 @@
   }
   .menu-home {
     flex: 100px 0 1;
-    margin-left: 2em;
+
     .mobile-btn {
       display: none;
     }
