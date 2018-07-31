@@ -1,4 +1,3 @@
-
   <?php get_template_part('title-container') ?>
      <div id="hero">
        <?php   $do_not_duplicate = array(); ?>
@@ -22,4 +21,4 @@
         <?php get_template_part( 'entry-summary' ); ?>
         <?php endwhile; endif; ?>
      </section>
-     <?php get_template_part( 'nav', 'below' ); ?>
+     <!-- < ?php get_template_part( 'nav', 'below' ); ?> -->

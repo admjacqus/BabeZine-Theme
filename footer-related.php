@@ -1,3 +1,4 @@
+
 <?php $orig_post = $post;
   global $post;
   $categories = get_the_category($post->ID);
@@ -36,5 +37,4 @@
   }
   $post = $orig_post;
   wp_reset_query();
-	wp_footer();
   ?>

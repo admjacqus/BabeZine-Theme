@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
   <?php get_template_part('title-container') ?>
 <header class="header">
 <h1 class="title"><?php single_tag_title('everything tagged with '); ?>.</h1>

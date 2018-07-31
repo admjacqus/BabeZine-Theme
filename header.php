@@ -6,8 +6,8 @@
 <!-- GTM & Twitter -->
 <?php get_template_part( 'tracking' ); ?>
 <!-- <div id="wrapper" class="hfeed"> -->
-<header id="header" role="banner">
+<div class="topNav" role="banner">
 <?php get_template_part( 'menu' ); ?>
 <!-- < ?php get_search_form(); ?> -->
-</header>
+</div>
 
