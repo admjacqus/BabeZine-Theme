@@ -23,3 +23,12 @@ gulp.task("default", function() {
   gulp.watch("./css/**/*.css").on("change", browserSync.reload);
   gulp.watch("**/*.php").on("change", browserSync.reload);
 });
+
+gulp.task("dist", ["dist-php"], function() {
+  // this occurs after 'dist-php' finishes
+  return gulp.src("css/*").pipe(gulp.dest("dist/css/"));
+});
+
+gulp.task("dist-php", function() {
+  return gulp.src("*.php").pipe(gulp.dest("dist/"));
+});

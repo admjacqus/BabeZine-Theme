@@ -254,7 +254,7 @@ body.archive header.header {
   margin-bottom: 3rem; }
 
 @media (min-width: 768px) {
-  header#header {
+  .topNav {
     margin-bottom: 2em;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1101,6 +1101,45 @@ body.tag .title-container {
   .navigation ul h5 {
     font-size: 1em;
     margin: 1.2em 0; }
+  .topNav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 96%;
+    margin: 1em auto 2em; }
+  .menu-home {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1; }
+  .menu-search {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding-top: 1em;
+    display: block; }
+  .categories {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    -webkit-box-flex: 1024px;
+        -ms-flex: 1024px 0 1;
+            flex: 1024px 0 1;
+    margin-right: 1.5em; }
+  .menu-home,
+  .categories,
+  .menu-search {
+    height: 50px; }
+  #menu-main-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+    #menu-main-menu li {
+      margin-right: 2em; }
   body:not(.single) #hero {
     width: 50%;
     margin: 0 auto 5%; }

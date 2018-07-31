@@ -90,6 +90,40 @@
     margin: 1.2em 0;
   }
 
+  .topNav {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 96%;
+    margin: 1em auto 2em;
+  }
+  .menu-home {
+    order: 1;
+  }
+  .menu-search {
+    order: 2;
+    padding-top: 1em;
+    display: block;
+  }
+  // drops underneath
+  .categories {
+    order: 3;
+    flex: 1024px 0 1;
+    margin-right: 1.5em;
+  }
+  .menu-home,
+  .categories,
+  .menu-search {
+    height: 50px;
+  }
+
+  #menu-main-menu {
+    display: flex;
+    justify-content: flex-start;
+    li {
+      margin-right: 2em;
+    }
+  }
+
   body:not(.single) {
     #hero {
       width: 50%;
