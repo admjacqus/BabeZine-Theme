@@ -173,40 +173,6 @@ body.single {
     }
   }
 
-  footer.footer {
-    margin: 0 auto 50px;
-    max-width: 960px;
-  }
-  .tag-links {
-    max-width: 960px;
-    min-width: 75%;
-    width: 100%;
-    margin: 0 auto;
-    ul {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end;
-      flex-wrap: wrap;
-      li:not(:nth-of-type(1)) {
-        list-style-type: none;
-        margin-left: 10px;
-      }
-    }
-  }
-
-  // #related_posts ul {
-  //   display: flex;
-  //   justify-content: center;
-  //   align-items: space-between;
-  //   flex-wrap: wrap;
-  //   width: 100%;
-  //   li {
-  //     flex: 0 1 250px;
-  //     padding: 10px;
-  //     margin-bottom: 1em;
-  //   }
-  // }
-
   #comments {
     display: none;
   }

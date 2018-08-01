@@ -4,7 +4,9 @@
 <footer class="footer">
 <?php
 if ( is_single() ) :
+	get_template_part( 'tags' );
 	get_footer( 'related' );
+	wp_footer();
 else :
 	wp_footer();
 endif;

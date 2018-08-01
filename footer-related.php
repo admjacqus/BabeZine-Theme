@@ -14,7 +14,7 @@
 
   $my_query = new wp_query( $args );
   if( $my_query->have_posts() ) {
-  echo '<div id="related_posts"><h3>more cool stuff</h3><ul class="flex_list horiz-on-mob">';
+  echo '<div class="related_posts"><h3>more cool stuff</h3><ul class="flex_list horiz-on-mob">';
   while( $my_query->have_posts() ) {
   $my_query->the_post();?>
 
@@ -22,12 +22,13 @@
   <li><a href="<?php the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>"><div class="relatedthumb"><?php the_post_thumbnail(); ?></div>
   <div class="relatedcontent">
   <h4 class="title"><?php the_title(); ?></h4>
-  </div>
+<p class="subtitle"><?php echo wp_strip_all_tags( get_the_excerpt(), true ); ?></p>
   <?php if( get_field('bz_button') ){ ?>
   <button class="button"><?php the_field('bz_button'); ?></button>
     <?php } else { ?>
         <button class="button">check it out</button>
         <?php } ?>
+          </div>
     </a></li>
 
   <?php }
@@ -36,5 +37,5 @@
   }
   $post = $orig_post;
   wp_reset_query();
-	wp_footer();
+	// wp_footer();
   ?>

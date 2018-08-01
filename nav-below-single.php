@@ -16,14 +16,14 @@ if ( empty( $next ) ) {?>
         <a title="<?php echo esc_attr($previous->post_title); ?>" href="<?php echo get_permalink($previous->ID); ?>">
             <h5>< previous post</h5>
             <?php echo get_the_post_thumbnail($previous->ID, 'thumbnail'); ?>
-            <h5><?php echo esc_attr($previous->post_title); ?></h5>
+            <p><?php echo esc_attr($previous->post_title); ?></p>
         </a>
     </div>
     <div class="float--right">
         <a title="<?php echo esc_attr($next->post_title); ?>" href="<?php echo get_permalink($next->ID); ?>">
             <h5>next post ></h5>
             <?php echo get_the_post_thumbnail($next->ID, 'thumbnail'); ?>
-            <h5><?php echo esc_attr($next->post_title); ?></h5>
+            <p><?php echo esc_attr($next->post_title); ?></p>
         </a>
     </div>
 </div>

@@ -176,17 +176,17 @@ img {
 
 .button {
   font-family: $font-family;
-  font-size: 0.8rem;
+  font-size: 1em;
   letter-spacing: 0.75px;
   text-transform: lowercase;
-  line-height: 1rem;
+  line-height: 1em;
   margin-bottom: 0;
   color: $font-colour;
   background: transparent;
   text-align: center;
-  padding: 1rem;
-  min-width: 90px;
-  border: 3px solid $font-colour;
+  padding: 1em;
+  min-width: 120px;
+  border: 2px solid $font-colour;
   margin: 1.5rem 0 0;
   cursor: inherit;
   @extend .transition;
@@ -206,7 +206,7 @@ a.fasc-button {
 
   color: $font-colour !important;
   background: transparent !important;
-  border: 3px solid $font-colour !important;
+  border: 2px solid $font-colour !important;
   &:hover,
   &:active,
   &:focus {
@@ -234,36 +234,6 @@ a.fasc-button {
     color: #fff;
     margin: 0;
   }
-}
-
-.totop {
-  position: fixed;
-  width: 4em;
-  height: 4em;
-  bottom: 10px;
-  right: 1em;
-  z-index: 2;
-
-  a {
-    display: none;
-    background: #fff;
-    padding: 15px 11px 8px;
-    border-radius: 20px;
-    font-weight: 700;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 0 11px;
-    transition: all 300ms ease;
-    svg {
-      width: 20px;
-      height: 20px;
-    }
-    &:hover {
-      background: $font-colour;
-      fill: white;
-    }
-  }
-}
-#nav-below {
-  opacity: 0;
 }
 
 #infscr-loading {
