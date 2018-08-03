@@ -1,7 +1,12 @@
+body.single {
+  footer.footer {
+    padding: 50px 0;
+  }
+}
+
 footer.footer {
-  padding: 50px 0;
-  max-width: 960px;
-  border-top: 2px solid white;
+  border-top: 1px solid lighten($background-colour, 2%);
+  // background: lighten($background-colour, 2%);
 }
 
 .totop {

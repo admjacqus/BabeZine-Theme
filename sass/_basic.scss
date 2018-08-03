@@ -10,7 +10,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   font-size: 12px;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   text-align: center;
   .user-is-touching {
     background-color: blue;
@@ -187,7 +187,7 @@ img {
   padding: 1em;
   min-width: 120px;
   border: 2px solid $font-colour;
-  margin: 1.5rem 0 0;
+  margin: 1em 0 0;
   cursor: inherit;
   @extend .transition;
   &:hover,

@@ -17,7 +17,7 @@ body {
   overflow-x: hidden;
   margin: 0;
   font-size: 12px;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   text-align: center; }
   body .user-is-touching {
     background-color: blue; }
@@ -172,7 +172,7 @@ img {
   padding: 1em;
   min-width: 120px;
   border: 2px solid #474747;
-  margin: 1.5rem 0 0;
+  margin: 1em 0 0;
   cursor: inherit; }
   .button:hover, a.fasc-button:hover, .button:active, a.fasc-button:active, .button:focus, a.fasc-button:focus {
     color: #fff;
@@ -572,10 +572,10 @@ body.archive header.header {
 
 .title {
   text-transform: lowercase;
-  margin: 1rem 0; }
+  margin: 1em 0; }
 
 .subtitle {
-  margin: 0; }
+  margin: 0 0 1em; }
 
 .swp_social_panel {
   -webkit-box-align: center;
@@ -616,10 +616,11 @@ html body .swp_social_panel.swp_individual_full_color .swp_pinterest:hover {
   background: rgba(0, 0, 0, 0);
   border: none; }
 
+body.single footer.footer {
+  padding: 50px 0; }
+
 footer.footer {
-  padding: 50px 0;
-  max-width: 960px;
-  border-top: 2px solid white; }
+  border-top: 1px solid #faeeec; }
 
 .totop {
   position: fixed;
@@ -1089,7 +1090,7 @@ body.search-no-results ul.recent {
             transform: translatey(0); } }
 
 .embed-responsive {
-  margin-bottom: 3rem; }
+  margin-bottom: 3em; }
 
 ig-embed,
 iframe.instagram-media {
@@ -1105,7 +1106,7 @@ input[type="search"] {
 twitterwidget.twitter-tweet {
   margin: 0 auto;
   border: white solid 20px;
-  margin-bottom: 2rem !important; }
+  margin-bottom: 2em !important; }
 
 /*search/archive/tag*/
 body.archive .title-container,
