@@ -6,21 +6,17 @@
 <path class="line line-1" d="M0,0H90V10H0Z"/>
 <path class="line line-2" d="M0,20H90V30H0Z"/>
 <path class="line line-3" d="M0,40H90V50H0Z"/>
-
 </g>
 </svg>
 	</div>	
-
-
-
 </div>
 
 <div class="categories">
 
 <div class="mobile-search">
-	<a class="back-home" href="https://www.missguided.co.uk">
-<h5>back to missguided</h5>
-</a>
+	<!-- <a class="back-home" href="https://www.missguided.co.uk">
+<h5 class="button">back to missguided</h5>
+</a> -->
 	<?php get_template_part('search', 'menu'); ?></div>
 	<?php wp_nav_menu(array(
 				'theme_location' => 'top-menu',
@@ -29,8 +25,9 @@
 				'depth' => 1 )
 			);
 			?>
-			
-			
+				<a class="back-home" href="https://www.missguided.co.uk">
+<h5 class="button">back to missguided</h5>
+</a>
 </div>
 
 <div class="menu-search"><?php get_template_part('search', 'menu'); ?></div>
