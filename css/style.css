@@ -702,12 +702,6 @@ footer.footer {
   .related_posts .relatedcontent .title {
     font-size: 1.25em;
     margin-top: 1em; }
-  .related_posts .relatedcontent button.button {
-    background: pink;
-    border: none;
-    color: white; }
-    .related_posts .relatedcontent button.button:hover {
-      background: #ff8da1; }
   .related_posts .relatedthumb img {
     position: absolute;
     top: 0;

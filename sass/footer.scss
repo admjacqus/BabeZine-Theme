@@ -91,14 +91,14 @@ footer.footer {
         font-size: 1.25em;
         margin-top: 1em;
       }
-      button.button {
-        background: pink;
-        border: none;
-        color: white;
-        &:hover {
-          background: darken(pink, 10%);
-        }
-      }
+      // button.button {
+      //   background: pink;
+      //   border: none;
+      //   color: white;
+      //   &:hover {
+      //     background: darken(pink, 10%);
+      //   }
+      // }
     }
     .relatedthumb img {
       position: absolute;
