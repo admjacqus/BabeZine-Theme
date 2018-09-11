@@ -120,6 +120,7 @@ img {
   height: auto; }
 
 .alignleft {
+  width: 50%;
   float: left;
   margin: 0 15px 30px 0; }
 
@@ -839,13 +840,10 @@ body.single .entry-content {
     margin: 0 auto 1em; }
   body.single .entry-content p.wp-caption-text {
     margin: 0px 0 10px; }
-  body.single .entry-content img:not(.alignnone):not(.size-full) {
-    max-height: 95vh;
+  body.single .entry-content img {
     max-width: 100%;
-    height: auto;
-    width: auto;
     margin: 0 auto 1rem; }
-    body.single .entry-content img:not(.alignnone):not(.size-full).alignleft.size-medium, body.single .entry-content img:not(.alignnone):not(.size-full).alignright.size-medium {
+    body.single .entry-content img.alignleft.size-medium, body.single .entry-content img.alignright.size-medium {
       max-width: 50%; }
   body.single .entry-content img.alignnone {
     width: 100%;

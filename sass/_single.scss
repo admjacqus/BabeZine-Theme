@@ -97,11 +97,8 @@ body.single {
     p.wp-caption-text {
       margin: 0px 0 10px;
     }
-    img:not(.alignnone):not(.size-full) {
-      max-height: 95vh;
+    img {
       max-width: 100%;
-      height: auto;
-      width: auto;
       margin: 0 auto 1rem;
       &.alignleft.size-medium,
       &.alignright.size-medium {
