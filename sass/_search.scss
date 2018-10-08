@@ -19,14 +19,15 @@ form.search-form {
     flex: auto 1 0;
   }
   input {
+    border-radius: 30px;
     &.search-field {
       font-size: 1rem;
       letter-spacing: 1px;
       border-bottom: 3px solid $font-colour;
-      padding: 5% 13% 5% 3%;
+      padding: 5% 10% 5% 5%;
       border: none;
       background-color: #fff;
-      width: 82%;
+      width: 95%;
       text-transform: lowercase;
       transition: opacity 300ms ease-out 2s;
     }

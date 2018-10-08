@@ -3,5 +3,5 @@
 		<?php get_template_part( 'entry' ); ?>
 	<?php endwhile; endif; ?>
 	<?php get_footer(); ?>
-	<?php get_template_part( 'nav', 'below-single' ); ?>
+	<!-- < ?php get_template_part( 'nav', 'below-single' ); ?> -->
 
