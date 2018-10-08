@@ -51,6 +51,8 @@ body.single {
         padding: 0 10px;
         border-top: 2px solid pink;
         &:before {
+          position: absolute;
+          left: 2%;
           content: counter(ol-count);
           counter-increment: ol-count;
           text-align: center;
