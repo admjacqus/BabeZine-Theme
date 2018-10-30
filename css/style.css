@@ -197,7 +197,7 @@ a.fasc-button {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 100vw;
-  max-width: 960px;
+  max-width: 930px;
   color: #fff;
   text-align: center;
   z-index: 1;
@@ -548,7 +548,7 @@ body.archive header.header {
           font-size: 1em; } }
 
 #hero {
-  width: 75%;
+  width: 40%;
   max-width: 600px;
   margin: 0 auto 5%; }
   #hero img {
@@ -585,6 +585,19 @@ body.archive header.header {
     width: 60%; }
     .grid .item-2 .title {
       font-size: 200%; }
+
+.grid,
+.grid .item {
+  -webkit-transition-duration: 0.7s;
+  transition-duration: 0.7s; }
+
+.grid {
+  -webkit-transition-property: height, width;
+  transition-property: height, width; }
+
+.grid .item {
+  -webkit-transition-property: left, right, top;
+  transition-property: left, right, top; }
 
 .title {
   text-transform: lowercase;

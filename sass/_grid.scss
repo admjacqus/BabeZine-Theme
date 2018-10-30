@@ -1,5 +1,5 @@
 #hero {
-  width: 75%;
+  width: 40%;
   max-width: 600px;
   margin: 0 auto 5%;
   img {
@@ -8,9 +8,9 @@
     width: 100%;
     height: auto;
   }
-        h1.title {
-        font-size: 2.5em;
-      }
+  h1.title {
+    font-size: 2.5em;
+  }
 }
 
 .grid {
@@ -46,6 +46,30 @@
       font-size: 200%;
     }
   }
+}
+
+.grid,
+.grid .item {
+  -webkit-transition-duration: 0.7s;
+  -moz-transition-duration: 0.7s;
+  -ms-transition-duration: 0.7s;
+  -o-transition-duration: 0.7s;
+  transition-duration: 0.7s;
+}
+
+.grid {
+  -webkit-transition-property: height, width;
+  -moz-transition-property: height, width;
+  -ms-transition-property: height, width;
+  -o-transition-property: height, width;
+  transition-property: height, width;
+}
+.grid .item {
+  -webkit-transition-property: left, right, top;
+  -moz-transition-property: left, right, top;
+  -ms-transition-property: left, right, top;
+  -o-transition-property: left, right, top;
+  transition-property: left, right, top;
 }
 
 .title {
