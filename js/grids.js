@@ -1,6 +1,6 @@
 (function($) {
   $(function() {
-    console.log("start making grids!");
+    // console.log("start making grids!");
 
     // requires itemSelector to be set on Masonry instance
     $.fn.masonryImagesReveal = function($items) {
@@ -16,7 +16,7 @@
         var $item = $(image.img).parents(itemSelector);
         // un-hide item
         $item.show();
-        console.log("show grid imgs!");
+        // console.log("show grid imgs!");
 
         // masonry does its thing
         msnry.appended($item);
@@ -65,7 +65,7 @@
           $newElems.animate({ opacity: 1 });
           // $grid.masonry("appended", $newElems, true);
           $grid.masonryImagesReveal($newElems);
-          console.log("reveal new items");
+          // console.log("reveal new items");
         });
       }
     );

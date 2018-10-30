@@ -1,6 +1,7 @@
 var gulp = require("gulp");
 var browserSync = require("browser-sync").create();
 var sass = require("gulp-sass");
+var uglifycss = require("gulp-uglifycss");
 var autoprefixer = require("gulp-autoprefixer");
 var autoprefixerOptions = {
   browsers: ["last 2 versions", "> 5%", "Firefox ESR"]
@@ -11,6 +12,12 @@ gulp.task("sass", function() {
     .src("./sass/style.scss")
     .pipe(sass().on("error", sass.logError))
     .pipe(autoprefixer())
+    .pipe(
+      uglifycss({
+        maxLineLen: 80,
+        uglyComments: true
+      })
+    )
     .pipe(gulp.dest("./css").on("change", browserSync.reload));
 });
 

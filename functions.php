@@ -8,7 +8,7 @@ if ( is_single() ) {
 	wp_enqueue_script( 'shed', get_template_directory_uri() . '/js/shed.js', array('jquery'), '2.2', true);
 }else if ( is_page( 'babezine' ) || is_category() || is_archive() || is_search() ) {
 
-	wp_enqueue_script( 'grids', get_template_directory_uri() . '/js/grids.js', array(), '1.311' , true);
+	wp_enqueue_script( 'grids', get_template_directory_uri() . '/js/grids.js', array(), '1.4' , true);
 	wp_enqueue_script( 'masonry', 'https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js', array('jquery'), null, true);
 	wp_enqueue_script( 'infinte', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-infinitescroll/2.0b2.120519/jquery.infinitescroll.min.js', array( 'jquery' ), '1', true );
 
