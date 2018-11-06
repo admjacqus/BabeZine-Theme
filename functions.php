@@ -114,4 +114,22 @@ function product_short() {
 	}
 }
 add_action('init', 'product_short');
+
+
+
+
+/* Youtube Videos remove show info related etc */
+// Hide Instagram Captions
+
+function custom_instagram_settings($code){
+    if(strpos($code, 'instagr.am') !== false || strpos($code, 'instagram.com') !== false){ // if instagram embed
+	    $return = preg_replace("@data-instgrm-captioned@", "", $code); // remove caption class
+	    return $return;		
+    }
+return $code;
+}
+
+add_filter('embed_handler_html', 'custom_instagram_settings');
+add_filter('embed_oembed_html', 'custom_instagram_settings');
+
 ?>
