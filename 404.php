@@ -24,6 +24,5 @@ $args = array ('category__not_in' => array( 1387, 1 ) );
 </ul>
 
 </article>
-
 <!-- < ?php get_sidebar(); ?> -->
 <?php get_footer(); ?>

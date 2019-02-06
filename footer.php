@@ -6,6 +6,7 @@
 if ( is_single() ) :
 	get_template_part( 'tags' );
 	get_footer( 'related' );
+	get_template_part( 'social_icons' );
 	wp_footer();
 else :
 	wp_footer();

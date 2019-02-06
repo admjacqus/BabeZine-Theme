@@ -79,3 +79,121 @@
 .subtitle {
   margin: 0 0 1em;
 }
+
+/*------------------------------------------
+  Responsive Grid Media Queries - 1280, 1024, 768, 480
+   1280-1024   - desktop (default grid)
+   1024-768    - tablet landscape
+   768-480     - tablet 
+   480-less    - phone landscape & smaller
+--------------------------------------------*/
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  body:not(.single) {
+    #hero {
+      width: 50%;
+      margin: 0 auto 5%;
+      h1.title {
+        font-size: 2.25em;
+      }
+    }
+    .grid {
+      width: 97%;
+      margin: 0 0 0 3%;
+      .item-2 {
+        width: 60%;
+        margin-left: 3%;
+        .title {
+          font-size: 2em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  body:not(.single) {
+    .title {
+      font-size: 2em;
+    }
+    .item,
+    .item-2 {
+      width: 80%;
+      margin-bottom: 10%;
+      .title {
+        font-size: 1.25em;
+      }
+    }
+    .item-2 {
+      .title {
+        font-size: 2em;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 767px) and (min-width: 481px) {
+  body:not(.single) {
+    .title {
+      font-size: 2em;
+    }
+    #hero {
+      width: 80%;
+      margin: 0 10% 10%;
+    }
+    .grid {
+      width: 100%;
+      margin-left: 3%;
+      .gutter-sizer {
+        width: 5%;
+      }
+      .item {
+        width: 46%;
+        margin-bottom: 5%;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 480px) {
+  body:not(.single) {
+    .title-container {
+      width: 95vw;
+      .subtitle {
+        font-size: 7vw;
+        color: #fff;
+        margin: 0;
+      }
+    }
+    .title {
+      font-size: 2.25em;
+    }
+    #hero {
+      width: 90%;
+      margin: 0 5% 15%;
+      h1.title {
+        font-size: 2em;
+      }
+    }
+    .grid {
+      width: 100%;
+      margin-left: 10%;
+      .gutter-sizer {
+        width: 10%;
+      }
+      .item,
+      .item-2 {
+        width: 80%;
+        margin-bottom: 10%;
+        .title {
+          font-size: 1.5em;
+        }
+      }
+      .item-2 {
+        .title {
+          font-size: 1.75em;
+        }
+      }
+    }
+  }
+}

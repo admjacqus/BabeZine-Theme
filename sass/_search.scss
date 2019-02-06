@@ -59,3 +59,30 @@ form.search-form {
 input[type="search"] {
   -webkit-appearance: textfield;
 }
+
+@media (max-width: 1000px) {
+  form.searchform {
+    input {
+      &:nth-of-type(1) {
+        width: 64%;
+      }
+    }
+  }
+}
+@media (max-width: 960px) {
+  form.search-form {
+    input {
+      &.search-field {
+        width: 85%;
+      }
+    }
+  }
+}
+@media all and (max-width: 480px) {
+  form.searchform {
+    min-width: 300px;
+  }
+  form.searchform input:nth-of-type(1) {
+    width: 56%;
+  }
+}

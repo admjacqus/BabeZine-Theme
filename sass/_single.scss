@@ -176,6 +176,10 @@ body.single {
     display: none;
   }
 }
+// removed social icons
+section.entry-meta {
+  margin-bottom: 3em;
+}
 
 .float--left {
   position: fixed;
@@ -212,11 +216,120 @@ body.single {
 @media (max-width: 740px) {
   body.single .entry-content img.alignleft:not(.size-full):not(.size-large),
   body.single .entry-content img.alignright:not(.size-full):not(.size-large) {
-    // max-height: 95vh;
-    // max-width: 50%;
     max-width: 50% !important;
-    // height: auto;
-    // width: auto;
-    // margin: 0 auto 1rem;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  body.single {
+    .entry-content {
+      p {
+        max-width: 45em;
+      }
+      .product {
+        max-width: 25%;
+      }
+    }
+    .related_posts {
+      width: 100%;
+    }
+    footer.entry-footer {
+      width: 60%;
+      margin: 0 auto 5%;
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  body.single {
+    .entry-content {
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        margin: 0 1em 1em;
+      }
+      img:not(.alignnone) {
+        max-height: 85vh;
+      }
+      h3 {
+        font-size: 1.75em;
+      }
+      p {
+        display: block;
+        max-width: 95%;
+        margin: 0 auto 2em;
+      }
+    }
+    .entry-content {
+      ol,
+      ul {
+        margin: 1em 0 2em 50px;
+        width: 82.5%;
+      }
+    }
+  }
+}
+@media all and (max-width: 767px) and (min-width: 481px) {
+  body.single {
+    .entry-content {
+      p {
+        max-width: 90%;
+        margin: 0 auto 1em;
+      }
+    }
+  }
+}
+@media all and (max-width: 600px) {
+  body.single .entry-content p:not(.product p) {
+    max-width: 80%;
+  }
+}
+@media all and (max-width: 480px) {
+  body.single {
+    .entry-content {
+      h1 {
+        font-size: 2em;
+      }
+      h2 {
+        font-size: 1.75em;
+      }
+      h3 {
+        font-size: 1.5em;
+      }
+      h4,
+      h4,
+      h6 {
+        font-size: 1.25em;
+      }
+      //shortcode product
+      .product {
+        width: 230px;
+        max-width: 30%;
+        display: inline-flex;
+        margin: 1em 0;
+        padding: 0.5em;
+        h5 {
+          font-size: 0.85em;
+          line-height: 1.5em;
+        }
+        h4 {
+          font-size: 1.15em;
+          margin-top: 0.5em;
+          line-height: 1.75em;
+        }
+      }
+
+      .wp-caption {
+        max-width: 85vw;
+      }
+    }
+
+    article {
+      header .title {
+        font-size: 2em;
+      }
+    }
   }
 }
